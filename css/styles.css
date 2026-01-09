@@ -1084,7 +1084,7 @@ p {
   position: relative;
   background: var(--bg-dark);
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
   padding: 40px 40px;
   overflow: hidden;
@@ -1111,7 +1111,7 @@ p {
   position: relative;
   background: var(--primary-blue);
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
   padding: 40px 40px;
   overflow: hidden;
@@ -1130,6 +1130,10 @@ p {
   z-index: 2;
   max-width: 400px;
   text-align: center;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .split-content h3 {
