@@ -1060,3 +1060,409 @@ p {
 @media (max-width: 768px) {
   .hidden-mobile { display: none; }
 }
+
+/* ========================================
+   LIFESTYLE IMAGES & VISUAL SECTIONS
+   ======================================== */
+
+/* Problem/Solution Split Section */
+.problem-solution-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  min-height: 500px;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .problem-solution-section {
+    grid-template-columns: 1fr;
+  }
+}
+
+.problem-side {
+  position: relative;
+  background: var(--bg-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 40px;
+  overflow: hidden;
+}
+
+.problem-side::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(204, 8, 0, 0.9) 0%, rgba(0, 0, 0, 0.8) 100%);
+  z-index: 1;
+}
+
+.problem-side .bg-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.4;
+}
+
+.solution-side {
+  position: relative;
+  background: var(--primary-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 40px;
+  overflow: hidden;
+}
+
+.solution-side::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(0, 75, 135, 0.95) 0%, rgba(0, 75, 135, 0.85) 100%);
+  z-index: 1;
+}
+
+.split-content {
+  position: relative;
+  z-index: 2;
+  max-width: 400px;
+  text-align: center;
+}
+
+.split-content h3 {
+  color: var(--bg-white);
+  font-size: 2rem;
+  margin-bottom: 16px;
+}
+
+.split-content p {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1.125rem;
+  margin-bottom: 24px;
+}
+
+.split-icon {
+  width: 80px;
+  height: 80px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 24px;
+}
+
+.split-icon svg {
+  width: 40px;
+  height: 40px;
+  color: var(--bg-white);
+}
+
+.split-icon.lime {
+  background: var(--accent-lime);
+}
+
+.split-icon.lime svg {
+  color: var(--primary-blue);
+}
+
+/* Image Banner with Overlay */
+.image-banner {
+  position: relative;
+  height: 400px;
+  overflow: hidden;
+}
+
+.image-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-banner .overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.4) 100%);
+  display: flex;
+  align-items: center;
+  padding: 0 60px;
+}
+
+.image-banner .overlay-content {
+  max-width: 500px;
+}
+
+.image-banner .overlay-content h2 {
+  color: var(--bg-white);
+  font-size: 2.5rem;
+  margin-bottom: 16px;
+}
+
+.image-banner .overlay-content p {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1.125rem;
+  margin-bottom: 24px;
+}
+
+@media (max-width: 768px) {
+  .image-banner {
+    height: 350px;
+  }
+
+  .image-banner .overlay {
+    padding: 0 24px;
+  }
+
+  .image-banner .overlay-content h2 {
+    font-size: 1.75rem;
+  }
+}
+
+/* Circular Image Accent */
+.image-accent-circle {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 6px solid var(--accent-lime);
+  box-shadow: var(--shadow-xl);
+  flex-shrink: 0;
+}
+
+.image-accent-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Image Grid */
+.image-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+@media (max-width: 768px) {
+  .image-grid-3 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.image-card {
+  position: relative;
+  border-radius: var(--radius-2xl);
+  overflow: hidden;
+  aspect-ratio: 4/3;
+}
+
+.image-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.image-card:hover img {
+  transform: scale(1.05);
+}
+
+.image-card .image-card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 24px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 100%);
+}
+
+.image-card .image-card-overlay h4 {
+  color: var(--bg-white);
+  font-size: 1.125rem;
+  margin-bottom: 4px;
+}
+
+.image-card .image-card-overlay p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.875rem;
+}
+
+/* Stats with Background Image */
+.stats-image-section {
+  position: relative;
+  padding: 100px 24px;
+  overflow: hidden;
+}
+
+.stats-image-section .bg-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.15;
+}
+
+.stats-image-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--bg-dark);
+  z-index: 0;
+}
+
+.stats-image-section .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Floating Image Card */
+.floating-image-card {
+  position: absolute;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-xl);
+  animation: float 4s ease-in-out infinite;
+}
+
+.floating-image-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Content with Side Image */
+.content-with-image {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .content-with-image {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+.content-with-image.reverse {
+  direction: rtl;
+}
+
+.content-with-image.reverse > * {
+  direction: ltr;
+}
+
+.content-image {
+  border-radius: var(--radius-2xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-xl);
+}
+
+.content-image img {
+  width: 100%;
+  height: auto;
+}
+
+/* Testimonial with Image Background */
+.testimonial-image-bg {
+  position: relative;
+  padding: 80px 24px;
+  overflow: hidden;
+}
+
+.testimonial-image-bg .bg-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.testimonial-image-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(0, 75, 135, 0.95) 0%, rgba(0, 75, 135, 0.85) 100%);
+  z-index: 1;
+}
+
+.testimonial-image-bg .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Visual Divider */
+.visual-divider {
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+}
+
+.visual-divider img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.visual-divider::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, var(--bg-dark) 0%, transparent 20%, transparent 80%, var(--bg-dark) 100%);
+  z-index: 1;
+}
+
+/* Stats Image Section Headers */
+.stats-image-section .section-header h2 {
+  color: var(--bg-white);
+}
+
+.stats-image-section .section-header p {
+  color: var(--text-light);
+}
+
+/* Image Banner Hover Effects */
+.image-banner img {
+  transition: transform 0.8s ease;
+}
+
+.image-banner:hover img {
+  transform: scale(1.03);
+}
+
+/* Problem Solution Section Adjustments */
+@media (max-width: 768px) {
+  .problem-side,
+  .solution-side {
+    padding: 48px 24px;
+    min-height: 300px;
+  }
+
+  .split-content h3 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Polish: Smoother card animations */
+.feature-card,
+.stat-card,
+.earn-card,
+.image-card {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease;
+}
+
+/* Polish: Button white variant for opt-out */
+.btn-white {
+  background: var(--bg-white);
+  color: var(--text-primary);
+  border: 2px solid var(--bg-white);
+}
+
+.btn-white:hover {
+  background: transparent;
+  color: var(--bg-white);
+}
