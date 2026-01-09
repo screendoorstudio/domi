@@ -1070,6 +1070,7 @@ p {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0;
+  align-items: stretch;
 }
 
 @media (max-width: 768px) {
@@ -1078,13 +1079,21 @@ p {
   }
 }
 
-.problem-side {
+.problem-side,
+.solution-side {
   position: relative;
-  background: var(--bg-dark);
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  padding: 48px 40px;
+  padding: 32px 40px 40px;
+}
+
+.problem-side {
+  background: var(--bg-dark);
+}
+
+.solution-side {
+  background: var(--primary-blue);
 }
 
 .problem-side::before {
@@ -1104,15 +1113,6 @@ p {
   opacity: 0.4;
 }
 
-.solution-side {
-  position: relative;
-  background: var(--primary-blue);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 48px 40px;
-}
-
 .solution-side::before {
   content: '';
   position: absolute;
@@ -1126,11 +1126,6 @@ p {
   z-index: 2;
   max-width: 400px;
   text-align: center;
-}
-
-/* Add bottom padding to problem side to match button height on solution side */
-.problem-side .split-content {
-  padding-bottom: 52px;
 }
 
 .split-content h3 {
