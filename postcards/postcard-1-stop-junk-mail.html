@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DOMI Postcard - Stop Junk Mail</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      background: #f0f0f0;
+      padding: 20px;
+    }
+
+    .postcard {
+      width: 9in;
+      height: 6in;
+      background: white;
+      margin: 20px auto;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    }
+
+    .page-label {
+      text-align: center;
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+
+    /* ========== FRONT SIDE ========== */
+    .front {
+      background: linear-gradient(135deg, #CC0800 0%, #8a0500 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0.5in;
+      text-align: center;
+    }
+
+    .front .irony-text {
+      background: rgba(0,0,0,0.3);
+      color: #CCFF00;
+      font-size: 14px;
+      font-weight: 700;
+      padding: 8px 20px;
+      border-radius: 100px;
+      margin-bottom: 30px;
+      letter-spacing: 0.5px;
+    }
+
+    .front h1 {
+      color: white;
+      font-size: 52px;
+      font-weight: 900;
+      line-height: 1.1;
+      margin-bottom: 20px;
+      max-width: 7in;
+    }
+
+    .front h1 span {
+      color: #CCFF00;
+    }
+
+    .front .subhead {
+      color: rgba(255,255,255,0.9);
+      font-size: 22px;
+      font-weight: 500;
+      max-width: 6in;
+      line-height: 1.4;
+    }
+
+    .front .arrow {
+      position: absolute;
+      bottom: 0.4in;
+      right: 0.5in;
+      color: white;
+      font-size: 16px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .front .arrow svg {
+      width: 24px;
+      height: 24px;
+    }
+
+    .front .logo {
+      position: absolute;
+      top: 0.4in;
+      left: 0.5in;
+    }
+
+    .front .logo img {
+      height: 40px;
+    }
+
+    /* ========== BACK SIDE ========== */
+    .back {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      height: 100%;
+    }
+
+    .back-left {
+      background: #004B87;
+      padding: 0.4in;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .back-left h2 {
+      color: white;
+      font-size: 26px;
+      font-weight: 800;
+      margin-bottom: 15px;
+      line-height: 1.2;
+    }
+
+    .back-left h2 span {
+      color: #CCFF00;
+    }
+
+    .benefits {
+      margin-bottom: 20px;
+    }
+
+    .benefit {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin-bottom: 12px;
+      color: white;
+      font-size: 13px;
+      line-height: 1.4;
+    }
+
+    .benefit .check {
+      width: 20px;
+      height: 20px;
+      background: #CCFF00;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .benefit .check svg {
+      width: 12px;
+      height: 12px;
+      color: #004B87;
+    }
+
+    .qr-section {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      background: rgba(255,255,255,0.1);
+      padding: 12px;
+      border-radius: 12px;
+    }
+
+    .qr-box {
+      width: 70px;
+      height: 70px;
+      background: white;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 10px;
+      color: #666;
+      text-align: center;
+    }
+
+    .qr-text {
+      color: white;
+      font-size: 12px;
+      line-height: 1.4;
+    }
+
+    .qr-text strong {
+      display: block;
+      font-size: 14px;
+      color: #CCFF00;
+      margin-bottom: 3px;
+    }
+
+    .back-right {
+      padding: 0.4in;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background: #f8f8f8;
+    }
+
+    /* EDDM Indicia */
+    .eddm-section {
+      text-align: right;
+    }
+
+    .indicia {
+      border: 2px solid #000;
+      padding: 8px 12px;
+      display: inline-block;
+      text-align: center;
+      font-size: 9px;
+      line-height: 1.3;
+      margin-bottom: 15px;
+    }
+
+    .indicia .eddm {
+      font-weight: 800;
+      font-size: 11px;
+    }
+
+    .address-block {
+      text-align: left;
+      margin-top: 20px;
+      padding-top: 15px;
+      border-top: 1px solid #ddd;
+    }
+
+    .address-block .ecrwss {
+      font-size: 10px;
+      font-weight: 700;
+      margin-bottom: 5px;
+      color: #333;
+    }
+
+    .address-block .resident {
+      font-size: 14px;
+      font-weight: 600;
+      color: #000;
+      margin-bottom: 3px;
+    }
+
+    .address-block .local {
+      font-size: 12px;
+      color: #333;
+    }
+
+    .return-address {
+      font-size: 9px;
+      color: #666;
+      line-height: 1.4;
+    }
+
+    .return-address strong {
+      font-size: 11px;
+      color: #004B87;
+    }
+
+    .back-cta {
+      background: #CC0800;
+      color: white;
+      text-align: center;
+      padding: 12px;
+      border-radius: 8px;
+      margin-top: auto;
+    }
+
+    .back-cta .url {
+      font-size: 16px;
+      font-weight: 800;
+    }
+
+    .back-cta .tagline {
+      font-size: 11px;
+      opacity: 0.9;
+      margin-top: 3px;
+    }
+
+    @media print {
+      body {
+        background: white;
+        padding: 0;
+      }
+      .postcard {
+        box-shadow: none;
+        margin: 0;
+        page-break-after: always;
+      }
+      .page-label {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <p class="page-label">POSTCARD 1: STOP JUNK MAIL - FRONT (6" x 9")</p>
+
+  <!-- FRONT SIDE -->
+  <div class="postcard front">
+    <div class="logo">
+      <img src="../assets/images/primary-logo.svg" alt="DOMI">
+    </div>
+
+    <div class="irony-text">YES, THIS IS JUNK MAIL</div>
+
+    <h1>But It's The <span>Last Piece</span> You'll Ever Need</h1>
+
+    <p class="subhead">Scan any unwanted mail with your phone. We'll make it stop. Forever.</p>
+
+    <div class="arrow">
+      Flip for details
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+      </svg>
+    </div>
+  </div>
+
+  <p class="page-label" style="margin-top: 40px;">POSTCARD 1: STOP JUNK MAIL - BACK (6" x 9")</p>
+
+  <!-- BACK SIDE -->
+  <div class="postcard back">
+    <div class="back-left">
+      <div>
+        <h2>Stop Junk Mail <span>In Seconds</span></h2>
+
+        <div class="benefits">
+          <div class="benefit">
+            <div class="check">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+            </div>
+            <span><strong>Snap a photo</strong> of any unwanted mail with the free DOMI app</span>
+          </div>
+          <div class="benefit">
+            <div class="check">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+            </div>
+            <span><strong>We contact the sender</strong> and remove you from their list</span>
+          </div>
+          <div class="benefit">
+            <div class="check">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+            </div>
+            <span><strong>Works with catalogs, credit offers,</strong> charity requests & more</span>
+          </div>
+          <div class="benefit">
+            <div class="check">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+            </div>
+            <span><strong>Connects to USPS</strong> Informed Delivery - stop mail before it arrives</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="qr-section">
+        <div class="qr-box">QR CODE<br/>HERE</div>
+        <div class="qr-text">
+          <strong>Scan to Download Free</strong>
+          Or visit domi-landing.vercel.app/opt-out
+        </div>
+      </div>
+    </div>
+
+    <div class="back-right">
+      <div class="return-address">
+        <strong>Digital DOMI</strong><br>
+        Your Mailbox, Your Rules<br>
+        digitaldomi.com
+      </div>
+
+      <div class="eddm-section">
+        <div class="indicia">
+          <div class="eddm">EDDM</div>
+          PRSRT STD<br>
+          ECRWSS<br>
+          U.S. POSTAGE<br>
+          <strong>PAID</strong><br>
+          EDDM RETAIL
+        </div>
+
+        <div class="address-block">
+          <div class="ecrwss">****ECRWSSEDDM****</div>
+          <div class="resident">Local Postal Customer</div>
+        </div>
+      </div>
+
+      <div class="back-cta">
+        <div class="url">domi-landing.vercel.app</div>
+        <div class="tagline">Download FREE on iOS & Android</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

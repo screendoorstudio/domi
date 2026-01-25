@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOMI EDDM Postcards</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      background: #f5f5f5;
+      padding: 40px;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-size: 32px;
+      font-weight: 800;
+      color: #004B87;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      font-size: 16px;
+      color: #666;
+      margin-bottom: 40px;
+    }
+
+    .postcard-list {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .postcard-item {
+      background: white;
+      border-radius: 12px;
+      padding: 24px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .postcard-info h2 {
+      font-size: 20px;
+      font-weight: 700;
+      color: #333;
+      margin-bottom: 6px;
+    }
+
+    .postcard-info p {
+      font-size: 14px;
+      color: #666;
+    }
+
+    .postcard-actions {
+      display: flex;
+      gap: 12px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .btn-primary {
+      background: #004B87;
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: #003866;
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: #004B87;
+      border: 2px solid #004B87;
+    }
+
+    .btn-outline:hover {
+      background: #004B87;
+      color: white;
+    }
+
+    .print-instructions {
+      background: #CCFF00;
+      border-radius: 12px;
+      padding: 24px;
+      margin-top: 40px;
+    }
+
+    .print-instructions h3 {
+      font-size: 18px;
+      font-weight: 700;
+      color: #004B87;
+      margin-bottom: 12px;
+    }
+
+    .print-instructions ol {
+      color: #004B87;
+      padding-left: 20px;
+    }
+
+    .print-instructions li {
+      margin-bottom: 8px;
+      font-size: 14px;
+    }
+
+    .specs {
+      background: white;
+      border-radius: 12px;
+      padding: 24px;
+      margin-top: 20px;
+    }
+
+    .specs h3 {
+      font-size: 18px;
+      font-weight: 700;
+      color: #333;
+      margin-bottom: 12px;
+    }
+
+    .specs ul {
+      list-style: none;
+      color: #666;
+    }
+
+    .specs li {
+      margin-bottom: 6px;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .specs li::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      background: #004B87;
+      border-radius: 50%;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>DOMI EDDM Postcards</h1>
+    <p class="subtitle">Three postcard designs for Every Door Direct Mail campaign</p>
+
+    <div class="postcard-list">
+      <div class="postcard-item">
+        <div class="postcard-info">
+          <h2>Postcard 1: Stop Junk Mail</h2>
+          <p>Ironic approach - "Yes, this is junk mail... but it's the last you'll need"</p>
+        </div>
+        <div class="postcard-actions">
+          <a href="postcard-1-stop-junk-mail.html" class="btn btn-primary">View</a>
+        </div>
+      </div>
+
+      <div class="postcard-item">
+        <div class="postcard-info">
+          <h2>Postcard 2: Digital Mailbox</h2>
+          <p>Digital convenience focus with earnings mentioned</p>
+        </div>
+        <div class="postcard-actions">
+          <a href="postcard-2-digital-mailbox.html" class="btn btn-primary">View</a>
+        </div>
+      </div>
+
+      <div class="postcard-item">
+        <div class="postcard-info">
+          <h2>Postcard 3: Earn Money</h2>
+          <p>Heavy earnings focus - "Your mailbox should pay YOU"</p>
+        </div>
+        <div class="postcard-actions">
+          <a href="postcard-3-earn-money.html" class="btn btn-primary">View</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="print-instructions">
+      <h3>How to Export as PDF</h3>
+      <ol>
+        <li>Click "View" to open the postcard design</li>
+        <li>Press <strong>Cmd + P</strong> (Mac) or <strong>Ctrl + P</strong> (Windows)</li>
+        <li>Select "Save as PDF" as the destination</li>
+        <li>Set paper size to "Custom" - 9" x 6"</li>
+        <li>Set margins to "None"</li>
+        <li>Enable "Background graphics"</li>
+        <li>Save the PDF</li>
+      </ol>
+    </div>
+
+    <div class="specs">
+      <h3>EDDM Specifications</h3>
+      <ul>
+        <li>Size: 6" x 9" (standard EDDM postcard)</li>
+        <li>Includes EDDM indicia (postage paid mark)</li>
+        <li>ECRWSS addressing for "Local Postal Customer"</li>
+        <li>Front: Marketing message and visual</li>
+        <li>Back: Details, QR code, and mailing panel</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>

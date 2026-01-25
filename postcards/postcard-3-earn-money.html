@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DOMI Postcard - Earn Money</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      background: #f0f0f0;
+      padding: 20px;
+    }
+
+    .postcard {
+      width: 9in;
+      height: 6in;
+      background: white;
+      margin: 20px auto;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    }
+
+    .page-label {
+      text-align: center;
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+
+    /* ========== FRONT SIDE ========== */
+    .front {
+      background: linear-gradient(135deg, #CCFF00 0%, #9ecc00 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0.5in;
+      text-align: center;
+      position: relative;
+    }
+
+    .front .logo {
+      position: absolute;
+      top: 0.4in;
+      left: 0.5in;
+    }
+
+    .front .logo img {
+      height: 40px;
+    }
+
+    .front .money-badge {
+      background: #004B87;
+      color: #CCFF00;
+      font-size: 14px;
+      font-weight: 800;
+      padding: 10px 24px;
+      border-radius: 100px;
+      margin-bottom: 20px;
+      letter-spacing: 0.5px;
+    }
+
+    .front .big-number {
+      font-size: 120px;
+      font-weight: 900;
+      color: #004B87;
+      line-height: 1;
+      margin-bottom: 5px;
+    }
+
+    .front .big-number sup {
+      font-size: 50px;
+      vertical-align: super;
+    }
+
+    .front .per-month {
+      font-size: 28px;
+      font-weight: 700;
+      color: #004B87;
+      margin-bottom: 15px;
+    }
+
+    .front h1 {
+      color: #004B87;
+      font-size: 36px;
+      font-weight: 800;
+      line-height: 1.2;
+      max-width: 6in;
+    }
+
+    .front .subhead {
+      color: rgba(0, 75, 135, 0.8);
+      font-size: 18px;
+      font-weight: 500;
+      max-width: 5.5in;
+      line-height: 1.4;
+      margin-top: 12px;
+    }
+
+    .front .arrow {
+      position: absolute;
+      bottom: 0.4in;
+      right: 0.5in;
+      color: #004B87;
+      font-size: 16px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .front .arrow svg {
+      width: 24px;
+      height: 24px;
+    }
+
+    /* Decorative money icons */
+    .money-icon {
+      position: absolute;
+      font-size: 40px;
+      opacity: 0.15;
+    }
+    .money-icon.m1 { top: 0.6in; right: 1in; transform: rotate(15deg); }
+    .money-icon.m2 { bottom: 1in; left: 0.8in; transform: rotate(-10deg); }
+    .money-icon.m3 { top: 1.5in; right: 2in; transform: rotate(5deg); font-size: 30px; }
+    .money-icon.m4 { bottom: 1.5in; right: 1.5in; transform: rotate(-5deg); font-size: 35px; }
+
+    /* ========== BACK SIDE ========== */
+    .back {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      height: 100%;
+    }
+
+    .back-left {
+      background: #004B87;
+      padding: 0.4in;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .back-left h2 {
+      color: white;
+      font-size: 22px;
+      font-weight: 800;
+      margin-bottom: 15px;
+      line-height: 1.2;
+    }
+
+    .back-left h2 span {
+      color: #CCFF00;
+    }
+
+    .earnings-breakdown {
+      margin-bottom: 15px;
+    }
+
+    .earnings-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .earnings-item:last-child {
+      border-bottom: none;
+    }
+
+    .earnings-item .activity {
+      color: white;
+      font-size: 13px;
+    }
+
+    .earnings-item .amount {
+      color: #CCFF00;
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    .total-box {
+      background: #CCFF00;
+      padding: 15px;
+      border-radius: 12px;
+      text-align: center;
+      margin-bottom: 15px;
+    }
+
+    .total-box .label {
+      font-size: 11px;
+      font-weight: 600;
+      color: #004B87;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 5px;
+    }
+
+    .total-box .amount {
+      font-size: 36px;
+      font-weight: 900;
+      color: #004B87;
+    }
+
+    .total-box .sublabel {
+      font-size: 12px;
+      color: #004B87;
+      opacity: 0.7;
+    }
+
+    .qr-section {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: rgba(255,255,255,0.1);
+      padding: 12px;
+      border-radius: 12px;
+    }
+
+    .qr-box {
+      width: 60px;
+      height: 60px;
+      background: white;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 9px;
+      color: #666;
+      text-align: center;
+    }
+
+    .qr-text {
+      color: white;
+      font-size: 11px;
+      line-height: 1.4;
+    }
+
+    .qr-text strong {
+      display: block;
+      font-size: 13px;
+      color: #CCFF00;
+      margin-bottom: 2px;
+    }
+
+    .back-right {
+      padding: 0.4in;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background: #f8f8f8;
+    }
+
+    /* EDDM Indicia */
+    .eddm-section {
+      text-align: right;
+    }
+
+    .indicia {
+      border: 2px solid #000;
+      padding: 8px 12px;
+      display: inline-block;
+      text-align: center;
+      font-size: 9px;
+      line-height: 1.3;
+      margin-bottom: 15px;
+    }
+
+    .indicia .eddm {
+      font-weight: 800;
+      font-size: 11px;
+    }
+
+    .address-block {
+      text-align: left;
+      margin-top: 20px;
+      padding-top: 15px;
+      border-top: 1px solid #ddd;
+    }
+
+    .address-block .ecrwss {
+      font-size: 10px;
+      font-weight: 700;
+      margin-bottom: 5px;
+      color: #333;
+    }
+
+    .address-block .resident {
+      font-size: 14px;
+      font-weight: 600;
+      color: #000;
+      margin-bottom: 3px;
+    }
+
+    .return-address {
+      font-size: 9px;
+      color: #666;
+      line-height: 1.4;
+    }
+
+    .return-address strong {
+      font-size: 11px;
+      color: #004B87;
+    }
+
+    .testimonial {
+      background: white;
+      padding: 15px;
+      border-radius: 12px;
+      border-left: 4px solid #CCFF00;
+      margin: auto 0;
+    }
+
+    .testimonial p {
+      font-size: 13px;
+      font-style: italic;
+      color: #333;
+      line-height: 1.4;
+      margin-bottom: 8px;
+    }
+
+    .testimonial .author {
+      font-size: 11px;
+      font-weight: 600;
+      color: #004B87;
+    }
+
+    .back-cta {
+      background: #CC0800;
+      color: white;
+      text-align: center;
+      padding: 12px;
+      border-radius: 8px;
+    }
+
+    .back-cta .url {
+      font-size: 16px;
+      font-weight: 800;
+    }
+
+    .back-cta .tagline {
+      font-size: 11px;
+      opacity: 0.9;
+      margin-top: 3px;
+    }
+
+    @media print {
+      body {
+        background: white;
+        padding: 0;
+      }
+      .postcard {
+        box-shadow: none;
+        margin: 0;
+        page-break-after: always;
+      }
+      .page-label {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <p class="page-label">POSTCARD 3: EARN MONEY - FRONT (6" x 9")</p>
+
+  <!-- FRONT SIDE -->
+  <div class="postcard front">
+    <div class="logo">
+      <img src="../assets/images/primary-logo.svg" alt="DOMI">
+    </div>
+
+    <!-- Decorative background elements -->
+    <span class="money-icon m1">$</span>
+    <span class="money-icon m2">$</span>
+    <span class="money-icon m3">$</span>
+    <span class="money-icon m4">$</span>
+
+    <div class="money-badge">YOUR MAILBOX SHOULD PAY YOU</div>
+
+    <div class="big-number"><sup>$</sup>100</div>
+    <div class="per-month">Per Month</div>
+
+    <h1>Just for Checking Your Mail</h1>
+
+    <p class="subhead">Turn junk mail into real money. Get paid for every digital offer you view.</p>
+
+    <div class="arrow">
+      Start earning today
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+      </svg>
+    </div>
+  </div>
+
+  <p class="page-label" style="margin-top: 40px;">POSTCARD 3: EARN MONEY - BACK (6" x 9")</p>
+
+  <!-- BACK SIDE -->
+  <div class="postcard back">
+    <div class="back-left">
+      <div>
+        <h2>How <span>You Earn</span></h2>
+
+        <div class="earnings-breakdown">
+          <div class="earnings-item">
+            <span class="activity">View digital offers</span>
+            <span class="amount">$0.25 - $2.00 each</span>
+          </div>
+          <div class="earnings-item">
+            <span class="activity">Complete quick surveys</span>
+            <span class="amount">$1.00 - $5.00 each</span>
+          </div>
+          <div class="earnings-item">
+            <span class="activity">Redeem coupons</span>
+            <span class="amount">Extra cashback</span>
+          </div>
+          <div class="earnings-item">
+            <span class="activity">Refer friends</span>
+            <span class="amount">$10.00 bonus</span>
+          </div>
+        </div>
+
+        <div class="total-box">
+          <div class="label">Average Monthly Earnings</div>
+          <div class="amount">$60 - $100</div>
+          <div class="sublabel">Based on active users</div>
+        </div>
+      </div>
+
+      <div class="qr-section">
+        <div class="qr-box">QR CODE<br/>HERE</div>
+        <div class="qr-text">
+          <strong>Scan to Start Earning</strong>
+          Or visit domi-landing.vercel.app
+        </div>
+      </div>
+    </div>
+
+    <div class="back-right">
+      <div class="return-address">
+        <strong>Digital DOMI</strong><br>
+        Your Mailbox, Your Rules<br>
+        digitaldomi.com
+      </div>
+
+      <div class="testimonial">
+        <p>"I made $87 last month just checking my digital mail. It's the easiest money I've ever earned."</p>
+        <span class="author">- Sarah T., Florida</span>
+      </div>
+
+      <div class="eddm-section">
+        <div class="indicia">
+          <div class="eddm">EDDM</div>
+          PRSRT STD<br>
+          ECRWSS<br>
+          U.S. POSTAGE<br>
+          <strong>PAID</strong><br>
+          EDDM RETAIL
+        </div>
+
+        <div class="address-block">
+          <div class="ecrwss">****ECRWSSEDDM****</div>
+          <div class="resident">Local Postal Customer</div>
+        </div>
+      </div>
+
+      <div class="back-cta">
+        <div class="url">domi-landing.vercel.app</div>
+        <div class="tagline">FREE Download - iOS & Android</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
