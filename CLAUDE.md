@@ -1,7 +1,7 @@
-# DoMi Partner Landing Pages
+# Domi Partner Landing Pages
 
 ## Project Overview
-A set of high-converting landing pages for Digital Domi (DoMi), showcasing their two main value propositions:
+A set of high-converting landing pages for Domi (Digital Domi), showcasing their two main value propositions:
 1. **Opt-Out Tool** - Scan unwanted mail with your phone to unsubscribe
 2. **Digital Mailbox** - Replace physical junk mail with digital coupons/offers you control
 
@@ -18,13 +18,13 @@ A set of high-converting landing pages for Digital Domi (DoMi), showcasing their
 ├── opt-out.html            # Opt-out tool landing page (red theme)
 ├── digital-mailbox.html    # Digital mailbox - convenience/eco focus (blue theme)
 ├── digital-mailbox-earn.html # A/B test variant - heavy earnings focus (green theme)
-├── gtm-strategy.html       # 12-month GTM strategy presentation for stakeholders
+├── gtm-strategy.html       # 12-month GTM strategy presentation (INTERACTIVE)
 ├── css/
-│   └── styles.css          # All styles, DoMi brand system
+│   └── styles.css          # All styles, Domi brand system
 ├── js/
 │   └── main.js             # Scroll animations, mobile menu, smooth scroll
 ├── assets/
-│   ├── images/             # DoMi brand assets (scraped from digitaldomi.com)
+│   ├── images/             # Domi brand assets (scraped from digitaldomi.com)
 │   │   ├── primary-logo.svg
 │   │   ├── brand-logo.png (favicon)
 │   │   ├── app-store.png
@@ -43,6 +43,7 @@ A set of high-converting landing pages for Digital Domi (DoMi), showcasing their
 │   │   ├── mailer-illustration.svg
 │   │   └── social-share.png
 │   └── other-images/       # Lifestyle/stock photos
+│       ├── domi-sticker.jpeg        # Return to Sender sticker (used in GTM page)
 │       ├── GettyImages-187591416.jpg (mail at door)
 │       ├── GettyImages-567074375.jpg (overflowing mailboxes)
 │       ├── GettyImages-83408155.jpg (mail carrier)
@@ -64,6 +65,9 @@ A set of high-converting landing pages for Digital Domi (DoMi), showcasing their
 ```
 
 ## Brand Guidelines
+
+### Branding Note
+Always use "Domi" (not "DoMi") for consistent branding across all materials.
 
 ### Colors (CSS Custom Properties)
 ```css
@@ -133,35 +137,122 @@ A set of high-converting landing pages for Digital Domi (DoMi), showcasing their
 - Comparison table (Traditional Mail vs Domi)
 - Trust badges
 
-### 5. gtm-strategy.html (Stakeholder Presentation)
+### 5. gtm-strategy.html (Stakeholder Presentation) - MAJOR INTERACTIVE PAGE
 **Live URL**: https://domi-landing.vercel.app/gtm-strategy.html
 
-Visual presentation of the 12-month Go-to-Market strategy for stakeholder approval.
+Visual, interactive presentation of the 12-month Go-to-Market strategy for stakeholder approval.
 
-**Sections:**
-- **Hero** - Executive summary with key numbers ($255K budget, 63K households, 5K users, $3-5M Series A)
-- **Strategic Timeline** - 4-phase visual timeline with expandable cards
-  - Phase 1 (M1-3): Foundation & Pilot Launch - $50,462
-  - Phase 2 (M4-6): Optimization & PR Push - $46,392
-  - Phase 3 (M7-9): Scale-Up & B2B Launch - $89,000
-  - Phase 4 (M10-12): Series A Push - $103,000
-- **Budget Allocation** - Donut chart visualization (EDDM 27%, Digital Ads 18%, PR 14%, etc.)
-- **Growth Trajectory** - KPI bar charts (Verified Users, CAC, LTV trajectories)
-- **12-Month Milestones** - Grid of monthly milestones with success criteria
-- **CTA** - Approval request with stakeholder contact
+#### Key Interactive Features
 
-**Design:**
-- Blue gradient hero matching DoMi brand
-- Phase-colored milestone cards (blue → cyan → purple → lime)
+**50-City Market Selector**
+- Scrollable grid of 50 US cities organized by region
+- Click to select/deselect cities for campaign planning
+- Tampa & Birmingham are pre-selected as pilot markets (locked)
+- "Select All" and "Clear" buttons
+- Shows "X of 50 cities selected" counter
+
+**Budget Calculator with Economies of Scale**
+- Dynamically calculates costs based on selected cities
+- Per-city base cost: $10,932 (EDDM $5,657 + Digital $3,775 + Partnerships $1,500)
+- Discount tiers:
+  - 1-5 cities: 0% discount
+  - 6-15 cities: 10% discount
+  - 16-30 cities: 20% discount
+  - 31-50 cities: 30% discount
+- Shows: cities selected, per-city cost, total savings, total budget
+- Visual tier indicator dots
+- Callout prompts to add more cities for next discount tier
+
+**Target Cities (50 total)**
+- **Pilots:** Tampa FL, Birmingham AL
+- **Southeast:** Atlanta, Charlotte, Raleigh, Durham, Asheville, Wilmington, Greenville SC, Charleston, Savannah, Jacksonville, Orlando
+- **Tennessee/Kentucky:** Nashville, Knoxville, Chattanooga, Louisville, Lexington
+- **Texas:** Austin, San Antonio
+- **Southwest:** Denver, Boulder, Colorado Springs, Phoenix, Scottsdale, Tucson, Albuquerque, Santa Fe, Salt Lake City
+- **Pacific Northwest:** Seattle, Spokane, Portland, Eugene, Boise
+- **California:** San Diego, Santa Barbara, San Jose, Oakland, Sacramento, Fresno
+- **Midwest:** Minneapolis, Madison, Grand Rapids, Ann Arbor, Indianapolis, Cincinnati, Kansas City, Omaha, Des Moines
+- **Mid-Atlantic:** Pittsburgh, Richmond, Providence
+
+#### Strategic Timeline (4 Phases, Detailed)
+
+**Phase 1: Foundation & Pilot (Months 1-3) - $50,462** - 12 items:
+- Harden sign-up flow & onboarding
+- Simplify messaging & value prop
+- Launch Tampa + Birmingham pilots
+- First 3-touch EDDM (3,000 homes)
+- Launch SEO content hub site
+- GA4 + Meta Pixel analytics live
+- First explainer video produced
+- Meta + Nextdoor ad campaigns
+- Change.org coalition outreach
+- Accelerator applications submitted
+- Recruit neighborhood champions
+- One Tree Planted partnership signed
+
+**Phase 2: Optimization & PR (Months 4-6) - $55,392** - 11 items:
+- Direct Mail Sculpture unveiling (public art installation)
+- First "Liberated" neighborhood (80%+)
+- Local TV/radio earned media push
+- Second explainer video (earnings focus)
+- Credit union member pilot program
+- HOA sustainability partnerships (5+)
+- Environmental impact dashboard live
+- Referral program launched
+- Email nurture sequences activated
+- A/B test landing page variants
+- Local eco-friendly retailer partnerships
+
+**Phase 3: Scale & B2B Launch (Months 7-9) - $98,000** - 11 items:
+- Expand to 20 neighborhoods
+- Launch DMP to brand partners
+- First zero-junk-mail apartment complex
+- University sustainability partnerships
+- Trade shows (ANA, Postal Forum)
+- Launch podcast + guest appearances
+- Investor deck & data room finalized
+- Mail house partnership negotiations
+- Property management company outreach
+- Employer benefits program pilot
+- Customer testimonial video series
+
+**Phase 4: Series A Push (Months 10-12) - $112,000** - 11 items:
+- Investor roadshow (20+ meetings)
+- National media placement (WSJ, NPR)
+- Scale to 30 neighborhoods
+- 20 brand partners, $50K/mo B2B
+- B Corp certification application
+- Customer case studies published
+- Convert petition signers to users
+- Advisory board formalized
+- Strategic partnership announcements
+- Due diligence materials ready
+- Close Series A: $3-5M
+
+#### Other Sections
+- **Executive Summary** - Key numbers and strategy overview
+- **Multi-Channel Approach** - 8 integrated channels
+- **EDDM Tactics** - 3-touch postcard strategy with sticker image
+- **Digital Marketing** - Meta, Nextdoor, Google Ads details
+- **SEO Content Strategy** - Content hub concept
+- **Partnerships** - Credit unions, environmental orgs, brands
+- **Budget Allocation** - Donut chart visualization
+- **Growth Trajectory** - KPI bar charts
+- **12-Month Milestones** - Detailed success criteria for each month
+
+#### Design Notes
+- Blue gradient hero matching Domi brand
+- Phase-colored cards (blue → cyan → purple → lime)
 - Animated bar charts and donut chart
 - Scroll fade-in animations
 - Mobile responsive
+- Uses actual `domi-sticker.jpeg` image (not SVG mockup)
 
 ## EDDM Postcards
 
 **Live URL**: https://domi-landing.vercel.app/postcards/
 
-Three 6" x 9" postcards designed for Every Door Direct Mail (EDDM) campaigns. Each includes front and back designs with proper USPS EDDM formatting. All postcards use the official DoMi logo (`assets/images/primary-logo.svg`) for consistent branding.
+Three 6" x 9" postcards designed for Every Door Direct Mail (EDDM) campaigns. Each includes front and back designs with proper USPS EDDM formatting.
 
 ### Postcard 1: Stop Junk Mail
 - **Theme:** Ironic approach - "Yes, this is junk mail"
@@ -194,34 +285,57 @@ Three 6" x 9" postcards designed for Every Door Direct Mail (EDDM) campaigns. Ea
 6. Enable "Background graphics"
 7. Save
 
-## Key CSS Components
+## Marketing Folder (/marketing/)
 
-### Problem/Solution Split Banner
-```css
-.problem-solution-section   /* Grid container */
-.problem-side              /* Red/left panel */
-.solution-side             /* Blue/right panel */
-.split-content             /* Content wrapper */
-.split-icon                /* Circular icon container */
-```
-- Uses `align-items: flex-start` with 100px top padding
-- `align-items: stretch` on grid for equal height columns
+Comprehensive GTM strategy documentation:
 
-### Image Banners
-```css
-.image-banner              /* Full-width image with overlay */
-.image-banner .overlay     /* Dark gradient overlay */
-.overlay-content           /* Text content on banner */
-```
-- `object-position: center bottom` to show mail piles
+| File | Purpose |
+|------|---------|
+| `GTM-TRACKER.md` | 12-month implementation tracker with phases |
+| `EDDM-CAMPAIGN-TRACKING.md` | QR codes, UTM structure, print specs |
+| `EMAIL-SEQUENCES.md` | Welcome & re-engagement nurture sequences |
+| `THEUNSUBSCRIBEGUY-CONTENT-PLAN.md` | SEO content hub strategy |
+| `PARTNERSHIP-OUTREACH.md` | Credit unions, mail houses, brand partners |
+| `DIGITAL-ADVERTISING-PLAN.md` | Meta, Nextdoor, Google Ads campaigns |
+| `ANALYTICS-IMPLEMENTATION.md` | GA4, GTM, Facebook Pixel setup |
 
-### Stats Section with Background
-```css
-.stats-image-section       /* Section with bg image */
-.stats-grid                /* 4-column stats layout */
-.stat-card                 /* Individual stat */
-.stat-number               /* Large lime number */
+## Go-To-Market Strategy Summary
+
+### Overview
+12-month pre-Series A GTM plan targeting 50 potential markets with pilot focus on Tampa + Birmingham.
+- **Total Budget:** ~$316K (varies by cities selected)
+- **Series A Goal:** $3-5M at $15-25M pre-money valuation
+- **Pilot Markets:** Tampa Bay, FL + Birmingham, AL
+
+### EDDM Campaign Structure
+Three-touch postcard sequence per neighborhood:
+1. **Touch 1:** "Stop Junk Mail" (red theme) → opt-out.html
+2. **Touch 2:** "Digital Mailbox" (blue theme) → digital-mailbox.html
+3. **Touch 3:** "Earn Money" (green theme) → digital-mailbox-earn.html
+
+### Key PR Event: Direct Mail Sculpture
+- Public art installation made from collected junk mail
+- Media event in Month 5
+- Positive framing (not "Wall of Shame")
+- Local TV/radio coverage opportunity
+
+### QR Code UTM Structure
 ```
+?utm_source=eddm
+&utm_medium=postcard
+&utm_campaign={wave}-{month}{year}
+&utm_content={postcard-variant}
+&utm_term={neighborhood-code}
+```
+
+### Key Metrics Targets (Month 12)
+- Verified users: 5,000
+- MAU: 4,000
+- CAC: <$10
+- LTV: $75
+- B2B partners: 20
+- Monthly B2B revenue: $50,000
+- Liberated neighborhoods: 5+
 
 ## External Links
 - App Store: https://apps.apple.com/app/digital-domi/id6738277048
@@ -239,48 +353,29 @@ npx vercel --prod --yes
 git push origin main
 ```
 
-## Go-To-Market Strategy
+## Recent Session Notes (January 2025)
 
-### Overview
-12-month pre-Series A GTM plan targeting 5,000-10,000 households in 20-30 zip+4 neighborhoods.
-- **Total Budget:** $255,000
-- **Series A Goal:** $3-5M at $15-25M pre-money valuation
-- **Primary Markets:** Tampa Bay, FL + Birmingham, AL
+### What Was Built
+1. **Interactive 50-City Market Selector** - Compact card grid with select all/clear buttons
+2. **Budget Calculator** - Real-time cost calculation with 4-tier volume discounts
+3. **Expanded Strategic Timeline** - All 4 phases now have 11-12 detailed action items
+4. **Updated Milestones** - All 12 months have detailed success criteria
+5. **Sticker Image** - Replaced SVG mockup with actual `domi-sticker.jpeg`
+6. **Rebranded** - Changed "Wall of Shame" to "Direct Mail Sculpture"
+7. **Standardized** - All "DoMi" instances changed to "Domi"
 
-### EDDM Campaign Structure
-Three-touch postcard sequence per neighborhood:
-1. **Touch 1:** "Stop Junk Mail" (red theme) → opt-out.html
-2. **Touch 2:** "Digital Mailbox" (blue theme) → digital-mailbox.html
-3. **Touch 3:** "Earn Money" (green theme) → digital-mailbox-earn.html
-
-### QR Code UTM Structure
-```
-?utm_source=eddm
-&utm_medium=postcard
-&utm_campaign={wave}-{month}{year}
-&utm_content={postcard-variant}
-&utm_term={neighborhood-code}
-```
-
-### Analytics Implementation
-- GA4 events: `qr_scan`, `app_download_click`, `cta_click`, `scroll_depth`
-- Facebook Pixel: `PageView`, `Lead`, `ViewContent`
-- Data layer pushes for GTM integration
-- UTM persistence via sessionStorage
-
-### Key Metrics Targets (Month 12)
-- Households reached: 63,000
-- Verified users: 5,000
-- MAU: 4,000
-- CAC: <$10
-- LTV: $75
-- B2B partners: 20
-- Monthly B2B revenue: $50,000
+### Next Steps / TODO
+- [ ] Review marketing/*.md files for consistency with updated GTM strategy
+- [ ] Update budget numbers in marketing docs to match new calculator
+- [ ] Add more cities if needed (currently 50)
+- [ ] Create actual QR codes for postcards
+- [ ] Finalize postcard designs for print
+- [ ] Set up GA4 and Meta Pixel per ANALYTICS-IMPLEMENTATION.md
 
 ## Notes
-- All pages use actual DoMi brand assets scraped from digitaldomi.com
+- All pages use actual Domi brand assets scraped from digitaldomi.com
 - Consistent header/footer across all pages
 - Mobile-responsive design
 - Scroll animations via Intersection Observer
-- The digital-mailbox-earn.html is an A/B test variant emphasizing earnings (not linked from main nav)
-- Analytics tracking added to main.js for campaign attribution
+- The digital-mailbox-earn.html is an A/B test variant (not linked from main nav)
+- GTM strategy page has embedded JavaScript for budget calculator
