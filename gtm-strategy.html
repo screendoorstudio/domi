@@ -888,6 +888,123 @@
       font-size: 0.75rem;
       color: var(--text-muted);
     }
+
+    /* Illustration styles */
+    .sticker-mockup {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 24px;
+    }
+
+    .sticker-svg {
+      width: 280px;
+      height: auto;
+      filter: drop-shadow(0 4px 12px rgba(0,0,0,0.15));
+    }
+
+    .postcard-visual {
+      display: flex;
+      justify-content: center;
+      margin: 16px 0;
+    }
+
+    .postcard-svg {
+      width: 100%;
+      max-width: 200px;
+      height: auto;
+      border-radius: 8px;
+      filter: drop-shadow(0 2px 8px rgba(0,0,0,0.1));
+    }
+
+    .visual-break {
+      padding: 60px 24px;
+      background: linear-gradient(135deg, var(--bg-light) 0%, #e8eaed 100%);
+      text-align: center;
+    }
+
+    .visual-break-inner {
+      max-width: 800px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 48px;
+      flex-wrap: wrap;
+    }
+
+    .visual-break-illustration {
+      flex: 0 0 auto;
+    }
+
+    .visual-break-illustration svg {
+      width: 180px;
+      height: auto;
+    }
+
+    .visual-break-content {
+      flex: 1;
+      min-width: 280px;
+      text-align: left;
+    }
+
+    .visual-break-content h3 {
+      color: var(--primary-blue);
+      margin-bottom: 12px;
+      font-size: 1.75rem;
+    }
+
+    .visual-break-content p {
+      color: var(--text-dark);
+      font-size: 1.125rem;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 640px) {
+      .visual-break-inner {
+        flex-direction: column;
+        text-align: center;
+      }
+      .visual-break-content {
+        text-align: center;
+      }
+    }
+
+    /* Phone mockup */
+    .phone-mockup {
+      display: flex;
+      justify-content: center;
+      margin: 24px 0;
+    }
+
+    .phone-svg {
+      width: 120px;
+      height: auto;
+    }
+
+    /* Illustration cards */
+    .illustration-row {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      margin: 32px 0;
+      flex-wrap: wrap;
+    }
+
+    .illustration-item {
+      text-align: center;
+    }
+
+    .illustration-item svg {
+      width: 80px;
+      height: 80px;
+      margin-bottom: 8px;
+    }
+
+    .illustration-item span {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      display: block;
+    }
   </style>
 </head>
 <body>
@@ -1192,6 +1309,43 @@
         <p>Our anchor channel: Three-touch postcard sequences reaching every mailbox in target neighborhoods</p>
       </div>
 
+      <!-- Postcard Sequence Visual -->
+      <div class="illustration-row fade-in">
+        <div class="illustration-item">
+          <svg viewBox="0 0 90 60" xmlns="http://www.w3.org/2000/svg">
+            <rect x="2" y="2" width="86" height="56" rx="4" fill="url(#redGrad)" stroke="#CC0800" stroke-width="2"/>
+            <defs><linearGradient id="redGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#CC0800"/><stop offset="100%" style="stop-color:#8b0000"/></linearGradient></defs>
+            <text x="45" y="25" text-anchor="middle" font-family="Inter, sans-serif" font-size="7" font-weight="bold" fill="#fff">YES, THIS IS</text>
+            <text x="45" y="35" text-anchor="middle" font-family="Inter, sans-serif" font-size="7" font-weight="bold" fill="#fff">JUNK MAIL</text>
+            <rect x="30" y="42" width="30" height="10" rx="2" fill="#CCFF00"/>
+            <text x="45" y="50" text-anchor="middle" font-family="Inter, sans-serif" font-size="6" fill="#000">Scan</text>
+          </svg>
+          <span>Touch 1: Problem</span>
+        </div>
+        <div class="illustration-item">
+          <svg viewBox="0 0 90 60" xmlns="http://www.w3.org/2000/svg">
+            <rect x="2" y="2" width="86" height="56" rx="4" fill="url(#blueGrad)" stroke="#004B87" stroke-width="2"/>
+            <defs><linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#004B87"/><stop offset="100%" style="stop-color:#003366"/></linearGradient></defs>
+            <text x="45" y="22" text-anchor="middle" font-family="Inter, sans-serif" font-size="6" font-weight="bold" fill="#fff">COUPONS YOU WANT</text>
+            <text x="45" y="32" text-anchor="middle" font-family="Inter, sans-serif" font-size="6" font-weight="bold" fill="#fff">ZERO CLUTTER</text>
+            <rect x="25" y="38" width="40" height="14" rx="2" fill="#CCFF00"/>
+            <text x="45" y="48" text-anchor="middle" font-family="Inter, sans-serif" font-size="7" font-weight="bold" fill="#000">$100/mo</text>
+          </svg>
+          <span>Touch 2: Solution</span>
+        </div>
+        <div class="illustration-item">
+          <svg viewBox="0 0 90 60" xmlns="http://www.w3.org/2000/svg">
+            <rect x="2" y="2" width="86" height="56" rx="4" fill="url(#limeGrad)" stroke="#9ACD32" stroke-width="2"/>
+            <defs><linearGradient id="limeGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#CCFF00"/><stop offset="100%" style="stop-color:#9ACD32"/></linearGradient></defs>
+            <text x="45" y="28" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" font-weight="bold" fill="#004B87">$100</text>
+            <text x="45" y="40" text-anchor="middle" font-family="Inter, sans-serif" font-size="7" font-weight="bold" fill="#004B87">PER MONTH</text>
+            <rect x="55" y="44" width="25" height="10" rx="2" fill="#004B87"/>
+            <text x="67" y="51" text-anchor="middle" font-family="Inter, sans-serif" font-size="5" fill="#fff">+ stickers</text>
+          </svg>
+          <span>Touch 3: Earnings</span>
+        </div>
+      </div>
+
       <div class="tactics-grid">
         <div class="tactic-card fade-in">
           <div class="tactic-icon" style="background: #fee2e2;">
@@ -1287,6 +1441,36 @@
       </div>
 
       <div class="highlight-box fade-in">
+        <div class="sticker-mockup">
+          <!-- Return to Sender Sticker Mockup -->
+          <svg class="sticker-svg" viewBox="0 0 300 140" xmlns="http://www.w3.org/2000/svg">
+            <!-- Sticker background with slight rotation for casual look -->
+            <g transform="rotate(-2, 150, 70)">
+              <!-- Main sticker shape -->
+              <rect x="10" y="10" width="280" height="120" rx="8" fill="#fff" stroke="#CC0800" stroke-width="4"/>
+              <!-- Inner border -->
+              <rect x="18" y="18" width="264" height="104" rx="4" fill="none" stroke="#CC0800" stroke-width="1" stroke-dasharray="4,4"/>
+              <!-- RETURN TO SENDER text -->
+              <text x="150" y="52" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="800" fill="#CC0800" letter-spacing="1">RETURN TO SENDER</text>
+              <!-- Subtext -->
+              <text x="150" y="74" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="11" fill="#666">I didn't ask for this mail</text>
+              <!-- Domi logo area -->
+              <rect x="105" y="84" width="90" height="28" rx="4" fill="#004B87"/>
+              <text x="150" y="103" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" fill="#fff">Powered by</text>
+              <text x="150" y="118" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="800" fill="#CCFF00">Domi</text>
+              <!-- Stamp-like circles in corners -->
+              <circle cx="35" cy="35" r="8" fill="none" stroke="#CC0800" stroke-width="2"/>
+              <circle cx="265" cy="35" r="8" fill="none" stroke="#CC0800" stroke-width="2"/>
+              <circle cx="35" cy="95" r="8" fill="none" stroke="#CC0800" stroke-width="2"/>
+              <circle cx="265" cy="95" r="8" fill="none" stroke="#CC0800" stroke-width="2"/>
+              <!-- X marks in circles -->
+              <path d="M30 30 L40 40 M40 30 L30 40" stroke="#CC0800" stroke-width="2"/>
+              <path d="M260 30 L270 40 M270 30 L260 40" stroke="#CC0800" stroke-width="2"/>
+              <path d="M30 90 L40 100 M40 90 L30 100" stroke="#CC0800" stroke-width="2"/>
+              <path d="M260 90 L270 100 M270 90 L260 100" stroke="#CC0800" stroke-width="2"/>
+            </g>
+          </svg>
+        </div>
         <h4>DoMi-Branded "Return to Sender" Stickers</h4>
         <p>Physical touchpoint that creates ongoing brand presence in homes. Each pack includes 20 stickers with instructions, turning every mailbox into a mini-billboard.</p>
         <div class="mini-grid">
@@ -1306,6 +1490,49 @@
       </div>
     </div>
   </section>
+
+  <!-- Visual Break: Physical to Digital -->
+  <div class="visual-break">
+    <div class="visual-break-inner">
+      <div class="visual-break-illustration">
+        <!-- Mailbox to Phone illustration -->
+        <svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
+          <!-- Mailbox -->
+          <g transform="translate(10, 20)">
+            <rect x="0" y="30" width="50" height="35" rx="4" fill="#004B87"/>
+            <rect x="0" y="25" width="50" height="10" rx="2" fill="#003366"/>
+            <rect x="5" y="65" width="8" height="30" fill="#666"/>
+            <path d="M10 40 L40 40" stroke="#CCFF00" stroke-width="3"/>
+            <circle cx="45" cy="47" r="4" fill="#CC0800"/>
+            <!-- X over mailbox -->
+            <path d="M5 30 L45 60 M45 30 L5 60" stroke="#CC0800" stroke-width="3" opacity="0.7"/>
+          </g>
+          <!-- Arrow -->
+          <g transform="translate(70, 45)">
+            <path d="M0 15 L40 15" stroke="#CCFF00" stroke-width="4"/>
+            <path d="M30 5 L45 15 L30 25" fill="#CCFF00"/>
+          </g>
+          <!-- Phone -->
+          <g transform="translate(125, 10)">
+            <rect x="0" y="0" width="55" height="100" rx="8" fill="#1a1a1a"/>
+            <rect x="4" y="12" width="47" height="76" rx="2" fill="#004B87"/>
+            <!-- App screen content -->
+            <rect x="8" y="20" width="39" height="8" rx="2" fill="#CCFF00"/>
+            <rect x="8" y="32" width="30" height="4" rx="1" fill="rgba(255,255,255,0.5)"/>
+            <rect x="8" y="40" width="25" height="4" rx="1" fill="rgba(255,255,255,0.3)"/>
+            <!-- Dollar signs -->
+            <text x="27" y="70" text-anchor="middle" font-family="Inter, sans-serif" font-size="20" font-weight="bold" fill="#CCFF00">$$$</text>
+            <!-- Home indicator -->
+            <rect x="18" y="92" width="20" height="4" rx="2" fill="#666"/>
+          </g>
+        </svg>
+      </div>
+      <div class="visual-break-content">
+        <h3>From Physical Clutter to Digital Value</h3>
+        <p>The multi-channel approach works in concert: EDDM creates awareness, digital ads reinforce the message, and content captures intent—all driving users to a single action.</p>
+      </div>
+    </div>
+  </div>
 
   <!-- Digital Marketing Section -->
   <section class="tactics-section" id="digital">
@@ -1696,6 +1923,51 @@
       </div>
     </div>
   </section>
+
+  <!-- Visual Break: Building the Network -->
+  <div class="visual-break">
+    <div class="visual-break-inner">
+      <div class="visual-break-content">
+        <h3>Building the Coalition</h3>
+        <p>Strategic partnerships multiply reach exponentially. Credit unions bring trust, mail houses bring industry credibility, and environmental orgs bring mission alignment.</p>
+      </div>
+      <div class="visual-break-illustration">
+        <!-- Network/Coalition illustration -->
+        <svg viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg">
+          <!-- Center Domi node -->
+          <circle cx="100" cy="70" r="30" fill="#004B87"/>
+          <text x="100" y="75" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" font-weight="bold" fill="#CCFF00">Domi</text>
+
+          <!-- Connection lines -->
+          <line x1="70" y1="70" x2="30" y2="35" stroke="#CCFF00" stroke-width="2" stroke-dasharray="4,2"/>
+          <line x1="130" y1="70" x2="170" y2="35" stroke="#CCFF00" stroke-width="2" stroke-dasharray="4,2"/>
+          <line x1="70" y1="70" x2="30" y2="105" stroke="#CCFF00" stroke-width="2" stroke-dasharray="4,2"/>
+          <line x1="130" y1="70" x2="170" y2="105" stroke="#CCFF00" stroke-width="2" stroke-dasharray="4,2"/>
+
+          <!-- Partner nodes -->
+          <!-- Credit Unions -->
+          <circle cx="30" cy="35" r="20" fill="#fff" stroke="#004B87" stroke-width="2"/>
+          <text x="30" y="32" text-anchor="middle" font-family="Inter, sans-serif" font-size="8" fill="#004B87">Credit</text>
+          <text x="30" y="42" text-anchor="middle" font-family="Inter, sans-serif" font-size="8" fill="#004B87">Unions</text>
+
+          <!-- Mail Houses -->
+          <circle cx="170" cy="35" r="20" fill="#fff" stroke="#004B87" stroke-width="2"/>
+          <text x="170" y="32" text-anchor="middle" font-family="Inter, sans-serif" font-size="8" fill="#004B87">Mail</text>
+          <text x="170" y="42" text-anchor="middle" font-family="Inter, sans-serif" font-size="8" fill="#004B87">Houses</text>
+
+          <!-- Environmental Orgs -->
+          <circle cx="30" cy="105" r="20" fill="#fff" stroke="#22c55e" stroke-width="2"/>
+          <text x="30" y="102" text-anchor="middle" font-family="Inter, sans-serif" font-size="8" fill="#22c55e">Env.</text>
+          <text x="30" y="112" text-anchor="middle" font-family="Inter, sans-serif" font-size="8" fill="#22c55e">Orgs</text>
+
+          <!-- Brands -->
+          <circle cx="170" cy="105" r="20" fill="#fff" stroke="#f97316" stroke-width="2"/>
+          <text x="170" y="102" text-anchor="middle" font-family="Inter, sans-serif" font-size="8" fill="#f97316">Brand</text>
+          <text x="170" y="112" text-anchor="middle" font-family="Inter, sans-serif" font-size="8" fill="#f97316">Partners</text>
+        </svg>
+      </div>
+    </div>
+  </div>
 
   <!-- Partnerships Section -->
   <section class="tactics-section alt" id="partnerships">
