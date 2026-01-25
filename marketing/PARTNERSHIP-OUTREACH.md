@@ -40,7 +40,7 @@
 ```
 Hi [Name],
 
-I'm Steve Gianfilippo, CEO of Digital DOMI. We're building the first platform that lets consumers control their physical mailbox digitally - stopping junk mail and receiving offers they actually want.
+I'm Steve Gianfilippo, CEO of Digital Domi. We're building the first platform that lets consumers control their physical mailbox digitally - stopping junk mail and receiving offers they actually want.
 
 I'm reaching out because credit unions are a perfect fit for what we're building:
 
@@ -61,7 +61,7 @@ Would you be open to a quick call next week?
 
 Best,
 Steve Gianfilippo
-CEO, Digital DOMI
+CEO, Digital Domi
 [phone] | [website]
 ```
 
@@ -76,7 +76,7 @@ CEO, Digital DOMI
 ### Objection Handling
 
 **"How do you verify addresses?"**
-> We use a combination of document verification (ID + mail piece photo) and integration with USPS Informed Delivery. This creates a verified DOMI ID tied to a real, confirmed address.
+> We use a combination of document verification (ID + mail piece photo) and integration with USPS Informed Delivery. This creates a verified Domi ID tied to a real, confirmed address.
 
 **"How is member data protected?"**
 > We're SOC 2 compliant [or pursuing], data is encrypted at rest and in transit, and members always control what's shared. Happy to provide our security documentation.
@@ -114,13 +114,13 @@ CEO, Digital DOMI
 ```
 Hi [Name],
 
-I'm Steve Gianfilippo, CEO of Digital DOMI. We're building something that will change your industry - and I want [Company Name] at the table.
+I'm Steve Gianfilippo, CEO of Digital Domi. We're building something that will change your industry - and I want [Company Name] at the table.
 
 **The shift that's coming:**
 Consumers are increasingly opting out of physical mail. The data is clear: response rates are declining, costs are rising, and sustainability pressure is mounting.
 
 **The opportunity:**
-DOMI creates a new channel - digital delivery to consumers who've opted IN. Higher engagement, lower costs, measurable results.
+Domi creates a new channel - digital delivery to consumers who've opted IN. Higher engagement, lower costs, measurable results.
 
 **For Founding Partners:**
 - Preferential DMP (Digital Mail Platform) rates locked in perpetuity
@@ -134,7 +134,7 @@ We're inviting 5 founding partners in the Southeast region. I'd love to show you
 
 Best,
 Steve Gianfilippo
-CEO, Digital DOMI
+CEO, Digital Domi
 ```
 
 ### Founding Partner Terms
@@ -180,11 +180,11 @@ Hi [Name],
 
 What if your next direct mail campaign only reached people who wanted to receive it - and cost 60% less?
 
-I'm Steve with Digital DOMI. We've built a platform where consumers opt IN to receive offers from brands they choose. No more waste mail to people who throw it away unopened.
+I'm Steve with Digital Domi. We've built a platform where consumers opt IN to receive offers from brands they choose. No more waste mail to people who throw it away unopened.
 
 **Pilot program details:**
 - Target: 1,000 opted-in consumers in [market]
-- Format: Digital offer delivered to DOMI inbox
+- Format: Digital offer delivered to Domi inbox
 - Cost: $0.15/impression (vs ~$0.40+ for print+postage)
 - Tracking: Full engagement analytics
 
@@ -197,12 +197,12 @@ Interested in a pilot? Happy to share case study data from our early partners.
 
 Best,
 Steve Gianfilippo
-CEO, Digital DOMI
+CEO, Digital Domi
 ```
 
 ### Pilot Success Metrics
 
-| Metric | Traditional DM | DOMI Target | DOMI Actual |
+| Metric | Traditional DM | Domi Target | Domi Actual |
 |--------|----------------|-------------|-------------|
 | Response rate | 1-2% | 5-10% | - |
 | Cost per impression | $0.40+ | $0.15 | - |
@@ -253,10 +253,10 @@ Hi [Name],
 
 Did you know Americans receive 100 billion pieces of junk mail annually, consuming 100 million trees?
 
-I'm Steve Gianfilippo, CEO of Digital DOMI. We've built the first platform that lets consumers permanently stop junk mail - and we want [Organization] as a partner.
+I'm Steve Gianfilippo, CEO of Digital Domi. We've built the first platform that lets consumers permanently stop junk mail - and we want [Organization] as a partner.
 
 **The opportunity:**
-- Every DOMI user stops ~41 lbs of mail/year
+- Every Domi user stops ~41 lbs of mail/year
 - 10,000 users = 410,000 lbs prevented
 - Real, measurable environmental impact
 
@@ -270,7 +270,7 @@ This aligns perfectly with [Organization]'s mission. Would you be open to explor
 
 Best,
 Steve Gianfilippo
-CEO, Digital DOMI
+CEO, Digital Domi
 ```
 
 ---
@@ -278,7 +278,7 @@ CEO, Digital DOMI
 ## Track 5: Nextdoor Partnership
 
 ### Long-Term Vision
-Integrate DOMI's neighborhood penetration data and opt-out tools directly into Nextdoor's platform.
+Integrate Domi's neighborhood penetration data and opt-out tools directly into Nextdoor's platform.
 
 ### Partnership Pitch Points
 - Neighborhood-level engagement (same as Nextdoor's core value)
@@ -290,7 +290,7 @@ Integrate DOMI's neighborhood penetration data and opt-out tools directly into N
 - Widget/feature within Nextdoor for neighborhoods
 - "Would you like to stop receiving this EDDM mailer?"
 - Real-time visualization of neighborhood sentiment
-- One-click connection to DOMI for opt-out action
+- One-click connection to Domi for opt-out action
 
 ### Outreach Strategy
 - Month 6: Initial outreach to Nextdoor partnerships team

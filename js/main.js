@@ -1,5 +1,5 @@
 /**
- * DOMI Landing Pages - Main JavaScript
+ * Domi Landing Pages - Main JavaScript
  * Handles animations, mobile menu, and scroll effects
  */
 

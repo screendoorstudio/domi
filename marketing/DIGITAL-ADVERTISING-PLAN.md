@@ -122,13 +122,13 @@ Digital advertising supports EDDM campaigns with geo-targeted awareness and reta
 Stop Junk Mail Permanently
 Finally, a way to end junk mail.
 Snap a photo, we do the rest. Free app.
-[Download DOMI]
+[Download Domi]
 ```
 
 ```
 Tired of Junk Mail? There's an App
 41 lbs per household, per year.
-Stop it with one photo. Try DOMI free.
+Stop it with one photo. Try Domi free.
 [Get Started]
 ```
 
@@ -172,7 +172,7 @@ Stop it with one photo. Try DOMI free.
 - "Download Free"
 - "Stop Junk Mail Now"
 - "Get Started"
-- "Try DOMI Free"
+- "Try Domi Free"
 
 ---
 
@@ -228,7 +228,7 @@ Behaviors:
 ```
 [Neighborhood Name] neighbors - is anyone else drowning in junk mail?
 
-I found this app called DOMI that lets you stop it by taking a photo. Already stopped 12 catalogs and 5 credit card offers.
+I found this app called Domi that lets you stop it by taking a photo. Already stopped 12 catalogs and 5 credit card offers.
 
 Has anyone else tried it?
 ```

@@ -3,7 +3,7 @@
 ## Site Overview
 
 **Domain:** TheUnsubscribeGuy.com
-**Purpose:** SEO/AEO content hub driving organic traffic to DOMI
+**Purpose:** SEO/AEO content hub driving organic traffic to Domi
 **Tone:** Helpful expert friend, slightly irreverent, deeply knowledgeable
 **Persona:** "The Unsubscribe Guy" - America's leading expert on stopping unwanted mail
 
@@ -21,7 +21,7 @@ Informational content about the junk mail industry, environmental impact, privac
 Practical guides, templates, and resources for managing mail.
 
 ### Pillar 4: News & Updates
-Industry news, regulation changes, DOMI updates.
+Industry news, regulation changes, Domi updates.
 
 ---
 
@@ -38,7 +38,7 @@ Industry news, regulation changes, DOMI updates.
 3. Direct contact method (with script)
 4. The "nuclear option" - certified mail template
 5. Preventing future catalogs
-6. **DOMI CTA:** "Or skip all this and let DOMI do it for you"
+6. **Domi CTA:** "Or skip all this and let Domi do it for you"
 
 ---
 
@@ -53,7 +53,7 @@ Industry news, regulation changes, DOMI updates.
 3. Online vs phone vs mail options
 4. 5-year vs permanent opt-out (which to choose)
 5. What to do with existing offers (shred!)
-6. **DOMI CTA:** "Track your progress and catch stragglers with DOMI"
+6. **Domi CTA:** "Track your progress and catch stragglers with Domi"
 
 ---
 
@@ -68,7 +68,7 @@ Industry news, regulation changes, DOMI updates.
 3. When it doesn't (bulk mail, EDDM)
 4. What the USPS actually does with returned mail
 5. Better alternatives for each mail type
-6. **DOMI CTA:** "The modern alternative to Return to Sender"
+6. **Domi CTA:** "The modern alternative to Return to Sender"
 
 ---
 
@@ -83,7 +83,7 @@ Industry news, regulation changes, DOMI updates.
 3. What happens in landfills
 4. The recycling myth (most isn't recyclable)
 5. Individual vs systemic solutions
-6. **DOMI CTA:** "Join the movement to end junk mail"
+6. **Domi CTA:** "Join the movement to end junk mail"
 
 ---
 
@@ -98,7 +98,7 @@ Industry news, regulation changes, DOMI updates.
 3. The "junk mail hack" - seeing what's coming before it arrives
 4. Using it to pre-emptively opt out
 5. Limitations and workarounds
-6. **DOMI CTA:** "DOMI connects to Informed Delivery to automate this"
+6. **Domi CTA:** "Domi connects to Informed Delivery to automate this"
 
 ---
 
@@ -113,7 +113,7 @@ Industry news, regulation changes, DOMI updates.
 - Why USPS doesn't offer individual opt-out
 - The petition approach (community action)
 - Working with local businesses directly
-- **DOMI CTA:** EDDM petition feature
+- **Domi CTA:** EDDM petition feature
 
 ---
 
@@ -126,7 +126,7 @@ Industry news, regulation changes, DOMI updates.
 - DMA's Do Not Mail list for nonprofits
 - Direct contact approach
 - The ethical consideration
-- **DOMI CTA:** Manage charity preferences
+- **Domi CTA:** Manage charity preferences
 
 ---
 
@@ -139,7 +139,7 @@ Industry news, regulation changes, DOMI updates.
 - The Deceased Do Not Contact List
 - Credit bureau notifications
 - Emotional and practical guidance
-- **DOMI CTA:** Sensitive handling support
+- **Domi CTA:** Sensitive handling support
 
 ---
 
@@ -152,7 +152,7 @@ Industry news, regulation changes, DOMI updates.
 - What to shred vs recycle
 - Pre-approved offers and fraud
 - Protecting yourself
-- **DOMI CTA:** Security through digital delivery
+- **Domi CTA:** Security through digital delivery
 
 ---
 
@@ -165,7 +165,7 @@ Industry news, regulation changes, DOMI updates.
 - Step-by-step walkthrough
 - Limitations and gaps
 - Complementary approaches
-- **DOMI CTA:** Comprehensive coverage
+- **Domi CTA:** Comprehensive coverage
 
 ---
 
@@ -216,11 +216,11 @@ Optimize for conversational queries that appear in voice assistants and AI respo
 - **Spokes:** Individual how-to articles linking back to hub
 - **Cross-links:** Related articles link to each other
 
-### DOMI Integration Points
+### Domi Integration Points
 Every article includes:
-1. Contextual mention of DOMI as solution
+1. Contextual mention of Domi as solution
 2. End-of-article CTA box
-3. Comparison table showing manual vs DOMI approach
+3. Comparison table showing manual vs Domi approach
 
 ---
 
@@ -229,17 +229,17 @@ Every article includes:
 ### Standard CTA Box (end of each article)
 ```html
 <div class="cta-box">
-  <h3>Skip the Hassle. Let DOMI Handle It.</h3>
+  <h3>Skip the Hassle. Let Domi Handle It.</h3>
   <p>Everything in this article takes time and follow-up.
-     DOMI automates the entire process - just snap a photo.</p>
-  <a href="https://domi-landing.vercel.app" class="btn">Try DOMI Free →</a>
+     Domi automates the entire process - just snap a photo.</p>
+  <a href="https://domi-landing.vercel.app" class="btn">Try Domi Free →</a>
 </div>
 ```
 
 ### Inline Contextual CTAs
-- "DOMI users report X% less mail after 30 days"
-- "This is one of 15+ mail types DOMI handles automatically"
-- "DOMI connects to Informed Delivery for you"
+- "Domi users report X% less mail after 30 days"
+- "This is one of 15+ mail types Domi handles automatically"
+- "Domi connects to Informed Delivery for you"
 
 ---
 
@@ -307,7 +307,7 @@ Every article includes:
 ### Differentiation Strategy
 - More actionable than competitors
 - Modern, scannable format
-- Clear CTA to automated solution (DOMI)
+- Clear CTA to automated solution (Domi)
 - Regular updates with current methods
 - Real success stories and data
 
@@ -334,7 +334,7 @@ Every article includes:
 - [ ] At least one numbered/bulleted list
 - [ ] At least one image or diagram
 - [ ] Internal links to 2-3 related articles
-- [ ] DOMI CTA box at end
+- [ ] Domi CTA box at end
 - [ ] FAQ section for voice search
 
 **Sources:**
@@ -354,11 +354,11 @@ Every article includes:
 - 10 articles published
 - 3,000 organic sessions/month
 - 25 keywords ranking page 1-2
-- 50 DOMI sign-ups from content
+- 50 Domi sign-ups from content
 
 ### Month 12 Goals
 - 25+ articles published
 - 15,000 organic sessions/month
 - 100+ keywords ranking page 1-2
-- 500+ DOMI sign-ups from content
+- 500+ Domi sign-ups from content
 - Featured snippets for 5+ queries

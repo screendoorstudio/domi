@@ -112,7 +112,7 @@ A set of high-converting landing pages for Digital Domi (DoMi), showcasing their
 - Problem vs Solution comparison cards
 - How it works (Snap, We Contact, Mail Stops)
 - Category grid (Catalogs, Credit Offers, etc.)
-- Old Way vs DOMI comparison
+- Old Way vs Domi comparison
 - USPS Integration section with mail carrier image
 - Image banner with overflowing mailboxes
 
@@ -130,7 +130,7 @@ A set of high-converting landing pages for Digital Domi (DoMi), showcasing their
 - Interactive earnings calculator slider
 - Value props ($100+/month, $0.42/offer, 100% your terms)
 - Testimonials with earnings quotes
-- Comparison table (Traditional Mail vs DOMI)
+- Comparison table (Traditional Mail vs Domi)
 - Trust badges
 
 ### 5. gtm-strategy.html (Stakeholder Presentation)
@@ -182,7 +182,7 @@ Three 6" x 9" postcards designed for Every Door Direct Mail (EDDM) campaigns. Ea
 - EDDM indicia box (PRSRT STD, ECRWSS, U.S. POSTAGE PAID, EDDM RETAIL)
 - `****ECRWSSEDDM****` addressing code
 - "Local Postal Customer" recipient line
-- Return address with Digital DOMI branding
+- Return address with Digital Domi branding
 - QR code placeholder for app download
 
 ### Export to PDF

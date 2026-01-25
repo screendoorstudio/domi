@@ -10,12 +10,12 @@ Email sequences to nurture leads from EDDM campaigns and website visitors throug
 ### Email 1: Welcome + Quick Win
 **Trigger:** User creates account
 **Delay:** Immediate
-**Subject:** Welcome to DOMI - Your mailbox is about to get a lot lighter
+**Subject:** Welcome to Domi - Your mailbox is about to get a lot lighter
 
 ```
 Hi {first_name},
 
-Welcome to DOMI! You just joined thousands of Americans taking back control of their mailboxes.
+Welcome to Domi! You just joined thousands of Americans taking back control of their mailboxes.
 
 Here's what happens next:
 
@@ -23,7 +23,7 @@ Here's what happens next:
    - [iOS App Store] | [Google Play]
 
 2. **Verify your address** (takes 2 minutes)
-   - This creates your unique DOMI ID
+   - This creates your unique Domi ID
 
 3. **Snap your first piece of junk mail**
    - We'll start working to remove you from that list immediately
@@ -33,7 +33,7 @@ Your Quick Win: The average American receives 41 pounds of junk mail per year. S
 Questions? Just reply to this email.
 
 Steve Gianfilippo
-CEO, Digital DOMI
+CEO, Digital Domi
 
 P.S. Did you know you can earn up to $100/month by going digital? More on that in our next email.
 ```
@@ -48,23 +48,23 @@ P.S. Did you know you can earn up to $100/month by going digital? More on that i
 ```
 Hi {first_name},
 
-Not all junk mail is created equal. Here are the three biggest offenders - and how DOMI handles each:
+Not all junk mail is created equal. Here are the three biggest offenders - and how Domi handles each:
 
 **1. Catalogs & Retail Mail**
-You bought something once, now they mail you forever. DOMI contacts the DMA and individual retailers to remove you.
+You bought something once, now they mail you forever. Domi contacts the DMA and individual retailers to remove you.
 
 **2. Credit Card Offers**
-Pre-approved offers that fill your mailbox (and worry you about identity theft). DOMI opts you out of prescreened offers.
+Pre-approved offers that fill your mailbox (and worry you about identity theft). Domi opts you out of prescreened offers.
 
 **3. Local Business Flyers (EDDM)**
 Those "Every Door Direct Mail" pieces from local businesses. This one's trickier - but we're building a petition system to give neighborhoods a voice. [Coming soon]
 
-**Your action:** Open the DOMI app and snap a photo of 3 pieces of unwanted mail. We'll get to work immediately.
+**Your action:** Open the Domi app and snap a photo of 3 pieces of unwanted mail. We'll get to work immediately.
 
-[Open DOMI App →]
+[Open Domi App →]
 
 Making mailboxes better,
-The DOMI Team
+The Domi Team
 ```
 
 ---
@@ -79,7 +79,7 @@ Hi {first_name},
 
 Here's a wild idea: What if instead of throwing away offers, you got paid to receive the ones you actually want?
 
-That's exactly what the DOMI Digital Mailbox does.
+That's exactly what the Domi Digital Mailbox does.
 
 **How it works:**
 1. You choose which categories interest you (restaurants, home improvement, travel, etc.)
@@ -102,7 +102,7 @@ That's exactly what the DOMI Digital Mailbox does.
 [Turn On Digital Mailbox →]
 
 Your mailbox, your money,
-The DOMI Team
+The Domi Team
 ```
 
 ---
@@ -115,7 +115,7 @@ The DOMI Team
 ```
 Hi {first_name},
 
-We asked early DOMI users what surprised them most. Here's what they said:
+We asked early Domi users what surprised them most. Here's what they said:
 
 "I had no idea how much junk mail I was getting until I started tracking it. 47 pieces in one month!" - Sarah M., Tampa
 
@@ -123,7 +123,7 @@ We asked early DOMI users what surprised them most. Here's what they said:
 
 "My recycling bin is practically empty now. It's such a small thing but it feels great." - Jennifer K., Orlando
 
-**Where are you in your DOMI journey?**
+**Where are you in your Domi journey?**
 
 {if verified}
 Great news - you're verified! Have you snapped any junk mail yet?
@@ -131,10 +131,10 @@ Great news - you're verified! Have you snapped any junk mail yet?
 You're almost there - just need to verify your address to unlock all features.
 {endif}
 
-[Open DOMI App →]
+[Open Domi App →]
 
 Making progress together,
-The DOMI Team
+The Domi Team
 ```
 
 ---
@@ -156,7 +156,7 @@ If so, here's why:
 
 **The 2-minute challenge:**
 
-1. Open DOMI
+1. Open Domi
 2. Snap photos of 5 pieces of junk mail
 3. That's it - we handle the rest
 
@@ -182,7 +182,7 @@ P.S. Reply to this email if you're having any trouble. I read every response.
 ```
 Hi {first_name},
 
-It's been a couple weeks since you opened DOMI.
+It's been a couple weeks since you opened Domi.
 
 Meanwhile, the average American mailbox received:
 - 6 catalogs
@@ -193,11 +193,11 @@ Meanwhile, the average American mailbox received:
 That's 21 pieces of mail you could have stopped.
 
 **Come back and catch up:**
-[Open DOMI App →]
+[Open Domi App →]
 
 No judgment - life gets busy. But your mailbox doesn't take breaks.
 
-The DOMI Team
+The Domi Team
 ```
 
 ---
@@ -210,7 +210,7 @@ The DOMI Team
 ```
 Hi {first_name},
 
-We've been busy making DOMI better. Here's what's new:
+We've been busy making Domi better. Here's what's new:
 
 **1. Faster Processing**
 Opt-out requests now process 40% faster. Most take effect within 2-3 weeks.
@@ -223,10 +223,10 @@ Digital Mailbox users are now averaging ${average_earnings}/month in their first
 
 Ready to give it another try?
 
-[Open DOMI App →]
+[Open Domi App →]
 
 Always improving,
-The DOMI Team
+The Domi Team
 ```
 
 ---
@@ -241,18 +241,18 @@ Hi {first_name},
 
 We don't want to become junk mail ourselves.
 
-If DOMI isn't for you, no hard feelings. Click below and we'll stop sending these emails:
+If Domi isn't for you, no hard feelings. Click below and we'll stop sending these emails:
 
 [Unsubscribe]
 
 But if you're just busy and still want a cleaner mailbox, here's a shortcut:
 
 **The 30-second method:**
-Next time you check your mail, open DOMI and snap one photo. That's it. Just one piece.
+Next time you check your mail, open Domi and snap one photo. That's it. Just one piece.
 
 Small actions add up.
 
-[Give DOMI One More Try →]
+[Give Domi One More Try →]
 
 Wishing you a lighter mailbox either way,
 Steve
@@ -265,17 +265,17 @@ Steve
 ### Email 1: Invitation
 **Trigger:** User has 10+ opt-outs processed
 **Delay:** Immediate
-**Subject:** You're officially a DOMI power user
+**Subject:** You're officially a Domi power user
 
 ```
 Hi {first_name},
 
-You've stopped {opt_out_count} pieces of junk mail. That puts you in the top 10% of DOMI users.
+You've stopped {opt_out_count} pieces of junk mail. That puts you in the top 10% of Domi users.
 
 We'd like to invite you to become a **Neighborhood Champion**.
 
 **What Champions do:**
-- Share DOMI with neighbors who complain about junk mail
+- Share Domi with neighbors who complain about junk mail
 - Give feedback on new features before anyone else
 - Help us identify common mailers in your area
 
@@ -289,7 +289,7 @@ Interested?
 [Become a Champion →]
 
 You're making a real difference,
-The DOMI Team
+The Domi Team
 ```
 
 ---
@@ -311,7 +311,7 @@ Welcome to the Champion program! Here's everything you need:
 
 **Conversation starters:**
 - "Are you tired of all the junk mail? I found this app that actually stops it."
-- "Did you know the average house gets 41 pounds of junk mail a year? I'm using this thing called DOMI..."
+- "Did you know the average house gets 41 pounds of junk mail a year? I'm using this thing called Domi..."
 - "You can actually get paid to receive offers instead of all this paper junk."
 
 **Shareable assets:**
@@ -325,7 +325,7 @@ Welcome to the Champion program! Here's everything you need:
 Questions? Reply anytime - you now have direct access to our team.
 
 Let's clean up your neighborhood,
-The DOMI Team
+The Domi Team
 ```
 
 ---
@@ -349,10 +349,10 @@ Holiday catalogs, end-of-year charity appeals, credit card offers for "holiday s
 [ ] Enable Digital Mailbox for holiday deals you actually want
 [ ] Invite a family member (they'll thank you at Christmas)
 
-[Open DOMI and Prepare →]
+[Open Domi and Prepare →]
 
 May your mailbox be merry and light,
-The DOMI Team
+The Domi Team
 ```
 
 ---
@@ -360,12 +360,12 @@ The DOMI Team
 ### Anniversary Email
 **Trigger:** 1 year since sign-up
 **Delay:** Immediate
-**Subject:** Your first year with DOMI - the numbers are in
+**Subject:** Your first year with Domi - the numbers are in
 
 ```
 Hi {first_name},
 
-Happy DOMI-versary! Here's what you accomplished in your first year:
+Happy Domi-versary! Here's what you accomplished in your first year:
 
 **Your Impact:**
 - Mail pieces stopped: {total_opt_outs}
@@ -375,14 +375,14 @@ Happy DOMI-versary! Here's what you accomplished in your first year:
 - Money earned: ${earnings}
 
 **You're part of something bigger:**
-Together, DOMI users have stopped {global_total} pieces of junk mail this year.
+Together, Domi users have stopped {global_total} pieces of junk mail this year.
 
 Thank you for being part of the solution.
 
 [Share Your Impact →]
 
 Here's to year two,
-Steve and the DOMI Team
+Steve and the Domi Team
 ```
 
 ---
@@ -396,7 +396,7 @@ Steve and the DOMI Team
 - Action-oriented
 
 ### Technical Specs
-- From name: DOMI or Steve Gianfilippo
+- From name: Domi or Steve Gianfilippo
 - From email: hello@digitaldomi.com
 - Reply-to: support@digitaldomi.com
 - Preheader: 40-60 characters
@@ -407,7 +407,7 @@ Steve and the DOMI Team
 | Element | Test A | Test B |
 |---------|--------|--------|
 | Subject | Question | Statement |
-| Sender | "DOMI" | "Steve from DOMI" |
+| Sender | "Domi" | "Steve from Domi" |
 | CTA | "Open App" | "Stop Junk Mail" |
 | Tone | Stats-focused | Story-focused |
 
