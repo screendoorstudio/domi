@@ -49,6 +49,7 @@ A set of high-converting landing pages for Domi (Digital Domi), showcasing their
 │       ├── GettyImages-83408155.jpg (mail carrier)
 │       └── Zero-Junk-Mail_*.jpg (paper waste piles)
 ├── screenshots/            # Development screenshots (not deployed)
+│   └── formatting/         # Bug screenshots for fixing layout issues
 ├── postcards/              # EDDM postcard designs
 │   ├── index.html          # Postcard gallery with PDF export instructions
 │   ├── postcard-1-stop-junk-mail.html
@@ -142,10 +143,44 @@ Always use "Domi" (not "DoMi") for consistent branding across all materials.
 
 Visual, interactive presentation of the 12-month Go-to-Market strategy for stakeholder approval.
 
+#### Page Structure (Top to Bottom)
+
+1. **Hero** - Gradient header with Domi branding
+2. **Executive Summary** (Enhanced)
+   - Key stats row: $255K budget, 12 months, 5,000 target users, $3-5M Series A
+   - "The Opportunity" - 41 lbs junk mail per household problem
+   - "Our Approach" - EDDM-anchored strategy overview
+   - Success Metrics sidebar (Month 12 targets)
+   - Three pillars: Pilot Markets, Acquisition Strategy, Series A Positioning
+3. **Multi-Channel Approach** - 8 integrated channel icons
+4. **Strategic Timeline** - 4 expandable phase cards
+5. **Messaging Simplification** (NEW)
+   - Two value prop cards with SVG illustrations
+   - Phone mockup showing "Stop Junk Mail" app
+   - Computer mockup showing digital offers
+   - Before/After website simplification wireframes
+6. **UX & Sign-up Flow Hardening** (NEW)
+   - 4-step flow with phone screen mockups
+   - Key improvements grid (Faster Onboarding, Clear Value, Mobile-First, Progress Indicators)
+7. **EDDM Postcard Campaigns** - 3-touch postcard visuals + sticker
+8. **Market Selection & Budget Calculator** (Moved here, side-by-side layout)
+   - City selector on left (scrollable)
+   - Budget calculator on right (sticky)
+9. **Digital Advertising** - Meta, Nextdoor, Google details
+10. **Content & SEO Strategy** - Content hub concept
+11. **Community Building** - Neighborhood champions, Nextdoor
+12. **Partnerships** - Credit unions, environmental orgs, brands
+13. **Budget Allocation** - Donut chart visualization
+14. **Growth Trajectory** - KPI bar charts
+15. **12-Month Milestones** - Detailed success criteria grid
+16. **CTA** - Approval request
+
 #### Key Interactive Features
 
-**50-City Market Selector**
-- Scrollable grid of 50 US cities organized by region
+**50-City Market Selector (Side-by-Side Layout)**
+- City selector on LEFT (scrollable, 500px max height)
+- Budget calculator on RIGHT (sticky, stays visible while scrolling)
+- Stacks vertically on mobile (<1000px)
 - Click to select/deselect cities for campaign planning
 - Tampa & Birmingham are pre-selected as pilot markets (locked)
 - "Select All" and "Clear" buttons
@@ -173,6 +208,41 @@ Visual, interactive presentation of the 12-month Go-to-Market strategy for stake
 - **California:** San Diego, Santa Barbara, San Jose, Oakland, Sacramento, Fresno
 - **Midwest:** Minneapolis, Madison, Grand Rapids, Ann Arbor, Indianapolis, Cincinnati, Kansas City, Omaha, Des Moines
 - **Mid-Atlantic:** Pittsburgh, Richmond, Providence
+
+#### Messaging Simplification Section
+Two value propositions presented with custom SVG illustrations:
+
+**Value Prop #1: Stop Junk Mail**
+- SVG phone mockup with red-themed opt-out app
+- Shows mail items with X buttons to block
+- "BLOCK ALL" button at bottom
+- Tagline: "Scan it. We stop it."
+- Target: Frustrated homeowners tired of mailbox clutter
+
+**Value Prop #2: Digital Mailbox**
+- SVG computer/monitor mockup showing digital offers
+- Three offer cards: Target 20% OFF, Amazon Free Shipping, Whole Foods $50
+- Each with "Claim $X" lime green buttons
+- Tagline: "Coupons you want. Zero clutter."
+- Target: Deal-seekers who want savings without paper waste
+
+**Before/After Website Wireframes**
+- Shows simplification from 6 confusing boxes to 2 clear paths
+- Issues listed: Too many features, unclear action, dense copy
+- Benefits listed: Two clear paths, single CTA, clean layout
+
+#### UX Hardening Section
+4-step visual flow with phone screen mockups:
+1. Quick Sign-up (email/social login)
+2. Verify Address (confirm mailbox)
+3. Choose Path (opt-out or digital mailbox)
+4. Ready to Go (start scanning)
+
+Key Improvements Grid:
+- Faster Onboarding (<60 seconds with social login)
+- Clear Value Upfront (benefit before account creation)
+- Mobile-First (thumb-friendly)
+- Progress Indicators (show where users are)
 
 #### Strategic Timeline (4 Phases, Detailed)
 
@@ -229,24 +299,17 @@ Visual, interactive presentation of the 12-month Go-to-Market strategy for stake
 - Due diligence materials ready
 - Close Series A: $3-5M
 
-#### Other Sections
-- **Executive Summary** - Key numbers and strategy overview
-- **Multi-Channel Approach** - 8 integrated channels
-- **EDDM Tactics** - 3-touch postcard strategy with sticker image
-- **Digital Marketing** - Meta, Nextdoor, Google Ads details
-- **SEO Content Strategy** - Content hub concept
-- **Partnerships** - Credit unions, environmental orgs, brands
-- **Budget Allocation** - Donut chart visualization
-- **Growth Trajectory** - KPI bar charts
-- **12-Month Milestones** - Detailed success criteria for each month
-
-#### Design Notes
-- Blue gradient hero matching Domi brand
+#### Visual Design Notes
+- Sections have clear separation with colored top borders
+- Lime green borders for primary sections
+- Blue borders for alternate sections
+- Executive Summary has blue bottom border
+- Market Selection has lime top border and blue bottom border
 - Phase-colored cards (blue → cyan → purple → lime)
 - Animated bar charts and donut chart
 - Scroll fade-in animations
 - Mobile responsive
-- Uses actual `domi-sticker.jpeg` image (not SVG mockup)
+- Uses actual `domi-sticker.jpeg` image
 
 ## EDDM Postcards
 
@@ -353,9 +416,28 @@ npx vercel --prod --yes
 git push origin main
 ```
 
-## Recent Session Notes (January 2025)
+## Recent Session Notes (January 25, 2025)
 
-### What Was Built
+### Latest Session Changes
+1. **City Selector & Budget Calculator** - Now side-by-side layout (city list left, calculator right sticky)
+2. **Market Selection Moved** - Now appears AFTER EDDM section (better flow)
+3. **Messaging Simplification Section** - NEW section with:
+   - Two value prop cards
+   - Custom SVG illustrations (phone app mockup, computer screen mockup)
+   - Before/After website wireframes
+4. **UX Hardening Section** - NEW section with:
+   - 4-step flow with phone screen mockups
+   - Key improvements grid
+5. **Enhanced Executive Summary** - Added:
+   - Key stats row ($255K, 12 months, 5K users, $3-5M)
+   - "The Opportunity" and "Our Approach" paragraphs
+   - Success Metrics sidebar
+6. **Section Separation** - Added colored borders to make sections distinct
+7. **Deleted** - "From Physical Clutter to Digital Value" visual break
+8. **Deleted** - "Marketing Contractor: $3,000/month" callout
+9. **Fixed** - CSS conflict with `.mini-card` class (was breaking stats grids)
+
+### Previous Session Changes
 1. **Interactive 50-City Market Selector** - Compact card grid with select all/clear buttons
 2. **Budget Calculator** - Real-time cost calculation with 4-tier volume discounts
 3. **Expanded Strategic Timeline** - All 4 phases now have 11-12 detailed action items
@@ -367,10 +449,10 @@ git push origin main
 ### Next Steps / TODO
 - [ ] Review marketing/*.md files for consistency with updated GTM strategy
 - [ ] Update budget numbers in marketing docs to match new calculator
-- [ ] Add more cities if needed (currently 50)
 - [ ] Create actual QR codes for postcards
 - [ ] Finalize postcard designs for print
 - [ ] Set up GA4 and Meta Pixel per ANALYTICS-IMPLEMENTATION.md
+- [ ] Consider adding more detail to individual channel sections
 
 ## Notes
 - All pages use actual Domi brand assets scraped from digitaldomi.com
@@ -379,3 +461,4 @@ git push origin main
 - Scroll animations via Intersection Observer
 - The digital-mailbox-earn.html is an A/B test variant (not linked from main nav)
 - GTM strategy page has embedded JavaScript for budget calculator
+- Screenshots folder contains bug/formatting screenshots for development reference

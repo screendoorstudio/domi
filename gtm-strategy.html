@@ -116,13 +116,117 @@
     .exec-summary {
       padding: 80px 24px;
       background: var(--bg-light);
+      border-bottom: 4px solid var(--primary-blue);
+    }
+
+    .exec-stats {
+      display: flex;
+      justify-content: center;
+      gap: 48px;
+      margin-bottom: 48px;
+      flex-wrap: wrap;
+    }
+
+    .exec-stat {
+      text-align: center;
+    }
+
+    .exec-stat-value {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--primary-blue);
+      line-height: 1.1;
+    }
+
+    .exec-stat-label {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .exec-overview {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      gap: 48px;
+      max-width: 1100px;
+      margin: 0 auto 48px;
+      background: white;
+      border-radius: var(--radius-2xl);
+      padding: 40px;
+      box-shadow: var(--shadow-lg);
+    }
+
+    @media (max-width: 900px) {
+      .exec-overview {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+    }
+
+    .exec-overview-left h3 {
+      font-size: 1.25rem;
+      color: var(--primary-blue);
+      margin-bottom: 12px;
+    }
+
+    .exec-overview-left h3:not(:first-child) {
+      margin-top: 24px;
+    }
+
+    .exec-overview-left p {
+      font-size: 1rem;
+      line-height: 1.7;
+      color: var(--text-dark);
+    }
+
+    .exec-overview-left strong {
+      color: var(--primary-blue);
+    }
+
+    .exec-overview-right {
+      background: var(--bg-light);
+      border-radius: var(--radius-xl);
+      padding: 24px;
+    }
+
+    .exec-overview-right h4 {
+      font-size: 1rem;
+      color: var(--text-primary);
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--accent-lime);
+    }
+
+    .exec-metrics {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .exec-metrics li {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+      font-size: 0.9375rem;
+      color: var(--text-dark);
+    }
+
+    .exec-metrics li:last-child {
+      border-bottom: none;
+    }
+
+    .metric-value {
+      font-weight: 700;
+      color: var(--primary-blue);
     }
 
     .summary-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 24px;
-      max-width: 1000px;
+      max-width: 1100px;
       margin: 0 auto;
     }
 
@@ -137,26 +241,58 @@
       border-radius: var(--radius-2xl);
       padding: 32px;
       box-shadow: var(--shadow-md);
+      border-top: 4px solid var(--accent-lime);
     }
 
     .summary-card h3 {
-      font-size: 1rem;
+      font-size: 0.875rem;
       color: var(--text-muted);
       text-transform: uppercase;
       letter-spacing: 0.05em;
-      margin-bottom: 16px;
+      margin-bottom: 12px;
     }
 
     .summary-card .big-text {
-      font-size: 2.5rem;
+      font-size: 2rem;
       font-weight: 700;
       color: var(--primary-blue);
-      margin-bottom: 8px;
+      margin-bottom: 12px;
     }
 
     .summary-card p {
       font-size: 0.9375rem;
-      color: var(--text-gray);
+      color: var(--text-dark);
+      line-height: 1.6;
+    }
+
+    /* Section Separation - Make sections distinct */
+    section {
+      border-bottom: 1px solid rgba(0,0,0,0.08);
+    }
+
+    section:last-of-type {
+      border-bottom: none;
+    }
+
+    .tactics-section {
+      border-top: 4px solid var(--accent-lime);
+    }
+
+    .tactics-section.alt {
+      border-top-color: var(--primary-blue);
+    }
+
+    .foundation-section {
+      border-top: 4px solid var(--primary-blue);
+    }
+
+    .foundation-section.alt {
+      border-top-color: var(--accent-lime);
+    }
+
+    .market-selection {
+      border-top: 4px solid var(--accent-lime);
+      border-bottom: 4px solid var(--primary-blue);
     }
 
     /* Timeline Section */
@@ -1020,12 +1156,23 @@
       background: var(--bg-light);
     }
 
+    .market-layout {
+      display: grid;
+      grid-template-columns: 1fr 340px;
+      gap: 32px;
+      max-width: 1400px;
+      margin: 0 auto;
+      align-items: start;
+    }
+
+    .city-selector-wrapper {
+      min-width: 0;
+    }
+
     .city-selector-container {
-      max-width: 1200px;
-      margin: 0 auto 32px;
-      max-height: 400px;
+      max-height: 500px;
       overflow-y: auto;
-      padding: 8px;
+      padding: 12px;
       background: white;
       border-radius: var(--radius-xl);
       box-shadow: var(--shadow-md);
@@ -1033,32 +1180,49 @@
 
     .city-selector-grid {
       display: grid;
-      grid-template-columns: repeat(6, 1fr);
+      grid-template-columns: repeat(5, 1fr);
       gap: 8px;
     }
 
-    @media (max-width: 1100px) {
-      .city-selector-grid {
-        grid-template-columns: repeat(5, 1fr);
-      }
-    }
-
-    @media (max-width: 900px) {
+    @media (max-width: 1200px) {
       .city-selector-grid {
         grid-template-columns: repeat(4, 1fr);
       }
     }
 
-    @media (max-width: 700px) {
+    @media (max-width: 1000px) {
+      .market-layout {
+        grid-template-columns: 1fr;
+      }
+      .city-selector-grid {
+        grid-template-columns: repeat(5, 1fr);
+      }
+      .budget-calculator-wrapper {
+        position: static !important;
+      }
+    }
+
+    @media (max-width: 800px) {
+      .city-selector-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
       .city-selector-grid {
         grid-template-columns: repeat(3, 1fr);
       }
     }
 
-    @media (max-width: 500px) {
+    @media (max-width: 450px) {
       .city-selector-grid {
         grid-template-columns: repeat(2, 1fr);
       }
+    }
+
+    .budget-calculator-wrapper {
+      position: sticky;
+      top: 24px;
     }
 
     .city-card {
@@ -1174,23 +1338,28 @@
     .budget-calculator {
       background: white;
       border-radius: var(--radius-2xl);
-      padding: 32px;
-      max-width: 800px;
-      margin: 0 auto;
+      padding: 24px;
       box-shadow: var(--shadow-lg);
+    }
+
+    @media (max-width: 1000px) {
+      .budget-calculator {
+        max-width: 500px;
+        margin: 0 auto;
+      }
     }
 
     .calc-header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 24px;
+      margin-bottom: 20px;
       flex-wrap: wrap;
-      gap: 16px;
+      gap: 12px;
     }
 
     .calc-title {
-      font-size: 1.25rem;
+      font-size: 1rem;
       font-weight: 700;
       color: var(--text-primary);
     }
@@ -1198,25 +1367,31 @@
     .discount-badge {
       background: var(--accent-lime);
       color: var(--text-primary);
-      padding: 8px 16px;
+      padding: 6px 12px;
       border-radius: var(--radius-full);
       font-weight: 700;
-      font-size: 0.875rem;
+      font-size: 0.75rem;
       display: flex;
       align-items: center;
-      gap: 6px;
+      gap: 4px;
     }
 
     .discount-badge svg {
-      width: 16px;
-      height: 16px;
+      width: 14px;
+      height: 14px;
     }
 
     .calc-summary {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 16px;
-      margin-bottom: 24px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    @media (max-width: 1000px) {
+      .calc-summary {
+        grid-template-columns: repeat(4, 1fr);
+      }
     }
 
     @media (max-width: 640px) {
@@ -1227,16 +1402,16 @@
 
     .calc-stat {
       text-align: center;
-      padding: 16px;
+      padding: 12px 8px;
       background: var(--bg-light);
       border-radius: var(--radius-lg);
     }
 
     .calc-stat .stat-value {
-      font-size: 1.5rem;
+      font-size: 1.125rem;
       font-weight: 700;
       color: var(--primary-blue);
-      margin-bottom: 4px;
+      margin-bottom: 2px;
     }
 
     .calc-stat .stat-value.lime {
@@ -1244,7 +1419,7 @@
     }
 
     .calc-stat .stat-label {
-      font-size: 0.75rem;
+      font-size: 0.625rem;
       color: var(--text-muted);
       text-transform: uppercase;
       letter-spacing: 0.05em;
@@ -1252,13 +1427,13 @@
 
     .calc-breakdown {
       border-top: 1px solid rgba(0,0,0,0.08);
-      padding-top: 24px;
+      padding-top: 16px;
     }
 
     .calc-breakdown h4 {
-      font-size: 0.875rem;
+      font-size: 0.75rem;
       color: var(--text-muted);
-      margin-bottom: 16px;
+      margin-bottom: 12px;
       text-transform: uppercase;
       letter-spacing: 0.05em;
     }
@@ -1267,31 +1442,32 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 12px 0;
+      padding: 8px 0;
       border-bottom: 1px solid rgba(0,0,0,0.05);
     }
 
-    .breakdown-row:last-child {
+    .breakdown-row.total {
       border-bottom: none;
-      padding-top: 16px;
+      padding-top: 12px;
       margin-top: 8px;
       border-top: 2px solid var(--primary-blue);
     }
 
     .breakdown-row .item-name {
-      font-size: 0.9375rem;
+      font-size: 0.8125rem;
       color: var(--text-dark);
     }
 
     .breakdown-row .item-value {
       font-weight: 600;
+      font-size: 0.8125rem;
       color: var(--text-primary);
     }
 
-    .breakdown-row:last-child .item-name,
-    .breakdown-row:last-child .item-value {
+    .breakdown-row.total .item-name,
+    .breakdown-row.total .item-value {
       font-weight: 700;
-      font-size: 1.125rem;
+      font-size: 0.9375rem;
       color: var(--primary-blue);
     }
 
@@ -1299,24 +1475,26 @@
       background: linear-gradient(135deg, rgba(204, 255, 0, 0.15) 0%, rgba(204, 255, 0, 0.05) 100%);
       border: 1px solid rgba(204, 255, 0, 0.5);
       border-radius: var(--radius-lg);
-      padding: 16px 20px;
-      margin-top: 24px;
+      padding: 12px;
+      margin-top: 16px;
       display: flex;
-      align-items: center;
-      gap: 12px;
+      align-items: flex-start;
+      gap: 8px;
     }
 
     .savings-callout svg {
-      width: 24px;
-      height: 24px;
+      width: 18px;
+      height: 18px;
       color: #6b9a00;
       flex-shrink: 0;
+      margin-top: 2px;
     }
 
     .savings-callout p {
-      font-size: 0.9375rem;
+      font-size: 0.75rem;
       color: var(--text-dark);
       margin: 0;
+      line-height: 1.4;
     }
 
     .savings-callout strong {
@@ -1326,8 +1504,8 @@
     /* Discount tier indicator */
     .tier-indicator {
       display: flex;
-      gap: 8px;
-      margin-top: 16px;
+      gap: 6px;
+      margin-top: 12px;
       justify-content: center;
     }
 
@@ -1335,7 +1513,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 4px;
+      gap: 3px;
       opacity: 0.4;
       transition: var(--transition-fast);
     }
@@ -1345,8 +1523,8 @@
     }
 
     .tier-dot {
-      width: 12px;
-      height: 12px;
+      width: 10px;
+      height: 10px;
       border-radius: 50%;
       background: var(--text-muted);
     }
@@ -1356,8 +1534,577 @@
     }
 
     .tier-label {
-      font-size: 0.6875rem;
+      font-size: 0.625rem;
       color: var(--text-muted);
+    }
+
+    /* Foundation Sections (Messaging & UX) */
+    .foundation-section {
+      padding: 80px 24px;
+      background: var(--bg-white);
+    }
+
+    .foundation-section.alt {
+      background: var(--bg-light);
+    }
+
+    .phase-badge {
+      display: inline-block;
+      background: var(--primary-blue);
+      color: white;
+      padding: 6px 16px;
+      border-radius: var(--radius-full);
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 16px;
+    }
+
+    /* Messaging Grid */
+    .messaging-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 32px;
+      margin-bottom: 64px;
+    }
+
+    @media (max-width: 900px) {
+      .messaging-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .value-prop-card {
+      background: white;
+      border-radius: var(--radius-2xl);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .vp-thumbnail {
+      height: 240px;
+      background: linear-gradient(135deg, var(--bg-light) 0%, #e8e8ea 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .vp-thumbnail.digital {
+      background: linear-gradient(135deg, #e8f4fc 0%, #d1e8f7 100%);
+    }
+
+    .vp-thumbnail img {
+      max-height: 100%;
+      max-width: 100%;
+      object-fit: contain;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-md);
+    }
+
+    .vp-thumbnail svg.phone-mockup {
+      height: 100%;
+      width: auto;
+      filter: drop-shadow(0 8px 24px rgba(0,0,0,0.15));
+    }
+
+    .vp-thumbnail svg.computer-mockup {
+      width: 100%;
+      height: auto;
+      max-height: 100%;
+      filter: drop-shadow(0 8px 24px rgba(0,0,0,0.15));
+    }
+
+    .vp-content {
+      padding: 28px;
+    }
+
+    .vp-badge {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: var(--radius-full);
+      font-size: 0.6875rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 12px;
+    }
+
+    .vp-badge.red {
+      background: rgba(204, 8, 0, 0.1);
+      color: var(--alert-red);
+    }
+
+    .vp-badge.blue {
+      background: rgba(0, 75, 135, 0.1);
+      color: var(--primary-blue);
+    }
+
+    .vp-content h3 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: var(--text-primary);
+    }
+
+    .vp-tagline {
+      font-size: 1.125rem;
+      color: var(--text-muted);
+      font-style: italic;
+      margin-bottom: 20px;
+    }
+
+    .vp-points {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 20px 0;
+    }
+
+    .vp-points li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 8px 0;
+      font-size: 0.9375rem;
+      color: var(--text-dark);
+    }
+
+    .vp-points li::before {
+      content: '✓';
+      color: var(--accent-lime);
+      font-weight: 700;
+      background: rgba(204, 255, 0, 0.2);
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      flex-shrink: 0;
+    }
+
+    .vp-target {
+      background: var(--bg-light);
+      padding: 12px 16px;
+      border-radius: var(--radius-lg);
+      font-size: 0.8125rem;
+      color: var(--text-dark);
+    }
+
+    .vp-target strong {
+      color: var(--primary-blue);
+    }
+
+    /* Before/After Messaging */
+    .messaging-before-after {
+      background: white;
+      border-radius: var(--radius-2xl);
+      padding: 40px;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .messaging-before-after h4 {
+      text-align: center;
+      font-size: 1.25rem;
+      color: var(--text-primary);
+      margin-bottom: 32px;
+    }
+
+    .ba-grid {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 32px;
+    }
+
+    @media (max-width: 800px) {
+      .ba-grid {
+        flex-direction: column;
+      }
+      .ba-arrow {
+        transform: rotate(90deg);
+      }
+    }
+
+    .ba-card {
+      flex: 1;
+      max-width: 320px;
+    }
+
+    .ba-label {
+      text-align: center;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 16px;
+      color: var(--text-muted);
+    }
+
+    .ba-card.before .ba-label { color: var(--alert-red); }
+    .ba-card.after .ba-label { color: #22c55e; }
+
+    .ba-mockup {
+      background: var(--bg-light);
+      border-radius: var(--radius-xl);
+      padding: 16px;
+      margin-bottom: 16px;
+      min-height: 200px;
+    }
+
+    .mock-header {
+      height: 24px;
+      background: var(--primary-blue);
+      border-radius: var(--radius-md);
+      margin-bottom: 12px;
+    }
+
+    .mock-hero {
+      padding: 16px 0;
+    }
+
+    .mock-text {
+      height: 8px;
+      background: #d1d5db;
+      border-radius: 4px;
+      margin-bottom: 8px;
+    }
+
+    .mock-text.long { width: 100%; }
+    .mock-text.medium { width: 70%; }
+    .mock-text.short { width: 40%; }
+
+    .mock-features {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+
+    .mock-box {
+      height: 40px;
+      background: #e5e7eb;
+      border-radius: var(--radius-md);
+    }
+
+    .mock-cta {
+      height: 32px;
+      background: var(--accent-lime);
+      border-radius: var(--radius-md);
+      width: 60%;
+      margin: 0 auto;
+    }
+
+    .mock-hero.clean {
+      text-align: center;
+    }
+
+    .mock-hero.clean .mock-text {
+      margin: 8px auto;
+    }
+
+    .mock-split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .mock-option {
+      height: 60px;
+      border-radius: var(--radius-lg);
+    }
+
+    .mock-option.red {
+      background: linear-gradient(135deg, #CC0800 0%, #8b0000 100%);
+    }
+
+    .mock-option.blue {
+      background: linear-gradient(135deg, #004B87 0%, #003d6e 100%);
+    }
+
+    .ba-arrow {
+      font-size: 2rem;
+      color: var(--accent-lime);
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .ba-issues, .ba-benefits {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .ba-issues li, .ba-benefits li {
+      font-size: 0.8125rem;
+      padding: 6px 0;
+      padding-left: 20px;
+      position: relative;
+    }
+
+    .ba-issues li::before {
+      content: '✕';
+      position: absolute;
+      left: 0;
+      color: var(--alert-red);
+      font-weight: 700;
+    }
+
+    .ba-benefits li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: #22c55e;
+      font-weight: 700;
+    }
+
+    /* UX Flow Visual */
+    .ux-flow-visual {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 16px;
+      margin-bottom: 64px;
+      flex-wrap: wrap;
+    }
+
+    .flow-step {
+      text-align: center;
+    }
+
+    .flow-screen {
+      margin-bottom: 16px;
+    }
+
+    .screen-frame {
+      width: 120px;
+      height: 200px;
+      background: #1a1a1a;
+      border-radius: 20px;
+      padding: 8px;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .screen-header {
+      margin-bottom: 8px;
+    }
+
+    .status-bar {
+      height: 16px;
+      background: #333;
+      border-radius: 8px 8px 0 0;
+    }
+
+    .screen-content {
+      background: white;
+      height: calc(100% - 24px);
+      border-radius: 0 0 12px 12px;
+      padding: 12px 8px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .app-logo {
+      width: 40px;
+      height: 40px;
+      background: var(--primary-blue);
+      border-radius: 10px;
+    }
+
+    .input-field {
+      width: 80%;
+      height: 20px;
+      background: var(--bg-light);
+      border-radius: 4px;
+      border: 1px solid #ddd;
+    }
+
+    .cta-button {
+      width: 70%;
+      height: 24px;
+      background: var(--accent-lime);
+      border-radius: 6px;
+    }
+
+    .social-logins {
+      display: flex;
+      gap: 8px;
+    }
+
+    .social-btn {
+      width: 28px;
+      height: 28px;
+      background: var(--bg-light);
+      border-radius: 50%;
+      border: 1px solid #ddd;
+    }
+
+    .verify-icon, .success-check {
+      width: 36px;
+      height: 36px;
+      background: var(--accent-lime);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+      color: var(--primary-blue);
+      font-weight: 700;
+    }
+
+    .address-line {
+      width: 80%;
+      height: 12px;
+      background: var(--bg-light);
+      border-radius: 3px;
+    }
+
+    .address-line.short {
+      width: 50%;
+    }
+
+    .choice-card {
+      width: 80%;
+      height: 36px;
+      background: var(--bg-light);
+      border-radius: 8px;
+      border: 2px solid transparent;
+    }
+
+    .choice-card.active {
+      border-color: var(--accent-lime);
+      background: rgba(204, 255, 0, 0.1);
+    }
+
+    .congrats-text {
+      width: 70%;
+      height: 10px;
+      background: var(--bg-light);
+      border-radius: 3px;
+    }
+
+    .action-cards {
+      display: flex;
+      gap: 6px;
+    }
+
+    .action-cards .mini-card {
+      width: 36px;
+      height: 28px;
+      background: var(--primary-blue);
+      border-radius: 6px;
+      opacity: 0.2;
+      padding: 0;
+    }
+
+    .flow-arrow {
+      font-size: 1.5rem;
+      color: var(--accent-lime);
+      font-weight: 700;
+      margin-top: 80px;
+    }
+
+    @media (max-width: 700px) {
+      .flow-arrow {
+        display: none;
+      }
+      .ux-flow-visual {
+        gap: 24px;
+      }
+    }
+
+    .flow-label {
+      max-width: 120px;
+    }
+
+    .step-num {
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      background: var(--primary-blue);
+      color: white;
+      border-radius: 50%;
+      font-size: 0.75rem;
+      font-weight: 700;
+      line-height: 24px;
+      margin-bottom: 8px;
+    }
+
+    .flow-label strong {
+      display: block;
+      font-size: 0.875rem;
+      color: var(--text-primary);
+      margin-bottom: 4px;
+    }
+
+    .flow-label p {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin: 0;
+    }
+
+    /* UX Improvements Grid */
+    .ux-improvements {
+      background: white;
+      border-radius: var(--radius-2xl);
+      padding: 40px;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .ux-improvements h4 {
+      text-align: center;
+      font-size: 1.25rem;
+      color: var(--text-primary);
+      margin-bottom: 32px;
+    }
+
+    .improvements-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+
+    @media (max-width: 900px) {
+      .improvements-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 500px) {
+      .improvements-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .improvement-card {
+      text-align: center;
+      padding: 24px 16px;
+      background: var(--bg-light);
+      border-radius: var(--radius-xl);
+    }
+
+    .imp-icon {
+      font-size: 2rem;
+      margin-bottom: 12px;
+    }
+
+    .improvement-card h5 {
+      font-size: 1rem;
+      color: var(--text-primary);
+      margin-bottom: 8px;
+    }
+
+    .improvement-card p {
+      font-size: 0.8125rem;
+      color: var(--text-muted);
+      margin: 0;
+      line-height: 1.5;
     }
   </style>
 </head>
@@ -1435,190 +2182,66 @@
     <div class="container">
       <div class="section-header">
         <h2>Executive Summary</h2>
-        <p>Our path to Series A through proven, scalable acquisition channels</p>
+        <p>12-month go-to-market strategy to establish product-market fit and position Domi for Series A funding</p>
       </div>
 
+      <!-- Key Numbers Row -->
+      <div class="exec-stats fade-in">
+        <div class="exec-stat">
+          <div class="exec-stat-value">$255K</div>
+          <div class="exec-stat-label">Total Budget</div>
+        </div>
+        <div class="exec-stat">
+          <div class="exec-stat-value">12</div>
+          <div class="exec-stat-label">Months</div>
+        </div>
+        <div class="exec-stat">
+          <div class="exec-stat-value">5,000</div>
+          <div class="exec-stat-label">Target Users</div>
+        </div>
+        <div class="exec-stat">
+          <div class="exec-stat-value">$3-5M</div>
+          <div class="exec-stat-label">Series A Goal</div>
+        </div>
+      </div>
+
+      <!-- Strategy Overview -->
+      <div class="exec-overview fade-in">
+        <div class="exec-overview-left">
+          <h3>The Opportunity</h3>
+          <p>Americans receive <strong>41 pounds of junk mail per household annually</strong>—5.6 million tons of paper waste that costs homeowners time, frustration, and contributes to deforestation. Domi transforms this pain point into value: consumers stop unwanted mail while earning money from brands they actually want to hear from.</p>
+          <h3>Our Approach</h3>
+          <p>This GTM strategy uses <strong>EDDM postcards as our anchor channel</strong>, supported by geo-targeted digital advertising, organic content, and strategic partnerships. We'll prove the model in two pilot markets before scaling nationally.</p>
+        </div>
+        <div class="exec-overview-right">
+          <h4>Success Metrics (Month 12)</h4>
+          <ul class="exec-metrics">
+            <li><span class="metric-value">5,000</span> Verified users</li>
+            <li><span class="metric-value">4,000</span> Monthly active users</li>
+            <li><span class="metric-value">&lt;$10</span> Customer acquisition cost</li>
+            <li><span class="metric-value">$75</span> Lifetime value</li>
+            <li><span class="metric-value">20</span> B2B brand partners</li>
+            <li><span class="metric-value">$50K</span> Monthly B2B revenue</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Three Pillars -->
       <div class="summary-grid">
         <div class="summary-card fade-in">
-          <h3>Primary Markets</h3>
+          <h3>Pilot Markets</h3>
           <div class="big-text">Tampa + Birmingham</div>
-          <p>Strategic pilot markets with strong demographics, environmental consciousness, and manageable scale for iteration.</p>
+          <p>Mid-size metros with affluent suburbs, strong environmental consciousness, and proximity to protected natural lands. Manageable scale for rapid iteration.</p>
         </div>
         <div class="summary-card fade-in">
           <h3>Acquisition Strategy</h3>
           <div class="big-text">PESO Model</div>
-          <p>Paid, Earned, Shared, Owned media working in concert - EDDM anchored by digital support, content, and community.</p>
+          <p>Paid (EDDM + digital ads), Earned (PR + press), Shared (community + social), and Owned (content + SEO) media working in concert.</p>
         </div>
         <div class="summary-card fade-in">
-          <h3>Series A Thesis</h3>
+          <h3>Series A Positioning</h3>
           <div class="big-text">$15-25M</div>
-          <p>Pre-money valuation supported by 5,000 verified users, $50K/mo B2B revenue, and proven unit economics.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Market Selection & Budget Calculator -->
-  <section class="market-selection" id="markets">
-    <div class="container">
-      <div class="section-header">
-        <h2>Market Selection</h2>
-        <p>Select target markets to calculate campaign costs with economies of scale</p>
-      </div>
-
-      <div class="city-selector-header">
-        <div class="city-count"><strong id="selectedCount">2</strong> of 50 cities selected</div>
-        <div class="select-actions">
-          <button onclick="selectAllCities()">Select All</button>
-          <button onclick="clearSelection()">Clear</button>
-        </div>
-      </div>
-
-      <div class="city-selector-container">
-        <div class="city-selector-grid" id="citySelector">
-          <!-- Pilot Markets -->
-          <div class="city-card selected pilot" data-city="tampa"><div class="city-name">Tampa</div><div class="city-state">FL</div></div>
-          <div class="city-card selected pilot" data-city="birmingham"><div class="city-name">Birmingham</div><div class="city-state">AL</div></div>
-
-          <!-- Southeast -->
-          <div class="city-card" data-city="atlanta"><div class="city-name">Atlanta</div><div class="city-state">GA</div></div>
-          <div class="city-card" data-city="charlotte"><div class="city-name">Charlotte</div><div class="city-state">NC</div></div>
-          <div class="city-card" data-city="raleigh"><div class="city-name">Raleigh</div><div class="city-state">NC</div></div>
-          <div class="city-card" data-city="durham"><div class="city-name">Durham</div><div class="city-state">NC</div></div>
-          <div class="city-card" data-city="asheville"><div class="city-name">Asheville</div><div class="city-state">NC</div></div>
-          <div class="city-card" data-city="wilmington"><div class="city-name">Wilmington</div><div class="city-state">NC</div></div>
-          <div class="city-card" data-city="greenville"><div class="city-name">Greenville</div><div class="city-state">SC</div></div>
-          <div class="city-card" data-city="charleston"><div class="city-name">Charleston</div><div class="city-state">SC</div></div>
-          <div class="city-card" data-city="savannah"><div class="city-name">Savannah</div><div class="city-state">GA</div></div>
-          <div class="city-card" data-city="jacksonville"><div class="city-name">Jacksonville</div><div class="city-state">FL</div></div>
-          <div class="city-card" data-city="orlando"><div class="city-name">Orlando</div><div class="city-state">FL</div></div>
-
-          <!-- Tennessee/Kentucky -->
-          <div class="city-card" data-city="nashville"><div class="city-name">Nashville</div><div class="city-state">TN</div></div>
-          <div class="city-card" data-city="knoxville"><div class="city-name">Knoxville</div><div class="city-state">TN</div></div>
-          <div class="city-card" data-city="chattanooga"><div class="city-name">Chattanooga</div><div class="city-state">TN</div></div>
-          <div class="city-card" data-city="louisville"><div class="city-name">Louisville</div><div class="city-state">KY</div></div>
-          <div class="city-card" data-city="lexington"><div class="city-name">Lexington</div><div class="city-state">KY</div></div>
-
-          <!-- Texas -->
-          <div class="city-card" data-city="austin"><div class="city-name">Austin</div><div class="city-state">TX</div></div>
-          <div class="city-card" data-city="sanantonio"><div class="city-name">San Antonio</div><div class="city-state">TX</div></div>
-
-          <!-- Southwest -->
-          <div class="city-card" data-city="denver"><div class="city-name">Denver</div><div class="city-state">CO</div></div>
-          <div class="city-card" data-city="boulder"><div class="city-name">Boulder</div><div class="city-state">CO</div></div>
-          <div class="city-card" data-city="coloradosprings"><div class="city-name">Colorado Springs</div><div class="city-state">CO</div></div>
-          <div class="city-card" data-city="phoenix"><div class="city-name">Phoenix</div><div class="city-state">AZ</div></div>
-          <div class="city-card" data-city="scottsdale"><div class="city-name">Scottsdale</div><div class="city-state">AZ</div></div>
-          <div class="city-card" data-city="tucson"><div class="city-name">Tucson</div><div class="city-state">AZ</div></div>
-          <div class="city-card" data-city="albuquerque"><div class="city-name">Albuquerque</div><div class="city-state">NM</div></div>
-          <div class="city-card" data-city="santafe"><div class="city-name">Santa Fe</div><div class="city-state">NM</div></div>
-          <div class="city-card" data-city="saltlake"><div class="city-name">Salt Lake City</div><div class="city-state">UT</div></div>
-
-          <!-- Pacific Northwest -->
-          <div class="city-card" data-city="seattle"><div class="city-name">Seattle</div><div class="city-state">WA</div></div>
-          <div class="city-card" data-city="spokane"><div class="city-name">Spokane</div><div class="city-state">WA</div></div>
-          <div class="city-card" data-city="portland"><div class="city-name">Portland</div><div class="city-state">OR</div></div>
-          <div class="city-card" data-city="eugene"><div class="city-name">Eugene</div><div class="city-state">OR</div></div>
-          <div class="city-card" data-city="boise"><div class="city-name">Boise</div><div class="city-state">ID</div></div>
-
-          <!-- California -->
-          <div class="city-card" data-city="sandiego"><div class="city-name">San Diego</div><div class="city-state">CA</div></div>
-          <div class="city-card" data-city="santabarbara"><div class="city-name">Santa Barbara</div><div class="city-state">CA</div></div>
-          <div class="city-card" data-city="sanjose"><div class="city-name">San Jose</div><div class="city-state">CA</div></div>
-          <div class="city-card" data-city="oakland"><div class="city-name">Oakland</div><div class="city-state">CA</div></div>
-          <div class="city-card" data-city="sacramento"><div class="city-name">Sacramento</div><div class="city-state">CA</div></div>
-          <div class="city-card" data-city="fresno"><div class="city-name">Fresno</div><div class="city-state">CA</div></div>
-
-          <!-- Midwest -->
-          <div class="city-card" data-city="minneapolis"><div class="city-name">Minneapolis</div><div class="city-state">MN</div></div>
-          <div class="city-card" data-city="madison"><div class="city-name">Madison</div><div class="city-state">WI</div></div>
-          <div class="city-card" data-city="grandrapids"><div class="city-name">Grand Rapids</div><div class="city-state">MI</div></div>
-          <div class="city-card" data-city="annarbor"><div class="city-name">Ann Arbor</div><div class="city-state">MI</div></div>
-          <div class="city-card" data-city="indianapolis"><div class="city-name">Indianapolis</div><div class="city-state">IN</div></div>
-          <div class="city-card" data-city="cincinnati"><div class="city-name">Cincinnati</div><div class="city-state">OH</div></div>
-          <div class="city-card" data-city="kansascity"><div class="city-name">Kansas City</div><div class="city-state">MO</div></div>
-          <div class="city-card" data-city="omaha"><div class="city-name">Omaha</div><div class="city-state">NE</div></div>
-          <div class="city-card" data-city="desmoines"><div class="city-name">Des Moines</div><div class="city-state">IA</div></div>
-
-          <!-- Mid-Atlantic -->
-          <div class="city-card" data-city="pittsburgh"><div class="city-name">Pittsburgh</div><div class="city-state">PA</div></div>
-          <div class="city-card" data-city="richmond"><div class="city-name">Richmond</div><div class="city-state">VA</div></div>
-          <div class="city-card" data-city="providence"><div class="city-name">Providence</div><div class="city-state">RI</div></div>
-        </div>
-      </div>
-
-      <!-- Budget Calculator -->
-      <div class="budget-calculator fade-in" id="budgetCalculator">
-        <div class="calc-header">
-          <div class="calc-title">Campaign Budget Calculator</div>
-          <div class="discount-badge" id="discountBadge">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
-            <span id="discountText">0% Discount</span>
-          </div>
-        </div>
-
-        <div class="calc-summary">
-          <div class="calc-stat">
-            <div class="stat-value" id="citiesSelected">2</div>
-            <div class="stat-label">Cities</div>
-          </div>
-          <div class="calc-stat">
-            <div class="stat-value" id="perCityCost">$10,932</div>
-            <div class="stat-label">Per City</div>
-          </div>
-          <div class="calc-stat">
-            <div class="stat-value lime" id="totalSavings">$0</div>
-            <div class="stat-label">Savings</div>
-          </div>
-          <div class="calc-stat">
-            <div class="stat-value" id="totalBudget">$21,864</div>
-            <div class="stat-label">Total</div>
-          </div>
-        </div>
-
-        <div class="calc-breakdown">
-          <h4>Per-City Breakdown</h4>
-          <div class="breakdown-row">
-            <span class="item-name">EDDM (3 touches x 3,000 homes)</span>
-            <span class="item-value" id="eddmCost">$5,657</span>
-          </div>
-          <div class="breakdown-row">
-            <span class="item-name">Digital Ad Support</span>
-            <span class="item-value" id="digitalCost">$3,775</span>
-          </div>
-          <div class="breakdown-row">
-            <span class="item-name">Local Partnerships</span>
-            <span class="item-value" id="partnersCost">$1,500</span>
-          </div>
-          <div class="breakdown-row">
-            <span class="item-name">Total Campaign Cost</span>
-            <span class="item-value" id="campaignTotal">$21,864</span>
-          </div>
-        </div>
-
-        <div class="tier-indicator">
-          <div class="tier-step active" data-tier="1">
-            <div class="tier-dot"></div>
-            <span class="tier-label">1-5</span>
-          </div>
-          <div class="tier-step" data-tier="2">
-            <div class="tier-dot"></div>
-            <span class="tier-label">6-15</span>
-          </div>
-          <div class="tier-step" data-tier="3">
-            <div class="tier-dot"></div>
-            <span class="tier-label">16-30</span>
-          </div>
-          <div class="tier-step" data-tier="4">
-            <div class="tier-dot"></div>
-            <span class="tier-label">31-50</span>
-          </div>
-        </div>
-
-        <div class="savings-callout" id="savingsCallout" style="display: none;">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          <p>Select <strong id="citiesToNextTier">1 more city</strong> to unlock <strong id="nextTierDiscount">10%</strong> volume discount!</p>
+          <p>Pre-money valuation supported by proven unit economics, demonstrated product-market fit, and a clear path to $1M+ ARR from B2B partnerships.</p>
         </div>
       </div>
     </div>
@@ -1921,6 +2544,326 @@
     </div>
   </section>
 
+  <!-- Messaging Simplification Section -->
+  <section class="foundation-section" id="messaging">
+    <div class="container">
+      <div class="section-header">
+        <span class="phase-badge">Phase 1 Priority</span>
+        <h2>Messaging Simplification</h2>
+        <p>Focus the website and marketing on two clear, compelling value propositions</p>
+      </div>
+
+      <div class="messaging-grid">
+        <!-- Opt-Out Value Prop -->
+        <div class="value-prop-card fade-in">
+          <div class="vp-thumbnail">
+            <!-- Phone with Stop Junk Mail App -->
+            <svg viewBox="0 0 200 280" xmlns="http://www.w3.org/2000/svg" class="phone-mockup">
+              <!-- Phone Frame -->
+              <rect x="30" y="10" width="140" height="260" rx="20" fill="#1a1a1a"/>
+              <rect x="38" y="30" width="124" height="220" rx="4" fill="#fff"/>
+              <!-- Status Bar -->
+              <rect x="38" y="30" width="124" height="20" fill="#CC0800"/>
+              <text x="100" y="43" text-anchor="middle" font-family="Inter, sans-serif" font-size="8" fill="#fff" font-weight="600">Domi</text>
+              <!-- App Header -->
+              <rect x="38" y="50" width="124" height="35" fill="#f5f5f5"/>
+              <text x="100" y="72" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="#CC0800" font-weight="700">STOP JUNK MAIL</text>
+              <!-- Mail Items with Stop Icons -->
+              <rect x="48" y="95" width="104" height="36" rx="6" fill="#fff" stroke="#e5e5e5" stroke-width="1"/>
+              <rect x="56" y="103" width="20" height="20" rx="3" fill="#CC0800" opacity="0.2"/>
+              <text x="66" y="117" text-anchor="middle" font-family="Inter, sans-serif" font-size="8" fill="#CC0800">AD</text>
+              <text x="105" y="112" text-anchor="middle" font-family="Inter, sans-serif" font-size="7" fill="#333">Credit Card Offer</text>
+              <text x="105" y="122" text-anchor="middle" font-family="Inter, sans-serif" font-size="6" fill="#999">Capital One</text>
+              <circle cx="140" cy="113" r="10" fill="#CC0800"/>
+              <path d="M136 109 L144 117 M144 109 L136 117" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+
+              <rect x="48" y="138" width="104" height="36" rx="6" fill="#fff" stroke="#e5e5e5" stroke-width="1"/>
+              <rect x="56" y="146" width="20" height="20" rx="3" fill="#004B87" opacity="0.2"/>
+              <text x="66" y="160" text-anchor="middle" font-family="Inter, sans-serif" font-size="6" fill="#004B87">CAT</text>
+              <text x="105" y="155" text-anchor="middle" font-family="Inter, sans-serif" font-size="7" fill="#333">Pottery Barn</text>
+              <text x="105" y="165" text-anchor="middle" font-family="Inter, sans-serif" font-size="6" fill="#999">Catalog</text>
+              <circle cx="140" cy="156" r="10" fill="#CC0800"/>
+              <path d="M136 152 L144 160 M144 152 L136 160" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+
+              <rect x="48" y="181" width="104" height="36" rx="6" fill="#fff" stroke="#e5e5e5" stroke-width="1"/>
+              <rect x="56" y="189" width="20" height="20" rx="3" fill="#22c55e" opacity="0.2"/>
+              <text x="66" y="203" text-anchor="middle" font-family="Inter, sans-serif" font-size="6" fill="#22c55e">INS</text>
+              <text x="105" y="198" text-anchor="middle" font-family="Inter, sans-serif" font-size="7" fill="#333">Insurance Offer</text>
+              <text x="105" y="208" text-anchor="middle" font-family="Inter, sans-serif" font-size="6" fill="#999">Geico</text>
+              <circle cx="140" cy="199" r="10" fill="#CC0800"/>
+              <path d="M136 195 L144 203 M144 195 L136 203" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+
+              <!-- Bottom Button -->
+              <rect x="58" y="225" width="84" height="20" rx="10" fill="#CC0800"/>
+              <text x="100" y="238" text-anchor="middle" font-family="Inter, sans-serif" font-size="7" fill="#fff" font-weight="600">BLOCK ALL</text>
+              <!-- Home Indicator -->
+              <rect x="80" y="258" width="40" height="4" rx="2" fill="#333"/>
+            </svg>
+          </div>
+          <div class="vp-content">
+            <div class="vp-badge red">Value Prop #1</div>
+            <h3>Stop Junk Mail</h3>
+            <p class="vp-tagline">"Scan it. We stop it."</p>
+            <ul class="vp-points">
+              <li>One-tap unsubscribe from any mailer</li>
+              <li>We contact companies on your behalf</li>
+              <li>Track which mailers have been stopped</li>
+              <li>No more catalogs, credit offers, or flyers</li>
+            </ul>
+            <div class="vp-target">
+              <strong>Target Audience:</strong> Frustrated homeowners tired of mailbox clutter
+            </div>
+          </div>
+        </div>
+
+        <!-- Digital Mailbox Value Prop -->
+        <div class="value-prop-card fade-in">
+          <div class="vp-thumbnail digital">
+            <!-- Computer Screen with Digital Offers -->
+            <svg viewBox="0 0 280 200" xmlns="http://www.w3.org/2000/svg" class="computer-mockup">
+              <!-- Monitor Frame -->
+              <rect x="20" y="10" width="240" height="150" rx="8" fill="#1a1a1a"/>
+              <rect x="28" y="18" width="224" height="126" rx="2" fill="#fff"/>
+              <!-- Stand -->
+              <rect x="115" y="160" width="50" height="12" fill="#1a1a1a"/>
+              <rect x="95" y="172" width="90" height="8" rx="2" fill="#2a2a2a"/>
+              <!-- Browser Bar -->
+              <rect x="28" y="18" width="224" height="18" fill="#f0f0f0"/>
+              <circle cx="38" cy="27" r="4" fill="#ff5f57"/>
+              <circle cx="50" cy="27" r="4" fill="#febc2e"/>
+              <circle cx="62" cy="27" r="4" fill="#28c840"/>
+              <rect x="80" y="23" width="120" height="8" rx="4" fill="#fff"/>
+              <!-- Header -->
+              <rect x="28" y="36" width="224" height="20" fill="#004B87"/>
+              <text x="140" y="50" text-anchor="middle" font-family="Inter, sans-serif" font-size="8" fill="#fff" font-weight="600">Your Digital Mailbox</text>
+              <!-- Offer Cards Grid -->
+              <rect x="36" y="62" width="66" height="76" rx="4" fill="#fff" stroke="#e5e5e5" stroke-width="1"/>
+              <rect x="40" y="66" width="58" height="32" rx="2" fill="#CC0800"/>
+              <text x="69" y="86" text-anchor="middle" font-family="Inter, sans-serif" font-size="7" fill="#fff" font-weight="700">20% OFF</text>
+              <text x="69" y="106" text-anchor="middle" font-family="Inter, sans-serif" font-size="6" fill="#333">Target</text>
+              <rect x="44" y="118" width="50" height="14" rx="7" fill="#CCFF00"/>
+              <text x="69" y="128" text-anchor="middle" font-family="Inter, sans-serif" font-size="6" fill="#000" font-weight="600">Claim $5</text>
+
+              <rect x="107" y="62" width="66" height="76" rx="4" fill="#fff" stroke="#e5e5e5" stroke-width="1"/>
+              <rect x="111" y="66" width="58" height="32" rx="2" fill="#004B87"/>
+              <text x="140" y="82" text-anchor="middle" font-family="Inter, sans-serif" font-size="6" fill="#fff" font-weight="700">FREE</text>
+              <text x="140" y="92" text-anchor="middle" font-family="Inter, sans-serif" font-size="6" fill="#fff" font-weight="700">SHIPPING</text>
+              <text x="140" y="106" text-anchor="middle" font-family="Inter, sans-serif" font-size="6" fill="#333">Amazon</text>
+              <rect x="115" y="118" width="50" height="14" rx="7" fill="#CCFF00"/>
+              <text x="140" y="128" text-anchor="middle" font-family="Inter, sans-serif" font-size="6" fill="#000" font-weight="600">Claim $3</text>
+
+              <rect x="178" y="62" width="66" height="76" rx="4" fill="#fff" stroke="#e5e5e5" stroke-width="1"/>
+              <rect x="182" y="66" width="58" height="32" rx="2" fill="#22c55e"/>
+              <text x="211" y="82" text-anchor="middle" font-family="Inter, sans-serif" font-size="7" fill="#fff" font-weight="700">$50</text>
+              <text x="211" y="92" text-anchor="middle" font-family="Inter, sans-serif" font-size="5" fill="#fff">GROCERY</text>
+              <text x="211" y="106" text-anchor="middle" font-family="Inter, sans-serif" font-size="6" fill="#333">Whole Foods</text>
+              <rect x="186" y="118" width="50" height="14" rx="7" fill="#CCFF00"/>
+              <text x="211" y="128" text-anchor="middle" font-family="Inter, sans-serif" font-size="6" fill="#000" font-weight="600">Claim $8</text>
+            </svg>
+          </div>
+          <div class="vp-content">
+            <div class="vp-badge blue">Value Prop #2</div>
+            <h3>Digital Mailbox</h3>
+            <p class="vp-tagline">"Coupons you want. Zero clutter."</p>
+            <ul class="vp-points">
+              <li>Choose which brands can reach you</li>
+              <li>Get deals delivered digitally</li>
+              <li>Earn up to $100/month from offers</li>
+              <li>100% control over what you receive</li>
+            </ul>
+            <div class="vp-target">
+              <strong>Target Audience:</strong> Deal-seekers who want savings without paper waste
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="messaging-before-after fade-in">
+        <h4>Website Simplification</h4>
+        <div class="ba-grid">
+          <div class="ba-card before">
+            <div class="ba-label">Before</div>
+            <div class="ba-mockup">
+              <div class="mock-header"></div>
+              <div class="mock-hero">
+                <div class="mock-text long"></div>
+                <div class="mock-text medium"></div>
+                <div class="mock-text short"></div>
+              </div>
+              <div class="mock-features">
+                <div class="mock-box"></div>
+                <div class="mock-box"></div>
+                <div class="mock-box"></div>
+                <div class="mock-box"></div>
+                <div class="mock-box"></div>
+                <div class="mock-box"></div>
+              </div>
+              <div class="mock-cta"></div>
+            </div>
+            <ul class="ba-issues">
+              <li>Too many features competing</li>
+              <li>Unclear primary action</li>
+              <li>Dense, confusing copy</li>
+            </ul>
+          </div>
+          <div class="ba-arrow">→</div>
+          <div class="ba-card after">
+            <div class="ba-label">After</div>
+            <div class="ba-mockup">
+              <div class="mock-header"></div>
+              <div class="mock-hero clean">
+                <div class="mock-text medium"></div>
+                <div class="mock-text short"></div>
+              </div>
+              <div class="mock-split">
+                <div class="mock-option red"></div>
+                <div class="mock-option blue"></div>
+              </div>
+              <div class="mock-cta"></div>
+            </div>
+            <ul class="ba-benefits">
+              <li>Two clear paths to choose</li>
+              <li>Single focused CTA</li>
+              <li>Clean, scannable layout</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- UX Hardening Section -->
+  <section class="foundation-section alt" id="ux-hardening">
+    <div class="container">
+      <div class="section-header">
+        <span class="phase-badge">Phase 1 Priority</span>
+        <h2>UX & Sign-up Flow Hardening</h2>
+        <p>Streamline the path from first visit to verified user</p>
+      </div>
+
+      <div class="ux-flow-visual fade-in">
+        <div class="flow-step">
+          <div class="flow-screen">
+            <div class="screen-frame">
+              <div class="screen-header">
+                <div class="status-bar"></div>
+              </div>
+              <div class="screen-content">
+                <div class="app-logo"></div>
+                <div class="input-field"></div>
+                <div class="cta-button"></div>
+                <div class="social-logins">
+                  <div class="social-btn"></div>
+                  <div class="social-btn"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flow-label">
+            <span class="step-num">1</span>
+            <strong>Quick Sign-up</strong>
+            <p>Email or social login</p>
+          </div>
+        </div>
+
+        <div class="flow-arrow">→</div>
+
+        <div class="flow-step">
+          <div class="flow-screen">
+            <div class="screen-frame">
+              <div class="screen-header">
+                <div class="status-bar"></div>
+              </div>
+              <div class="screen-content">
+                <div class="verify-icon">✓</div>
+                <div class="address-line"></div>
+                <div class="address-line short"></div>
+                <div class="cta-button"></div>
+              </div>
+            </div>
+          </div>
+          <div class="flow-label">
+            <span class="step-num">2</span>
+            <strong>Verify Address</strong>
+            <p>Confirm your mailbox</p>
+          </div>
+        </div>
+
+        <div class="flow-arrow">→</div>
+
+        <div class="flow-step">
+          <div class="flow-screen">
+            <div class="screen-frame">
+              <div class="screen-header">
+                <div class="status-bar"></div>
+              </div>
+              <div class="screen-content">
+                <div class="choice-card"></div>
+                <div class="choice-card active"></div>
+              </div>
+            </div>
+          </div>
+          <div class="flow-label">
+            <span class="step-num">3</span>
+            <strong>Choose Path</strong>
+            <p>Opt-out or Digital Mailbox</p>
+          </div>
+        </div>
+
+        <div class="flow-arrow">→</div>
+
+        <div class="flow-step">
+          <div class="flow-screen">
+            <div class="screen-frame">
+              <div class="screen-header">
+                <div class="status-bar"></div>
+              </div>
+              <div class="screen-content">
+                <div class="success-check">✓</div>
+                <div class="congrats-text"></div>
+                <div class="action-cards">
+                  <div class="mini-card"></div>
+                  <div class="mini-card"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flow-label">
+            <span class="step-num">4</span>
+            <strong>Ready to Go</strong>
+            <p>Start scanning mail</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="ux-improvements fade-in">
+        <h4>Key Improvements</h4>
+        <div class="improvements-grid">
+          <div class="improvement-card">
+            <div class="imp-icon">⚡</div>
+            <h5>Faster Onboarding</h5>
+            <p>Reduce sign-up to under 60 seconds with social login and address autocomplete</p>
+          </div>
+          <div class="improvement-card">
+            <div class="imp-icon">🎯</div>
+            <h5>Clear Value Upfront</h5>
+            <p>Show immediate benefit before asking for account creation</p>
+          </div>
+          <div class="improvement-card">
+            <div class="imp-icon">📱</div>
+            <h5>Mobile-First</h5>
+            <p>Optimize for thumb-friendly interactions on small screens</p>
+          </div>
+          <div class="improvement-card">
+            <div class="imp-icon">✅</div>
+            <h5>Progress Indicators</h5>
+            <p>Show users exactly where they are in the process</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- EDDM Campaign Section -->
   <section class="tactics-section alt" id="eddm">
     <div class="container">
@@ -2084,48 +3027,169 @@
     </div>
   </section>
 
-  <!-- Visual Break: Physical to Digital -->
-  <div class="visual-break">
-    <div class="visual-break-inner">
-      <div class="visual-break-illustration">
-        <!-- Mailbox to Phone illustration -->
-        <svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
-          <!-- Mailbox -->
-          <g transform="translate(10, 20)">
-            <rect x="0" y="30" width="50" height="35" rx="4" fill="#004B87"/>
-            <rect x="0" y="25" width="50" height="10" rx="2" fill="#003366"/>
-            <rect x="5" y="65" width="8" height="30" fill="#666"/>
-            <path d="M10 40 L40 40" stroke="#CCFF00" stroke-width="3"/>
-            <circle cx="45" cy="47" r="4" fill="#CC0800"/>
-            <!-- X over mailbox -->
-            <path d="M5 30 L45 60 M45 30 L5 60" stroke="#CC0800" stroke-width="3" opacity="0.7"/>
-          </g>
-          <!-- Arrow -->
-          <g transform="translate(70, 45)">
-            <path d="M0 15 L40 15" stroke="#CCFF00" stroke-width="4"/>
-            <path d="M30 5 L45 15 L30 25" fill="#CCFF00"/>
-          </g>
-          <!-- Phone -->
-          <g transform="translate(125, 10)">
-            <rect x="0" y="0" width="55" height="100" rx="8" fill="#1a1a1a"/>
-            <rect x="4" y="12" width="47" height="76" rx="2" fill="#004B87"/>
-            <!-- App screen content -->
-            <rect x="8" y="20" width="39" height="8" rx="2" fill="#CCFF00"/>
-            <rect x="8" y="32" width="30" height="4" rx="1" fill="rgba(255,255,255,0.5)"/>
-            <rect x="8" y="40" width="25" height="4" rx="1" fill="rgba(255,255,255,0.3)"/>
-            <!-- Dollar signs -->
-            <text x="27" y="70" text-anchor="middle" font-family="Inter, sans-serif" font-size="20" font-weight="bold" fill="#CCFF00">$$$</text>
-            <!-- Home indicator -->
-            <rect x="18" y="92" width="20" height="4" rx="2" fill="#666"/>
-          </g>
-        </svg>
+  <!-- Market Selection & Budget Calculator -->
+  <section class="market-selection" id="markets">
+    <div class="container">
+      <div class="section-header">
+        <h2>Market Selection & Budget Calculator</h2>
+        <p>Select target markets to calculate campaign costs with economies of scale discounts</p>
       </div>
-      <div class="visual-break-content">
-        <h3>From Physical Clutter to Digital Value</h3>
-        <p>The multi-channel approach works in concert: EDDM creates awareness, digital ads reinforce the message, and content captures intent—all driving users to a single action.</p>
+
+      <div class="market-layout">
+        <div class="city-selector-wrapper">
+          <div class="city-selector-header">
+            <div class="city-count"><strong id="selectedCount">2</strong> of 50 cities selected</div>
+            <div class="select-actions">
+              <button onclick="selectAllCities()">Select All</button>
+              <button onclick="clearSelection()">Clear</button>
+            </div>
+          </div>
+
+          <div class="city-selector-container">
+            <div class="city-selector-grid" id="citySelector">
+              <!-- Pilot Markets -->
+              <div class="city-card selected pilot" data-city="tampa"><div class="city-name">Tampa</div><div class="city-state">FL</div></div>
+              <div class="city-card selected pilot" data-city="birmingham"><div class="city-name">Birmingham</div><div class="city-state">AL</div></div>
+              <!-- Southeast -->
+              <div class="city-card" data-city="atlanta"><div class="city-name">Atlanta</div><div class="city-state">GA</div></div>
+              <div class="city-card" data-city="charlotte"><div class="city-name">Charlotte</div><div class="city-state">NC</div></div>
+              <div class="city-card" data-city="raleigh"><div class="city-name">Raleigh</div><div class="city-state">NC</div></div>
+              <div class="city-card" data-city="durham"><div class="city-name">Durham</div><div class="city-state">NC</div></div>
+              <div class="city-card" data-city="asheville"><div class="city-name">Asheville</div><div class="city-state">NC</div></div>
+              <div class="city-card" data-city="wilmington"><div class="city-name">Wilmington</div><div class="city-state">NC</div></div>
+              <div class="city-card" data-city="greenville"><div class="city-name">Greenville</div><div class="city-state">SC</div></div>
+              <div class="city-card" data-city="charleston"><div class="city-name">Charleston</div><div class="city-state">SC</div></div>
+              <div class="city-card" data-city="savannah"><div class="city-name">Savannah</div><div class="city-state">GA</div></div>
+              <div class="city-card" data-city="jacksonville"><div class="city-name">Jacksonville</div><div class="city-state">FL</div></div>
+              <div class="city-card" data-city="orlando"><div class="city-name">Orlando</div><div class="city-state">FL</div></div>
+              <!-- Tennessee/Kentucky -->
+              <div class="city-card" data-city="nashville"><div class="city-name">Nashville</div><div class="city-state">TN</div></div>
+              <div class="city-card" data-city="knoxville"><div class="city-name">Knoxville</div><div class="city-state">TN</div></div>
+              <div class="city-card" data-city="chattanooga"><div class="city-name">Chattanooga</div><div class="city-state">TN</div></div>
+              <div class="city-card" data-city="louisville"><div class="city-name">Louisville</div><div class="city-state">KY</div></div>
+              <div class="city-card" data-city="lexington"><div class="city-name">Lexington</div><div class="city-state">KY</div></div>
+              <!-- Texas -->
+              <div class="city-card" data-city="austin"><div class="city-name">Austin</div><div class="city-state">TX</div></div>
+              <div class="city-card" data-city="sanantonio"><div class="city-name">San Antonio</div><div class="city-state">TX</div></div>
+              <!-- Southwest -->
+              <div class="city-card" data-city="denver"><div class="city-name">Denver</div><div class="city-state">CO</div></div>
+              <div class="city-card" data-city="boulder"><div class="city-name">Boulder</div><div class="city-state">CO</div></div>
+              <div class="city-card" data-city="coloradosprings"><div class="city-name">Colorado Springs</div><div class="city-state">CO</div></div>
+              <div class="city-card" data-city="phoenix"><div class="city-name">Phoenix</div><div class="city-state">AZ</div></div>
+              <div class="city-card" data-city="scottsdale"><div class="city-name">Scottsdale</div><div class="city-state">AZ</div></div>
+              <div class="city-card" data-city="tucson"><div class="city-name">Tucson</div><div class="city-state">AZ</div></div>
+              <div class="city-card" data-city="albuquerque"><div class="city-name">Albuquerque</div><div class="city-state">NM</div></div>
+              <div class="city-card" data-city="santafe"><div class="city-name">Santa Fe</div><div class="city-state">NM</div></div>
+              <div class="city-card" data-city="saltlake"><div class="city-name">Salt Lake City</div><div class="city-state">UT</div></div>
+              <!-- Pacific Northwest -->
+              <div class="city-card" data-city="seattle"><div class="city-name">Seattle</div><div class="city-state">WA</div></div>
+              <div class="city-card" data-city="spokane"><div class="city-name">Spokane</div><div class="city-state">WA</div></div>
+              <div class="city-card" data-city="portland"><div class="city-name">Portland</div><div class="city-state">OR</div></div>
+              <div class="city-card" data-city="eugene"><div class="city-name">Eugene</div><div class="city-state">OR</div></div>
+              <div class="city-card" data-city="boise"><div class="city-name">Boise</div><div class="city-state">ID</div></div>
+              <!-- California -->
+              <div class="city-card" data-city="sandiego"><div class="city-name">San Diego</div><div class="city-state">CA</div></div>
+              <div class="city-card" data-city="santabarbara"><div class="city-name">Santa Barbara</div><div class="city-state">CA</div></div>
+              <div class="city-card" data-city="sanjose"><div class="city-name">San Jose</div><div class="city-state">CA</div></div>
+              <div class="city-card" data-city="oakland"><div class="city-name">Oakland</div><div class="city-state">CA</div></div>
+              <div class="city-card" data-city="sacramento"><div class="city-name">Sacramento</div><div class="city-state">CA</div></div>
+              <div class="city-card" data-city="fresno"><div class="city-name">Fresno</div><div class="city-state">CA</div></div>
+              <!-- Midwest -->
+              <div class="city-card" data-city="minneapolis"><div class="city-name">Minneapolis</div><div class="city-state">MN</div></div>
+              <div class="city-card" data-city="madison"><div class="city-name">Madison</div><div class="city-state">WI</div></div>
+              <div class="city-card" data-city="grandrapids"><div class="city-name">Grand Rapids</div><div class="city-state">MI</div></div>
+              <div class="city-card" data-city="annarbor"><div class="city-name">Ann Arbor</div><div class="city-state">MI</div></div>
+              <div class="city-card" data-city="indianapolis"><div class="city-name">Indianapolis</div><div class="city-state">IN</div></div>
+              <div class="city-card" data-city="cincinnati"><div class="city-name">Cincinnati</div><div class="city-state">OH</div></div>
+              <div class="city-card" data-city="kansascity"><div class="city-name">Kansas City</div><div class="city-state">MO</div></div>
+              <div class="city-card" data-city="omaha"><div class="city-name">Omaha</div><div class="city-state">NE</div></div>
+              <div class="city-card" data-city="desmoines"><div class="city-name">Des Moines</div><div class="city-state">IA</div></div>
+              <!-- Mid-Atlantic -->
+              <div class="city-card" data-city="pittsburgh"><div class="city-name">Pittsburgh</div><div class="city-state">PA</div></div>
+              <div class="city-card" data-city="richmond"><div class="city-name">Richmond</div><div class="city-state">VA</div></div>
+              <div class="city-card" data-city="providence"><div class="city-name">Providence</div><div class="city-state">RI</div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Budget Calculator -->
+        <div class="budget-calculator-wrapper">
+          <div class="budget-calculator fade-in" id="budgetCalculator">
+            <div class="calc-header">
+              <div class="calc-title">Budget Calculator</div>
+              <div class="discount-badge" id="discountBadge">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
+                <span id="discountText">0% Discount</span>
+              </div>
+            </div>
+
+            <div class="calc-summary">
+              <div class="calc-stat">
+                <div class="stat-value" id="citiesSelected">2</div>
+                <div class="stat-label">Cities</div>
+              </div>
+              <div class="calc-stat">
+                <div class="stat-value" id="perCityCost">$10,932</div>
+                <div class="stat-label">Per City</div>
+              </div>
+              <div class="calc-stat">
+                <div class="stat-value lime" id="totalSavings">$0</div>
+                <div class="stat-label">Savings</div>
+              </div>
+              <div class="calc-stat">
+                <div class="stat-value" id="totalBudget">$21,864</div>
+                <div class="stat-label">Total</div>
+              </div>
+            </div>
+
+            <div class="calc-breakdown">
+              <h4>Per-City Breakdown</h4>
+              <div class="breakdown-row">
+                <span class="item-name">EDDM (3 touches × 3k homes)</span>
+                <span class="item-value" id="eddmCost">$5,657</span>
+              </div>
+              <div class="breakdown-row">
+                <span class="item-name">Digital Ad Support</span>
+                <span class="item-value" id="digitalCost">$3,775</span>
+              </div>
+              <div class="breakdown-row">
+                <span class="item-name">Local Partnerships</span>
+                <span class="item-value" id="partnersCost">$1,500</span>
+              </div>
+              <div class="breakdown-row total">
+                <span class="item-name">Total Campaign</span>
+                <span class="item-value" id="campaignTotal">$21,864</span>
+              </div>
+            </div>
+
+            <div class="tier-indicator">
+              <div class="tier-step active" data-tier="1">
+                <div class="tier-dot"></div>
+                <span class="tier-label">1-5</span>
+              </div>
+              <div class="tier-step" data-tier="2">
+                <div class="tier-dot"></div>
+                <span class="tier-label">6-15</span>
+              </div>
+              <div class="tier-step" data-tier="3">
+                <div class="tier-dot"></div>
+                <span class="tier-label">16-30</span>
+              </div>
+              <div class="tier-step" data-tier="4">
+                <div class="tier-dot"></div>
+                <span class="tier-label">31-50</span>
+              </div>
+            </div>
+
+            <div class="savings-callout" id="savingsCallout" style="display: none;">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              <p>Select <strong id="citiesToNextTier">1 more</strong> for <strong id="nextTierDiscount">10%</strong> discount!</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
+  </section>
 
   <!-- Digital Marketing Section -->
   <section class="tactics-section" id="digital">
@@ -2773,11 +3837,6 @@
             </div>
           </div>
         </div>
-      </div>
-
-      <div class="budget-callout fade-in">
-        <h4>Marketing Contractor: $3,000/month</h4>
-        <p>Dedicated resource for campaign execution, content production, and community management. 12-month commitment = $36,000.</p>
       </div>
     </div>
   </section>
