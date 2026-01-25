@@ -18,6 +18,7 @@ A set of high-converting landing pages for Digital Domi (DoMi), showcasing their
 ├── opt-out.html            # Opt-out tool landing page (red theme)
 ├── digital-mailbox.html    # Digital mailbox - convenience/eco focus (blue theme)
 ├── digital-mailbox-earn.html # A/B test variant - heavy earnings focus (green theme)
+├── gtm-strategy.html       # 12-month GTM strategy presentation for stakeholders
 ├── css/
 │   └── styles.css          # All styles, DoMi brand system
 ├── js/
@@ -131,6 +132,30 @@ A set of high-converting landing pages for Digital Domi (DoMi), showcasing their
 - Testimonials with earnings quotes
 - Comparison table (Traditional Mail vs DOMI)
 - Trust badges
+
+### 5. gtm-strategy.html (Stakeholder Presentation)
+**Live URL**: https://domi-landing.vercel.app/gtm-strategy.html
+
+Visual presentation of the 12-month Go-to-Market strategy for stakeholder approval.
+
+**Sections:**
+- **Hero** - Executive summary with key numbers ($255K budget, 63K households, 5K users, $3-5M Series A)
+- **Strategic Timeline** - 4-phase visual timeline with expandable cards
+  - Phase 1 (M1-3): Foundation & Pilot Launch - $50,462
+  - Phase 2 (M4-6): Optimization & PR Push - $46,392
+  - Phase 3 (M7-9): Scale-Up & B2B Launch - $89,000
+  - Phase 4 (M10-12): Series A Push - $103,000
+- **Budget Allocation** - Donut chart visualization (EDDM 27%, Digital Ads 18%, PR 14%, etc.)
+- **Growth Trajectory** - KPI bar charts (Verified Users, CAC, LTV trajectories)
+- **12-Month Milestones** - Grid of monthly milestones with success criteria
+- **CTA** - Approval request with stakeholder contact
+
+**Design:**
+- Blue gradient hero matching DoMi brand
+- Phase-colored milestone cards (blue → cyan → purple → lime)
+- Animated bar charts and donut chart
+- Scroll fade-in animations
+- Mobile responsive
 
 ## EDDM Postcards
 
