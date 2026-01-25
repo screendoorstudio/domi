@@ -902,6 +902,14 @@
       filter: drop-shadow(0 4px 12px rgba(0,0,0,0.15));
     }
 
+    .sticker-img {
+      width: 280px;
+      height: auto;
+      border-radius: 8px;
+      filter: drop-shadow(0 4px 12px rgba(0,0,0,0.15));
+      transform: rotate(-2deg);
+    }
+
     .postcard-visual {
       display: flex;
       justify-content: center;
@@ -1005,6 +1013,352 @@
       color: var(--text-muted);
       display: block;
     }
+
+    /* Market Selection Section */
+    .market-selection {
+      padding: 80px 24px;
+      background: var(--bg-light);
+    }
+
+    .city-selector-container {
+      max-width: 1200px;
+      margin: 0 auto 32px;
+      max-height: 400px;
+      overflow-y: auto;
+      padding: 8px;
+      background: white;
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow-md);
+    }
+
+    .city-selector-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 8px;
+    }
+
+    @media (max-width: 1100px) {
+      .city-selector-grid {
+        grid-template-columns: repeat(5, 1fr);
+      }
+    }
+
+    @media (max-width: 900px) {
+      .city-selector-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    @media (max-width: 700px) {
+      .city-selector-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 500px) {
+      .city-selector-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .city-card {
+      background: var(--bg-light);
+      border-radius: var(--radius-lg);
+      padding: 10px 12px;
+      cursor: pointer;
+      transition: var(--transition-base);
+      border: 2px solid transparent;
+      position: relative;
+    }
+
+    .city-card:hover {
+      background: white;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .city-card.selected {
+      border-color: var(--accent-lime);
+      background: linear-gradient(135deg, rgba(204, 255, 0, 0.15) 0%, white 100%);
+    }
+
+    .city-card.selected::after {
+      content: '';
+      position: absolute;
+      top: 6px;
+      right: 6px;
+      width: 16px;
+      height: 16px;
+      background: var(--accent-lime);
+      border-radius: 50%;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23004B87'%3E%3Cpath d='M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z'/%3E%3C/svg%3E");
+      background-size: 10px;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .city-card .city-name {
+      font-weight: 600;
+      font-size: 0.8125rem;
+      color: var(--text-primary);
+      line-height: 1.2;
+    }
+
+    .city-card .city-state {
+      font-size: 0.6875rem;
+      color: var(--text-muted);
+    }
+
+    .city-card .city-nature {
+      display: none;
+    }
+
+    .city-card.pilot {
+      border-color: var(--primary-blue);
+      background: rgba(0, 75, 135, 0.08);
+    }
+
+    .city-card.pilot::before {
+      content: 'PILOT';
+      position: absolute;
+      top: -6px;
+      left: 8px;
+      background: var(--primary-blue);
+      color: white;
+      font-size: 0.5rem;
+      font-weight: 700;
+      padding: 1px 5px;
+      border-radius: var(--radius-full);
+      letter-spacing: 0.05em;
+    }
+
+    .city-selector-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .city-count {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+    }
+
+    .city-count strong {
+      color: var(--primary-blue);
+    }
+
+    .select-actions {
+      display: flex;
+      gap: 8px;
+    }
+
+    .select-actions button {
+      background: var(--bg-light);
+      border: 1px solid rgba(0,0,0,0.1);
+      padding: 6px 12px;
+      border-radius: var(--radius-md);
+      font-size: 0.75rem;
+      cursor: pointer;
+      transition: var(--transition-fast);
+    }
+
+    .select-actions button:hover {
+      background: var(--primary-blue);
+      color: white;
+      border-color: var(--primary-blue);
+    }
+
+    /* Budget Calculator */
+    .budget-calculator {
+      background: white;
+      border-radius: var(--radius-2xl);
+      padding: 32px;
+      max-width: 800px;
+      margin: 0 auto;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .calc-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .calc-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+
+    .discount-badge {
+      background: var(--accent-lime);
+      color: var(--text-primary);
+      padding: 8px 16px;
+      border-radius: var(--radius-full);
+      font-weight: 700;
+      font-size: 0.875rem;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .discount-badge svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    .calc-summary {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    @media (max-width: 640px) {
+      .calc-summary {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .calc-stat {
+      text-align: center;
+      padding: 16px;
+      background: var(--bg-light);
+      border-radius: var(--radius-lg);
+    }
+
+    .calc-stat .stat-value {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--primary-blue);
+      margin-bottom: 4px;
+    }
+
+    .calc-stat .stat-value.lime {
+      color: #6b9a00;
+    }
+
+    .calc-stat .stat-label {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .calc-breakdown {
+      border-top: 1px solid rgba(0,0,0,0.08);
+      padding-top: 24px;
+    }
+
+    .calc-breakdown h4 {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .breakdown-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+    }
+
+    .breakdown-row:last-child {
+      border-bottom: none;
+      padding-top: 16px;
+      margin-top: 8px;
+      border-top: 2px solid var(--primary-blue);
+    }
+
+    .breakdown-row .item-name {
+      font-size: 0.9375rem;
+      color: var(--text-dark);
+    }
+
+    .breakdown-row .item-value {
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+
+    .breakdown-row:last-child .item-name,
+    .breakdown-row:last-child .item-value {
+      font-weight: 700;
+      font-size: 1.125rem;
+      color: var(--primary-blue);
+    }
+
+    .savings-callout {
+      background: linear-gradient(135deg, rgba(204, 255, 0, 0.15) 0%, rgba(204, 255, 0, 0.05) 100%);
+      border: 1px solid rgba(204, 255, 0, 0.5);
+      border-radius: var(--radius-lg);
+      padding: 16px 20px;
+      margin-top: 24px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .savings-callout svg {
+      width: 24px;
+      height: 24px;
+      color: #6b9a00;
+      flex-shrink: 0;
+    }
+
+    .savings-callout p {
+      font-size: 0.9375rem;
+      color: var(--text-dark);
+      margin: 0;
+    }
+
+    .savings-callout strong {
+      color: #6b9a00;
+    }
+
+    /* Discount tier indicator */
+    .tier-indicator {
+      display: flex;
+      gap: 8px;
+      margin-top: 16px;
+      justify-content: center;
+    }
+
+    .tier-step {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+      opacity: 0.4;
+      transition: var(--transition-fast);
+    }
+
+    .tier-step.active {
+      opacity: 1;
+    }
+
+    .tier-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--text-muted);
+    }
+
+    .tier-step.active .tier-dot {
+      background: var(--accent-lime);
+    }
+
+    .tier-label {
+      font-size: 0.6875rem;
+      color: var(--text-muted);
+    }
   </style>
 </head>
 <body>
@@ -1104,6 +1458,172 @@
     </div>
   </section>
 
+  <!-- Market Selection & Budget Calculator -->
+  <section class="market-selection" id="markets">
+    <div class="container">
+      <div class="section-header">
+        <h2>Market Selection</h2>
+        <p>Select target markets to calculate campaign costs with economies of scale</p>
+      </div>
+
+      <div class="city-selector-header">
+        <div class="city-count"><strong id="selectedCount">2</strong> of 50 cities selected</div>
+        <div class="select-actions">
+          <button onclick="selectAllCities()">Select All</button>
+          <button onclick="clearSelection()">Clear</button>
+        </div>
+      </div>
+
+      <div class="city-selector-container">
+        <div class="city-selector-grid" id="citySelector">
+          <!-- Pilot Markets -->
+          <div class="city-card selected pilot" data-city="tampa"><div class="city-name">Tampa</div><div class="city-state">FL</div></div>
+          <div class="city-card selected pilot" data-city="birmingham"><div class="city-name">Birmingham</div><div class="city-state">AL</div></div>
+
+          <!-- Southeast -->
+          <div class="city-card" data-city="atlanta"><div class="city-name">Atlanta</div><div class="city-state">GA</div></div>
+          <div class="city-card" data-city="charlotte"><div class="city-name">Charlotte</div><div class="city-state">NC</div></div>
+          <div class="city-card" data-city="raleigh"><div class="city-name">Raleigh</div><div class="city-state">NC</div></div>
+          <div class="city-card" data-city="durham"><div class="city-name">Durham</div><div class="city-state">NC</div></div>
+          <div class="city-card" data-city="asheville"><div class="city-name">Asheville</div><div class="city-state">NC</div></div>
+          <div class="city-card" data-city="wilmington"><div class="city-name">Wilmington</div><div class="city-state">NC</div></div>
+          <div class="city-card" data-city="greenville"><div class="city-name">Greenville</div><div class="city-state">SC</div></div>
+          <div class="city-card" data-city="charleston"><div class="city-name">Charleston</div><div class="city-state">SC</div></div>
+          <div class="city-card" data-city="savannah"><div class="city-name">Savannah</div><div class="city-state">GA</div></div>
+          <div class="city-card" data-city="jacksonville"><div class="city-name">Jacksonville</div><div class="city-state">FL</div></div>
+          <div class="city-card" data-city="orlando"><div class="city-name">Orlando</div><div class="city-state">FL</div></div>
+
+          <!-- Tennessee/Kentucky -->
+          <div class="city-card" data-city="nashville"><div class="city-name">Nashville</div><div class="city-state">TN</div></div>
+          <div class="city-card" data-city="knoxville"><div class="city-name">Knoxville</div><div class="city-state">TN</div></div>
+          <div class="city-card" data-city="chattanooga"><div class="city-name">Chattanooga</div><div class="city-state">TN</div></div>
+          <div class="city-card" data-city="louisville"><div class="city-name">Louisville</div><div class="city-state">KY</div></div>
+          <div class="city-card" data-city="lexington"><div class="city-name">Lexington</div><div class="city-state">KY</div></div>
+
+          <!-- Texas -->
+          <div class="city-card" data-city="austin"><div class="city-name">Austin</div><div class="city-state">TX</div></div>
+          <div class="city-card" data-city="sanantonio"><div class="city-name">San Antonio</div><div class="city-state">TX</div></div>
+
+          <!-- Southwest -->
+          <div class="city-card" data-city="denver"><div class="city-name">Denver</div><div class="city-state">CO</div></div>
+          <div class="city-card" data-city="boulder"><div class="city-name">Boulder</div><div class="city-state">CO</div></div>
+          <div class="city-card" data-city="coloradosprings"><div class="city-name">Colorado Springs</div><div class="city-state">CO</div></div>
+          <div class="city-card" data-city="phoenix"><div class="city-name">Phoenix</div><div class="city-state">AZ</div></div>
+          <div class="city-card" data-city="scottsdale"><div class="city-name">Scottsdale</div><div class="city-state">AZ</div></div>
+          <div class="city-card" data-city="tucson"><div class="city-name">Tucson</div><div class="city-state">AZ</div></div>
+          <div class="city-card" data-city="albuquerque"><div class="city-name">Albuquerque</div><div class="city-state">NM</div></div>
+          <div class="city-card" data-city="santafe"><div class="city-name">Santa Fe</div><div class="city-state">NM</div></div>
+          <div class="city-card" data-city="saltlake"><div class="city-name">Salt Lake City</div><div class="city-state">UT</div></div>
+
+          <!-- Pacific Northwest -->
+          <div class="city-card" data-city="seattle"><div class="city-name">Seattle</div><div class="city-state">WA</div></div>
+          <div class="city-card" data-city="spokane"><div class="city-name">Spokane</div><div class="city-state">WA</div></div>
+          <div class="city-card" data-city="portland"><div class="city-name">Portland</div><div class="city-state">OR</div></div>
+          <div class="city-card" data-city="eugene"><div class="city-name">Eugene</div><div class="city-state">OR</div></div>
+          <div class="city-card" data-city="boise"><div class="city-name">Boise</div><div class="city-state">ID</div></div>
+
+          <!-- California -->
+          <div class="city-card" data-city="sandiego"><div class="city-name">San Diego</div><div class="city-state">CA</div></div>
+          <div class="city-card" data-city="santabarbara"><div class="city-name">Santa Barbara</div><div class="city-state">CA</div></div>
+          <div class="city-card" data-city="sanjose"><div class="city-name">San Jose</div><div class="city-state">CA</div></div>
+          <div class="city-card" data-city="oakland"><div class="city-name">Oakland</div><div class="city-state">CA</div></div>
+          <div class="city-card" data-city="sacramento"><div class="city-name">Sacramento</div><div class="city-state">CA</div></div>
+          <div class="city-card" data-city="fresno"><div class="city-name">Fresno</div><div class="city-state">CA</div></div>
+
+          <!-- Midwest -->
+          <div class="city-card" data-city="minneapolis"><div class="city-name">Minneapolis</div><div class="city-state">MN</div></div>
+          <div class="city-card" data-city="madison"><div class="city-name">Madison</div><div class="city-state">WI</div></div>
+          <div class="city-card" data-city="grandrapids"><div class="city-name">Grand Rapids</div><div class="city-state">MI</div></div>
+          <div class="city-card" data-city="annarbor"><div class="city-name">Ann Arbor</div><div class="city-state">MI</div></div>
+          <div class="city-card" data-city="indianapolis"><div class="city-name">Indianapolis</div><div class="city-state">IN</div></div>
+          <div class="city-card" data-city="cincinnati"><div class="city-name">Cincinnati</div><div class="city-state">OH</div></div>
+          <div class="city-card" data-city="kansascity"><div class="city-name">Kansas City</div><div class="city-state">MO</div></div>
+          <div class="city-card" data-city="omaha"><div class="city-name">Omaha</div><div class="city-state">NE</div></div>
+          <div class="city-card" data-city="desmoines"><div class="city-name">Des Moines</div><div class="city-state">IA</div></div>
+
+          <!-- Mid-Atlantic -->
+          <div class="city-card" data-city="pittsburgh"><div class="city-name">Pittsburgh</div><div class="city-state">PA</div></div>
+          <div class="city-card" data-city="richmond"><div class="city-name">Richmond</div><div class="city-state">VA</div></div>
+          <div class="city-card" data-city="providence"><div class="city-name">Providence</div><div class="city-state">RI</div></div>
+        </div>
+      </div>
+
+      <!-- Budget Calculator -->
+      <div class="budget-calculator fade-in" id="budgetCalculator">
+        <div class="calc-header">
+          <div class="calc-title">Campaign Budget Calculator</div>
+          <div class="discount-badge" id="discountBadge">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
+            <span id="discountText">0% Discount</span>
+          </div>
+        </div>
+
+        <div class="calc-summary">
+          <div class="calc-stat">
+            <div class="stat-value" id="citiesSelected">2</div>
+            <div class="stat-label">Cities</div>
+          </div>
+          <div class="calc-stat">
+            <div class="stat-value" id="perCityCost">$10,932</div>
+            <div class="stat-label">Per City</div>
+          </div>
+          <div class="calc-stat">
+            <div class="stat-value lime" id="totalSavings">$0</div>
+            <div class="stat-label">Savings</div>
+          </div>
+          <div class="calc-stat">
+            <div class="stat-value" id="totalBudget">$21,864</div>
+            <div class="stat-label">Total</div>
+          </div>
+        </div>
+
+        <div class="calc-breakdown">
+          <h4>Per-City Breakdown</h4>
+          <div class="breakdown-row">
+            <span class="item-name">EDDM (3 touches x 3,000 homes)</span>
+            <span class="item-value" id="eddmCost">$5,657</span>
+          </div>
+          <div class="breakdown-row">
+            <span class="item-name">Digital Ad Support</span>
+            <span class="item-value" id="digitalCost">$3,775</span>
+          </div>
+          <div class="breakdown-row">
+            <span class="item-name">Local Partnerships</span>
+            <span class="item-value" id="partnersCost">$1,500</span>
+          </div>
+          <div class="breakdown-row">
+            <span class="item-name">Total Campaign Cost</span>
+            <span class="item-value" id="campaignTotal">$21,864</span>
+          </div>
+        </div>
+
+        <div class="tier-indicator">
+          <div class="tier-step active" data-tier="1">
+            <div class="tier-dot"></div>
+            <span class="tier-label">1-5</span>
+          </div>
+          <div class="tier-step" data-tier="2">
+            <div class="tier-dot"></div>
+            <span class="tier-label">6-15</span>
+          </div>
+          <div class="tier-step" data-tier="3">
+            <div class="tier-dot"></div>
+            <span class="tier-label">16-30</span>
+          </div>
+          <div class="tier-step" data-tier="4">
+            <div class="tier-dot"></div>
+            <span class="tier-label">31-50</span>
+          </div>
+        </div>
+
+        <div class="savings-callout" id="savingsCallout" style="display: none;">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <p>Select <strong id="citiesToNextTier">1 more city</strong> to unlock <strong id="nextTierDiscount">10%</strong> volume discount!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Channel Overview -->
   <section class="tactics-section">
     <div class="container">
@@ -1190,10 +1710,6 @@
           <ul>
             <li>
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-              Harden sign-up flow
-            </li>
-            <li>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
               Launch Tampa + Birmingham pilots
             </li>
             <li>
@@ -1202,7 +1718,11 @@
             </li>
             <li>
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-              Launch SEO content hub site
+              Change.org coalition outreach
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              Accelerator applications submitted
             </li>
             <li>
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
@@ -1219,7 +1739,7 @@
           <ul>
             <li>
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-              "Wall of Shame" media event
+              Direct Mail Sculpture unveiling
             </li>
             <li>
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
@@ -1227,15 +1747,15 @@
             </li>
             <li>
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-              One Tree Planted partnership
+              Credit union member pilot program
             </li>
             <li>
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-              Launch Change.org coalition outreach
+              HOA sustainability partnerships
             </li>
             <li>
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-              Accelerator applications
+              Environmental impact dashboard
             </li>
           </ul>
         </div>
@@ -1256,15 +1776,15 @@
             </li>
             <li>
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              First zero-junk-mail apartment complex
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              University sustainability partnerships
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
               Trade shows (ANA, Postal Forum)
-            </li>
-            <li>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-              Launch podcast + guest strategy
-            </li>
-            <li>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-              Investor materials ready
             </li>
           </ul>
         </div>
@@ -1281,7 +1801,7 @@
             </li>
             <li>
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-              Scale to 30 neighborhoods
+              National media placement (WSJ, NPR)
             </li>
             <li>
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
@@ -1289,7 +1809,7 @@
             </li>
             <li>
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-              Convert petition signers
+              B Corp certification application
             </li>
             <li>
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
@@ -1442,34 +1962,7 @@
 
       <div class="highlight-box fade-in">
         <div class="sticker-mockup">
-          <!-- Return to Sender Sticker Mockup -->
-          <svg class="sticker-svg" viewBox="0 0 300 140" xmlns="http://www.w3.org/2000/svg">
-            <!-- Sticker background with slight rotation for casual look -->
-            <g transform="rotate(-2, 150, 70)">
-              <!-- Main sticker shape -->
-              <rect x="10" y="10" width="280" height="120" rx="8" fill="#fff" stroke="#CC0800" stroke-width="4"/>
-              <!-- Inner border -->
-              <rect x="18" y="18" width="264" height="104" rx="4" fill="none" stroke="#CC0800" stroke-width="1" stroke-dasharray="4,4"/>
-              <!-- RETURN TO SENDER text -->
-              <text x="150" y="52" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="800" fill="#CC0800" letter-spacing="1">RETURN TO SENDER</text>
-              <!-- Subtext -->
-              <text x="150" y="74" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="11" fill="#666">I didn't ask for this mail</text>
-              <!-- Domi logo area -->
-              <rect x="105" y="84" width="90" height="28" rx="4" fill="#004B87"/>
-              <text x="150" y="103" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700" fill="#fff">Powered by</text>
-              <text x="150" y="118" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="800" fill="#CCFF00">Domi</text>
-              <!-- Stamp-like circles in corners -->
-              <circle cx="35" cy="35" r="8" fill="none" stroke="#CC0800" stroke-width="2"/>
-              <circle cx="265" cy="35" r="8" fill="none" stroke="#CC0800" stroke-width="2"/>
-              <circle cx="35" cy="95" r="8" fill="none" stroke="#CC0800" stroke-width="2"/>
-              <circle cx="265" cy="95" r="8" fill="none" stroke="#CC0800" stroke-width="2"/>
-              <!-- X marks in circles -->
-              <path d="M30 30 L40 40 M40 30 L30 40" stroke="#CC0800" stroke-width="2"/>
-              <path d="M260 30 L270 40 M270 30 L260 40" stroke="#CC0800" stroke-width="2"/>
-              <path d="M30 90 L40 100 M40 90 L30 100" stroke="#CC0800" stroke-width="2"/>
-              <path d="M260 90 L270 100 M270 90 L260 100" stroke="#CC0800" stroke-width="2"/>
-            </g>
-          </svg>
+          <img src="assets/other-images/domi-sticker.jpeg" alt="Domi Return to Sender Sticker" class="sticker-img">
         </div>
         <h4>DoMi-Branded "Return to Sender" Stickers</h4>
         <p>Physical touchpoint that creates ongoing brand presence in homes. Each pack includes 20 stickers with instructions, turning every mailbox into a mini-billboard.</p>
@@ -2051,7 +2544,7 @@
             </li>
             <li>
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-              "Wall of Shame" event co-hosts
+              Direct Mail Sculpture co-hosts
             </li>
           </ul>
         </div>
@@ -2322,63 +2815,63 @@
         <div class="milestone-card fade-in">
           <span class="milestone-month">Month 1</span>
           <div class="milestone-title">Foundation Complete</div>
-          <div class="milestone-criteria">Product hardened, analytics live, SEO content hub launched</div>
+          <div class="milestone-criteria">Pilots launched, analytics live, Change.org outreach begun</div>
         </div>
         <div class="milestone-card fade-in">
           <span class="milestone-month">Month 2</span>
           <div class="milestone-title">First EDDM Deployed</div>
-          <div class="milestone-criteria">3,000 households, digital ads live, first explainer video</div>
+          <div class="milestone-criteria">3,000 households, accelerator apps submitted, first explainer video</div>
         </div>
         <div class="milestone-card fade-in">
           <span class="milestone-month">Month 3</span>
           <div class="milestone-title">Champions Recruited</div>
-          <div class="milestone-criteria">50 verified users, 5 neighborhood champions, PR prep complete</div>
+          <div class="milestone-criteria">50 verified users, 5 neighborhood champions, petition coalition live</div>
         </div>
 
         <!-- Phase 2 Milestones -->
         <div class="milestone-card phase-2 fade-in">
           <span class="milestone-month">Month 4</span>
           <div class="milestone-title">Metrics Baseline</div>
-          <div class="milestone-criteria">CAC &lt;$20, activation &gt;30%, second explainer video live</div>
+          <div class="milestone-criteria">CAC &lt;$20, activation &gt;30%, credit union pilot signed</div>
         </div>
         <div class="milestone-card phase-2 fade-in">
           <span class="milestone-month">Month 5</span>
-          <div class="milestone-title">Wall of Shame Launch</div>
-          <div class="milestone-criteria">Media event, viral video, Change.org coalition launched</div>
+          <div class="milestone-title">Direct Mail Sculpture Launch</div>
+          <div class="milestone-criteria">Public art installation, media coverage, 3+ HOA partnerships</div>
         </div>
         <div class="milestone-card phase-2 fade-in">
           <span class="milestone-month">Month 6</span>
           <div class="milestone-title">First Liberated Neighborhood</div>
-          <div class="milestone-criteria">80%+ opt-out in one zip+4, accelerator apps submitted</div>
+          <div class="milestone-criteria">80%+ opt-out in one zip+4, impact dashboard live</div>
         </div>
 
         <!-- Phase 3 Milestones -->
         <div class="milestone-card phase-3 fade-in">
           <span class="milestone-month">Month 7</span>
           <div class="milestone-title">B2B Platform Live</div>
-          <div class="milestone-criteria">3+ brand partners, Nextdoor survey tool launched</div>
+          <div class="milestone-criteria">3+ brand partners, first apartment complex signed</div>
         </div>
         <div class="milestone-card phase-3 fade-in">
           <span class="milestone-month">Month 8</span>
-          <div class="milestone-title">Investor Deck Ready</div>
-          <div class="milestone-criteria">Series A conversations begun, podcast launched</div>
+          <div class="milestone-title">Campus Expansion</div>
+          <div class="milestone-criteria">University sustainability partnership, investor deck ready</div>
         </div>
         <div class="milestone-card phase-3 fade-in">
           <span class="milestone-month">Month 9</span>
           <div class="milestone-title">Trade Show Success</div>
-          <div class="milestone-criteria">10+ brand leads, 50 neighborhoods surveyed</div>
+          <div class="milestone-criteria">10+ brand leads, 20 neighborhoods active</div>
         </div>
 
         <!-- Phase 4 Milestones -->
         <div class="milestone-card phase-4 fade-in">
           <span class="milestone-month">Month 10</span>
-          <div class="milestone-title">Scale Metrics Proven</div>
-          <div class="milestone-criteria">2,000+ users, CAC &lt;$12, petition signers converting</div>
+          <div class="milestone-title">National Media Placement</div>
+          <div class="milestone-criteria">WSJ or NPR feature, 2,000+ users, CAC &lt;$12</div>
         </div>
         <div class="milestone-card phase-4 fade-in">
           <span class="milestone-month">Month 11</span>
           <div class="milestone-title">Term Sheet Received</div>
-          <div class="milestone-criteria">$3-5M at $15-25M valuation, 15+ brand partners</div>
+          <div class="milestone-criteria">$3-5M at $15-25M valuation, B Corp application filed</div>
         </div>
         <div class="milestone-card phase-4 fade-in">
           <span class="milestone-month">Month 12</span>
@@ -2462,5 +2955,174 @@
   </footer>
 
   <script src="js/main.js"></script>
+  <script>
+    // Budget Calculator for Market Selection
+    (function() {
+      // Base costs per city
+      const BASE_EDDM = 5657;
+      const BASE_DIGITAL = 3775;
+      const BASE_PARTNERS = 1500;
+      const BASE_PER_CITY = BASE_EDDM + BASE_DIGITAL + BASE_PARTNERS;
+
+      // Discount tiers (scaled for 50 cities)
+      const TIERS = [
+        { min: 1, max: 5, discount: 0 },
+        { min: 6, max: 15, discount: 0.10 },
+        { min: 16, max: 30, discount: 0.20 },
+        { min: 31, max: 50, discount: 0.30 }
+      ];
+
+      // DOM elements
+      const cityCards = document.querySelectorAll('.city-card');
+      const citiesSelectedEl = document.getElementById('citiesSelected');
+      const selectedCountEl = document.getElementById('selectedCount');
+      const perCityCostEl = document.getElementById('perCityCost');
+      const totalSavingsEl = document.getElementById('totalSavings');
+      const totalBudgetEl = document.getElementById('totalBudget');
+      const discountBadgeEl = document.getElementById('discountBadge');
+      const discountTextEl = document.getElementById('discountText');
+      const eddmCostEl = document.getElementById('eddmCost');
+      const digitalCostEl = document.getElementById('digitalCost');
+      const partnersCostEl = document.getElementById('partnersCost');
+      const campaignTotalEl = document.getElementById('campaignTotal');
+      const tierSteps = document.querySelectorAll('.tier-step');
+      const savingsCallout = document.getElementById('savingsCallout');
+      const citiesToNextTier = document.getElementById('citiesToNextTier');
+      const nextTierDiscount = document.getElementById('nextTierDiscount');
+
+      // Format currency
+      function formatCurrency(amount) {
+        return '$' + amount.toLocaleString('en-US', { maximumFractionDigits: 0 });
+      }
+
+      // Get current tier info
+      function getTierInfo(count) {
+        for (let i = 0; i < TIERS.length; i++) {
+          if (count >= TIERS[i].min && count <= TIERS[i].max) {
+            return { tier: i + 1, discount: TIERS[i].discount };
+          }
+        }
+        return { tier: 4, discount: 0.30 };
+      }
+
+      // Get next tier info
+      function getNextTierInfo(count) {
+        const currentTier = getTierInfo(count).tier;
+        if (currentTier >= 4) return null;
+
+        const nextTier = TIERS[currentTier];
+        return {
+          citiesNeeded: nextTier.min - count,
+          discount: nextTier.discount
+        };
+      }
+
+      // Update calculator display
+      function updateCalculator() {
+        const selectedCities = document.querySelectorAll('.city-card.selected');
+        const count = selectedCities.length;
+
+        // Update header count
+        if (selectedCountEl) selectedCountEl.textContent = count;
+
+        if (count === 0) {
+          citiesSelectedEl.textContent = '0';
+          perCityCostEl.textContent = formatCurrency(BASE_PER_CITY);
+          totalSavingsEl.textContent = '$0';
+          totalBudgetEl.textContent = '$0';
+          discountTextEl.textContent = '0% Discount';
+          eddmCostEl.textContent = formatCurrency(BASE_EDDM);
+          digitalCostEl.textContent = formatCurrency(BASE_DIGITAL);
+          partnersCostEl.textContent = formatCurrency(BASE_PARTNERS);
+          campaignTotalEl.textContent = '$0';
+
+          // Update tier indicators
+          tierSteps.forEach(step => step.classList.remove('active'));
+
+          // Show callout
+          savingsCallout.style.display = 'flex';
+          citiesToNextTier.textContent = '6 cities';
+          nextTierDiscount.textContent = '10%';
+          return;
+        }
+
+        const { tier, discount } = getTierInfo(count);
+        const discountedEDDM = Math.round(BASE_EDDM * (1 - discount));
+        const discountedDigital = Math.round(BASE_DIGITAL * (1 - discount));
+        const discountedPartners = Math.round(BASE_PARTNERS * (1 - discount));
+        const perCityDiscounted = discountedEDDM + discountedDigital + discountedPartners;
+        const totalCost = perCityDiscounted * count;
+        const totalSavings = (BASE_PER_CITY - perCityDiscounted) * count;
+
+        // Update display
+        citiesSelectedEl.textContent = count;
+        perCityCostEl.textContent = formatCurrency(perCityDiscounted);
+        totalSavingsEl.textContent = formatCurrency(totalSavings);
+        totalBudgetEl.textContent = formatCurrency(totalCost);
+        discountTextEl.textContent = (discount * 100) + '% Discount';
+        eddmCostEl.textContent = formatCurrency(discountedEDDM);
+        digitalCostEl.textContent = formatCurrency(discountedDigital);
+        partnersCostEl.textContent = formatCurrency(discountedPartners);
+        campaignTotalEl.textContent = formatCurrency(totalCost);
+
+        // Update tier indicators
+        tierSteps.forEach(step => {
+          const stepTier = parseInt(step.dataset.tier);
+          step.classList.toggle('active', stepTier <= tier);
+        });
+
+        // Update savings callout
+        const nextInfo = getNextTierInfo(count);
+        if (nextInfo) {
+          savingsCallout.style.display = 'flex';
+          citiesToNextTier.textContent = nextInfo.citiesNeeded + ' more ' + (nextInfo.citiesNeeded === 1 ? 'city' : 'cities');
+          nextTierDiscount.textContent = (nextInfo.discount * 100) + '%';
+        } else {
+          savingsCallout.style.display = 'none';
+        }
+
+        // Visual feedback for discount badge
+        if (discount > 0) {
+          discountBadgeEl.style.background = 'var(--accent-lime)';
+        } else {
+          discountBadgeEl.style.background = 'var(--bg-light)';
+        }
+      }
+
+      // Toggle city selection
+      function toggleCity(card) {
+        // Don't allow deselecting pilot cities
+        if (card.classList.contains('pilot') && card.classList.contains('selected')) {
+          return;
+        }
+        card.classList.toggle('selected');
+        updateCalculator();
+      }
+
+      // Select all cities
+      window.selectAllCities = function() {
+        cityCards.forEach(card => card.classList.add('selected'));
+        updateCalculator();
+      };
+
+      // Clear selection (keep pilots selected)
+      window.clearSelection = function() {
+        cityCards.forEach(card => {
+          if (!card.classList.contains('pilot')) {
+            card.classList.remove('selected');
+          }
+        });
+        updateCalculator();
+      };
+
+      // Add click listeners
+      cityCards.forEach(card => {
+        card.addEventListener('click', () => toggleCity(card));
+      });
+
+      // Initialize
+      updateCalculator();
+    })();
+  </script>
 </body>
 </html>
