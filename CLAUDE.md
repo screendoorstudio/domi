@@ -7,6 +7,7 @@ A set of high-converting landing pages for Digital Domi (DoMi), showcasing their
 
 ## Deployment
 - **Live URL**: https://domi-landing.vercel.app
+- **Password**: DomiNODM (Vercel deployment protection)
 - **GitHub**: https://github.com/screendoorstudio/domi.git
 - **Vercel Project**: domi-landing (screenteam account)
 
@@ -45,7 +46,20 @@ A set of high-converting landing pages for Digital Domi (DoMi), showcasing their
 │       ├── GettyImages-567074375.jpg (overflowing mailboxes)
 │       ├── GettyImages-83408155.jpg (mail carrier)
 │       └── Zero-Junk-Mail_*.jpg (paper waste piles)
-└── screenshots/            # Development screenshots (not deployed)
+├── screenshots/            # Development screenshots (not deployed)
+├── postcards/              # EDDM postcard designs
+│   ├── index.html          # Postcard gallery with PDF export instructions
+│   ├── postcard-1-stop-junk-mail.html
+│   ├── postcard-2-digital-mailbox.html
+│   └── postcard-3-earn-money.html
+└── marketing/              # GTM strategy & campaign assets
+    ├── GTM-TRACKER.md              # 12-month implementation tracker
+    ├── EDDM-CAMPAIGN-TRACKING.md   # QR codes, UTM structure, print specs
+    ├── EMAIL-SEQUENCES.md          # Nurture sequences (welcome, re-engagement)
+    ├── THEUNSUBSCRIBEGUY-CONTENT-PLAN.md  # SEO content strategy
+    ├── PARTNERSHIP-OUTREACH.md     # Credit unions, mail houses, brands
+    ├── DIGITAL-ADVERTISING-PLAN.md # Meta, Nextdoor, Google Ads
+    └── ANALYTICS-IMPLEMENTATION.md # GA4, GTM, Facebook Pixel setup
 ```
 
 ## Brand Guidelines
@@ -118,6 +132,43 @@ A set of high-converting landing pages for Digital Domi (DoMi), showcasing their
 - Comparison table (Traditional Mail vs DOMI)
 - Trust badges
 
+## EDDM Postcards
+
+**Live URL**: https://domi-landing.vercel.app/postcards/
+
+Three 6" x 9" postcards designed for Every Door Direct Mail (EDDM) campaigns. Each includes front and back designs with proper USPS EDDM formatting. All postcards use the official DoMi logo (`assets/images/primary-logo.svg`) for consistent branding.
+
+### Postcard 1: Stop Junk Mail
+- **Theme:** Ironic approach - "Yes, this is junk mail"
+- **Front:** Red gradient (#CC0800), bold headline "But It's The Last Piece You'll Ever Need"
+- **Back:** Navy blue left panel with benefits list, QR code section, EDDM indicia on right
+
+### Postcard 2: Digital Mailbox
+- **Theme:** Digital convenience with earnings mentioned
+- **Front:** Navy blue gradient (#004B87), "Coupons You Want. Zero Clutter." Value pills for Earn/Privacy/Green
+- **Back:** 3-step how-it-works, earnings box showing "$100/mo", QR code, EDDM indicia
+
+### Postcard 3: Earn Money
+- **Theme:** Heavy earnings focus (aligned with A/B test page)
+- **Front:** Lime green gradient (#CCFF00), giant "$100 Per Month" headline, "Just for Checking Your Mail"
+- **Back:** Earnings breakdown table, testimonial quote, QR code, EDDM indicia
+
+### EDDM Requirements Included
+- EDDM indicia box (PRSRT STD, ECRWSS, U.S. POSTAGE PAID, EDDM RETAIL)
+- `****ECRWSSEDDM****` addressing code
+- "Local Postal Customer" recipient line
+- Return address with Digital DOMI branding
+- QR code placeholder for app download
+
+### Export to PDF
+1. Open postcard in browser
+2. Press **Cmd + P** (Mac) or **Ctrl + P** (Windows)
+3. Select "Save as PDF"
+4. Set paper size to 9" x 6"
+5. Set margins to "None"
+6. Enable "Background graphics"
+7. Save
+
 ## Key CSS Components
 
 ### Problem/Solution Split Banner
@@ -163,9 +214,48 @@ npx vercel --prod --yes
 git push origin main
 ```
 
+## Go-To-Market Strategy
+
+### Overview
+12-month pre-Series A GTM plan targeting 5,000-10,000 households in 20-30 zip+4 neighborhoods.
+- **Total Budget:** $255,000
+- **Series A Goal:** $3-5M at $15-25M pre-money valuation
+- **Primary Markets:** Tampa Bay, FL + Birmingham, AL
+
+### EDDM Campaign Structure
+Three-touch postcard sequence per neighborhood:
+1. **Touch 1:** "Stop Junk Mail" (red theme) → opt-out.html
+2. **Touch 2:** "Digital Mailbox" (blue theme) → digital-mailbox.html
+3. **Touch 3:** "Earn Money" (green theme) → digital-mailbox-earn.html
+
+### QR Code UTM Structure
+```
+?utm_source=eddm
+&utm_medium=postcard
+&utm_campaign={wave}-{month}{year}
+&utm_content={postcard-variant}
+&utm_term={neighborhood-code}
+```
+
+### Analytics Implementation
+- GA4 events: `qr_scan`, `app_download_click`, `cta_click`, `scroll_depth`
+- Facebook Pixel: `PageView`, `Lead`, `ViewContent`
+- Data layer pushes for GTM integration
+- UTM persistence via sessionStorage
+
+### Key Metrics Targets (Month 12)
+- Households reached: 63,000
+- Verified users: 5,000
+- MAU: 4,000
+- CAC: <$10
+- LTV: $75
+- B2B partners: 20
+- Monthly B2B revenue: $50,000
+
 ## Notes
 - All pages use actual DoMi brand assets scraped from digitaldomi.com
 - Consistent header/footer across all pages
 - Mobile-responsive design
 - Scroll animations via Intersection Observer
 - The digital-mailbox-earn.html is an A/B test variant emphasizing earnings (not linked from main nav)
+- Analytics tracking added to main.js for campaign attribution
