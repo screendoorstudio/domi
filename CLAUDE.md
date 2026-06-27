@@ -26,6 +26,7 @@ A set of high-converting landing pages for Domi (Digital Domi), showcasing their
 ├── assets/
 │   ├── images/             # Domi brand assets (scraped from digitaldomi.com)
 │   │   ├── primary-logo.svg
+│   │   ├── primary-logo-white.svg  # White version for dark backgrounds
 │   │   ├── brand-logo.png (favicon)
 │   │   ├── app-store.png
 │   │   ├── playstore.png
@@ -43,7 +44,7 @@ A set of high-converting landing pages for Domi (Digital Domi), showcasing their
 │   │   ├── mailer-illustration.svg
 │   │   └── social-share.png
 │   └── other-images/       # Lifestyle/stock photos
-│       ├── domi-sticker.jpeg        # Return to Sender sticker (used in GTM page)
+│       ├── return-to-sender-sticker_Domi.jpeg  # "REJECTED: UNSOLICITED PROMOTIONAL MAIL" sticker (GTM page)
 │       ├── GettyImages-187591416.jpg (mail at door)
 │       ├── GettyImages-567074375.jpg (overflowing mailboxes)
 │       ├── GettyImages-83408155.jpg (mail carrier)
@@ -147,14 +148,14 @@ Visual, interactive presentation of the 12-month Go-to-Market strategy for stake
 
 1. **Hero** - Gradient header with Domi branding
 2. **Executive Summary** (Enhanced)
-   - Key stats row: $255K budget, 12 months, 5,000 target users, $3-5M Series A
+   - Key stats row: $391K budget, 12 months, 5,000 target users, $3-5M Series A
    - "The Opportunity" - 41 lbs junk mail per household problem
    - "Our Approach" - EDDM-anchored strategy overview
    - Success Metrics sidebar (Month 12 targets)
    - Three pillars: Pilot Markets, Acquisition Strategy, Series A Positioning
-3. **Multi-Channel Approach** - 8 integrated channel icons
-4. **Strategic Timeline** - 4 expandable phase cards
-5. **Messaging Simplification** (NEW)
+3. **Multi-Channel Approach** - 9 integrated channel icons (includes Social Media)
+4. **Strategic Timeline** - 4 expandable phase cards + horizontal 8-event milestone timeline
+5. **Messaging Simplification**
    - Two value prop cards with SVG illustrations
    - Phone mockup showing "Stop Junk Mail" app
    - Computer mockup showing digital offers
@@ -167,9 +168,10 @@ Visual, interactive presentation of the 12-month Go-to-Market strategy for stake
    - City selector on left (scrollable)
    - Budget calculator on right (sticky)
 9. **Digital Advertising** - Meta, Nextdoor, Google details
-10. **Content & SEO Strategy** - Content hub concept
-11. **Community Building** - Neighborhood champions, Nextdoor
-12. **Partnerships** - Credit unions, environmental orgs, brands
+10. **Social Media & Early Adopter Program** - TikTok, Instagram, LinkedIn, $100 bonus program
+11. **Content & SEO Strategy** - Two-column layout (keywords left, 3 cards stacked right)
+12. **Community Building** - Neighborhood champions, Nextdoor
+13. **Partnerships** - Banks, credit unions, mail houses, environmental orgs, brands + expanded coalition graphic
 13. **Budget Allocation** - Donut chart visualization
 14. **Growth Trajectory** - KPI bar charts
 15. **12-Month Milestones** - Detailed success criteria grid
@@ -275,7 +277,7 @@ Key Improvements Grid:
 
 **Phase 3: Scale & B2B Launch (Months 7-9) - $98,000** - 11 items:
 - Expand to 20 neighborhoods
-- Launch DMP to brand partners
+- Launch Domi Marketing Platform (DMP) to brand partners
 - First zero-junk-mail apartment complex
 - University sustainability partnerships
 - Trade shows (ANA, Postal Forum)
@@ -309,7 +311,7 @@ Key Improvements Grid:
 - Animated bar charts and donut chart
 - Scroll fade-in animations
 - Mobile responsive
-- Uses actual `domi-sticker.jpeg` image
+- Uses actual `return-to-sender-sticker_Domi.jpeg` image (450px wide)
 
 ## EDDM Postcards
 
@@ -366,7 +368,7 @@ Comprehensive GTM strategy documentation:
 
 ### Overview
 12-month pre-Series A GTM plan targeting 50 potential markets with pilot focus on Tampa + Birmingham.
-- **Total Budget:** ~$316K (varies by cities selected)
+- **Total Budget:** ~$391K (includes Early Adopter Bonus + Social Media + Marketing Contractor increase)
 - **Series A Goal:** $3-5M at $15-25M pre-money valuation
 - **Pilot Markets:** Tampa Bay, FL + Birmingham, AL
 
@@ -416,9 +418,88 @@ npx vercel --prod --yes
 git push origin main
 ```
 
-## Recent Session Notes (January 25, 2025)
+## Recent Session Notes
 
-### Latest Session Changes
+### January 29, 2025
+1. **Marketing Contractor Budget Increased** - Updated from $36,000 to $50,000 (13% of budget)
+2. **Total Budget Updated** - Now $391K (was $377K)
+3. **Percentage Adjustments** - Recalculated all budget percentages for new total:
+   - EDDM: 18% → 17%
+   - Social Media: 10% → 9%
+   - PR & Trade Shows: 10% → 9%
+   - Marketing Contractor: 10% → 13%
+
+### January 25, 2025 (Evening - Continued)
+1. **E-statement Customers** - Coalition partner bubble (blue #004B87):
+   - Targets bank/credit union members already using paperless statements
+   - Tactic card bullet points: Already paperless-minded, partner with banks, "Complete your digital journey" messaging, high-value demographic
+2. **Tech Community** - NEW coalition partner bubble (indigo #6366f1):
+   - Coalition graphic now has **15 nodes total**
+   - Tactic card bullet points:
+     - Tampa: Tampa Bay Wave, Embarc Collective
+     - Birmingham: Innovation Depot, TechBirmingham
+     - Product Hunt launch for visibility
+     - Angel/seed investor awareness building
+3. **Coalition Graphic Reorganized** - Color-coded by category:
+   - **Top Row (B2B Partners):**
+     - Purple (#7c3aed): Mail Houses, Business Mailrooms
+     - Orange (#f97316): Brands & Advertisers
+     - Green (#22c55e): Environmental Orgs
+     - Red (#dc2626): Legislators & Regulators
+   - **Left Side (Property - Cyan #0891b2):** HOAs, Multifamily Properties
+   - **Right Side (Financial & Tech):**
+     - Blue (#004B87): Banks & Credit Unions, E-statement Customers
+     - Indigo (#6366f1): Tech Community
+   - **Bottom Row (Consumer & Grassroots):**
+     - Indigo (#6366f1): E-delivery Enthusiasts
+     - Pink (#ec4899): Petition Signers, Activists & Petitioners
+     - Amber (#eab308): Early Adopters, Forward-thinking Neighborhoods
+   - Adjusted right side spacing (y=150, 240, 330) to prevent overlap with bottom row
+2. **Return to Sender Sticker Image Updated**:
+   - New image: `return-to-sender-sticker_Domi.jpeg`
+   - New messaging: "REJECTED: UNSOLICITED PROMOTIONAL MAIL"
+   - Enlarged from 280px to 450px wide
+   - Enhanced drop shadow and rounded corners
+3. **Navigation Styling** - Centered nav links, styled as clickable pill buttons with hover states
+4. **Other Considerations Section** - Added featuring:
+   - Harmony Venture Labs (featured agency box with link)
+   - Alternative agencies: Kalungi, Refine Labs, Directive
+   - Strategic Acquirer Conversations card
+   - White-Label/Licensing Model card
+5. **Partner Tactic Cards Expanded** - Added 9 new cards to match coalition bubbles:
+   - Legislators & Regulators, HOA Partnerships, Multifamily Properties
+   - E-delivery Enthusiasts, Business Mailrooms, Petition Signers & Activists
+   - Early Adopters & Champions (highlighted), Forward-thinking Neighborhoods
+
+### Previous Session Changes (Afternoon)
+1. **Content & SEO Layout Redesign** - Two-column layout:
+   - Keywords card on LEFT (full height)
+   - SEO Hub, Podcast, Change.org cards stacked vertically on RIGHT
+2. **Early Adopter Bonus Styling** - Changed from dark green to sky blue gradient (#0ea5e9 → #0284c7) for better readability
+3. **Postcard Graphics Enlarged** - Increased from 80×80px to 140×95px in EDDM section
+4. **DMP Clarifications** - Expanded to "Domi Marketing Platform (DMP)" on first mentions for clarity
+5. **Coalition Graphic Completely Redesigned** - Now 15 nodes around Domi (color-coded by category):
+   - **Top row (B2B):** Mail Houses, Business Mailrooms (purple), Brands & Advertisers (orange), Environmental Orgs (green), Legislators & Regulators (red)
+   - **Left side (Property):** HOAs, Multifamily Properties (cyan)
+   - **Right side (Financial/Tech):** Banks & Credit Unions, E-statement Customers (blue), Tech Community (indigo)
+   - **Bottom row (Consumer/Grassroots):** E-delivery Enthusiasts (indigo), Petition Signers, Activists & Petitioners (pink), Early Adopters, Forward-thinking Neighborhoods (amber)
+   - Similar categories grouped together with matching colors
+6. **Social Media & Early Adopter Section** - NEW section with:
+   - $100 Early Adopter Bonus Program (sky blue callout)
+   - TikTok, Instagram, LinkedIn platform strategies
+   - Influencer & Creator Partnerships
+   - Weekly Content Cadence grid
+7. **Budget Updated** - Now $391K total (was $291K):
+   - Added: Early Adopter Bonus $50,000 (13%)
+   - Added: Social Media & Influencers $36,000 (9%)
+   - Increased: Marketing Contractor $36,000 → $50,000 (13%)
+8. **Multi-Channel Grid** - Now 9 channels (added Social Media icon)
+9. **Horizontal Timeline** - 8 major GTM milestones across 12 months
+10. **White Logo Created** - `primary-logo-white.svg` for dark footer background
+11. **Footer Fixed** - Now uses white logo on dark background
+12. **Banks Added** - Coalition now includes "Banks & Credit Unions" (not just credit unions)
+
+### Previous Session Changes (Morning)
 1. **City Selector & Budget Calculator** - Now side-by-side layout (city list left, calculator right sticky)
 2. **Market Selection Moved** - Now appears AFTER EDDM section (better flow)
 3. **Messaging Simplification Section** - NEW section with:
@@ -433,26 +514,23 @@ git push origin main
    - "The Opportunity" and "Our Approach" paragraphs
    - Success Metrics sidebar
 6. **Section Separation** - Added colored borders to make sections distinct
-7. **Deleted** - "From Physical Clutter to Digital Value" visual break
-8. **Deleted** - "Marketing Contractor: $3,000/month" callout
-9. **Fixed** - CSS conflict with `.mini-card` class (was breaking stats grids)
 
-### Previous Session Changes
+### Earlier Session Changes
 1. **Interactive 50-City Market Selector** - Compact card grid with select all/clear buttons
 2. **Budget Calculator** - Real-time cost calculation with 4-tier volume discounts
 3. **Expanded Strategic Timeline** - All 4 phases now have 11-12 detailed action items
 4. **Updated Milestones** - All 12 months have detailed success criteria
-5. **Sticker Image** - Replaced SVG mockup with actual `domi-sticker.jpeg`
+5. **Sticker Image** - Replaced SVG mockup with actual sticker photo
 6. **Rebranded** - Changed "Wall of Shame" to "Direct Mail Sculpture"
 7. **Standardized** - All "DoMi" instances changed to "Domi"
 
 ### Next Steps / TODO
 - [ ] Review marketing/*.md files for consistency with updated GTM strategy
-- [ ] Update budget numbers in marketing docs to match new calculator
+- [ ] Update budget numbers in marketing docs to match new $391K total
 - [ ] Create actual QR codes for postcards
 - [ ] Finalize postcard designs for print
 - [ ] Set up GA4 and Meta Pixel per ANALYTICS-IMPLEMENTATION.md
-- [ ] Consider adding more detail to individual channel sections
+- [ ] Add SEO keyword research data to marketing docs
 
 ## Notes
 - All pages use actual Domi brand assets scraped from digitaldomi.com
